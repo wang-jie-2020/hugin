@@ -1,0 +1,9 @@
+﻿@page
+@using LG.NetCore.Sample.Localization
+@using Microsoft.Extensions.Localization
+@model LG.NetCore.Sample.Web.Pages.IndexModel
+@inject IStringLocalizer<SampleResource> L
+@{
+}
+<h1>Sample</h1>
+<p>@L["SamplePageMessage"]</p>

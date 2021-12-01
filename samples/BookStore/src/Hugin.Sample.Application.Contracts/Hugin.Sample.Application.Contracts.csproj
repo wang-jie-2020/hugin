@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<DocumentationFile>bin\$(Configuration)\Hugin.Sample.Application.Contracts.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Application.Contracts\Volo.Abp.Ddd.Application.Contracts.csproj" />
+		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Authorization\Volo.Abp.Authorization.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\infrastructure\Hugin.Infrastructure.Common\Hugin.Infrastructure.Common.csproj" />
+		<ProjectReference Include="..\..\module\abp\src\Hugin.Module.Abp.Application\Hugin.Module.Abp.Application.csproj" />
+		<ProjectReference Include="..\Hugin.Sample.Domain.Shared\Hugin.Sample.Domain.Shared.csproj" />
+	</ItemGroup>
+
+</Project>
