@@ -7,14 +7,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Domain\Volo.Abp.Ddd.Domain.csproj" />
-		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.AutoMapper\Volo.Abp.AutoMapper.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\..\module\cache\src\Hugin.Module.Cache.CsRedis\Hugin.Module.Cache.CsRedis.csproj" />
 		<ProjectReference Include="..\Hugin.Sample.Data\Hugin.Sample.Data.csproj" />
 		<ProjectReference Include="..\Hugin.Sample.Domain.Shared\Hugin.Sample.Domain.Shared.csproj" />
+		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Domain\Volo.Abp.Ddd.Domain.csproj" />
+		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.AutoMapper\Volo.Abp.AutoMapper.csproj" />
 	</ItemGroup>
 
 </Project>

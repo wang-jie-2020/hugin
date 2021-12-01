@@ -7,11 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Http.Client\Volo.Abp.Http.Client.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
+		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Http.Client\Volo.Abp.Http.Client.csproj" />
 	</ItemGroup>
 
 </Project>

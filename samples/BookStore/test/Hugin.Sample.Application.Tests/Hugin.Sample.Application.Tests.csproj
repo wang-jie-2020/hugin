@@ -7,12 +7,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\..\src\Hugin.Sample.Application\Hugin.Sample.Application.csproj" />
 		<ProjectReference Include="..\Hugin.Sample.Domain.Tests\Hugin.Sample.Domain.Tests.csproj" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
 	</ItemGroup>
 
 </Project>

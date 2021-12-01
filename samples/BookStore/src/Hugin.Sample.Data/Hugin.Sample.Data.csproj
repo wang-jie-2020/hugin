@@ -7,13 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Domain\Volo.Abp.Ddd.Domain.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\..\infrastructure\Hugin.Infrastructure.Common\Hugin.Infrastructure.Common.csproj" />
 		<ProjectReference Include="..\..\module\abp\src\Hugin.Module.Abp.Domain\Hugin.Module.Abp.Domain.csproj" />
 		<ProjectReference Include="..\Hugin.Sample.Domain.Shared\Hugin.Sample.Domain.Shared.csproj" />
+		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Domain\Volo.Abp.Ddd.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

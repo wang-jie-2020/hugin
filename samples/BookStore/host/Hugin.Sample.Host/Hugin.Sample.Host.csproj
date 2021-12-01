@@ -9,6 +9,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Hugin.HostShared\Hugin.HostShared.csproj" />
+		<ProjectReference Include="..\..\infrastructure\Hugin.Infrastructure.Cap\Hugin.Infrastructure.Cap.csproj" />
+		<ProjectReference Include="..\..\module\abp\src\Hugin.Module.Abp.Mvc\Hugin.Module.Abp.Mvc.csproj" />
+		<ProjectReference Include="..\..\module\abp\src\Volo.Abp.AspNetCore.MultiStadium\Volo.Abp.AspNetCore.MultiStadium.csproj" />
+		<ProjectReference Include="..\..\module\cache\src\Hugin.Module.Cache.CsRedis\Hugin.Module.Cache.CsRedis.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Identity.HttpApi.Client\Hugin.Identity.HttpApi.Client.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Sample.Application\Hugin.Sample.Application.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Sample.EntityFrameworkCore\Hugin.Sample.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Sample.HttpApi\Hugin.Sample.HttpApi.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
@@ -43,18 +52,6 @@
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\modules\identity\src\Volo.Abp.Identity.HttpApi.Client\Volo.Abp.Identity.HttpApi.Client.csproj" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\modules\tenant-management\src\Volo.Abp.TenantManagement.HttpApi.Client\Volo.Abp.TenantManagement.HttpApi.Client.csproj" />
 		<!--mvc-client end-->
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\Hugin.HostShared\Hugin.HostShared.csproj" />
-		<ProjectReference Include="..\..\infrastructure\Hugin.Infrastructure.Cap\Hugin.Infrastructure.Cap.csproj" />
-		<ProjectReference Include="..\..\module\abp\src\Hugin.Module.Abp.Mvc\Hugin.Module.Abp.Mvc.csproj" />
-		<ProjectReference Include="..\..\module\abp\src\Volo.Abp.AspNetCore.MultiStadium\Volo.Abp.AspNetCore.MultiStadium.csproj" />
-		<ProjectReference Include="..\..\module\cache\src\Hugin.Module.Cache.CsRedis\Hugin.Module.Cache.CsRedis.csproj" />
-		<ProjectReference Include="..\..\src\Hugin.Identity.HttpApi.Client\Hugin.Identity.HttpApi.Client.csproj" />
-		<ProjectReference Include="..\..\src\Hugin.Sample.Application\Hugin.Sample.Application.csproj" />
-		<ProjectReference Include="..\..\src\Hugin.Sample.EntityFrameworkCore\Hugin.Sample.EntityFrameworkCore.csproj" />
-		<ProjectReference Include="..\..\src\Hugin.Sample.HttpApi\Hugin.Sample.HttpApi.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

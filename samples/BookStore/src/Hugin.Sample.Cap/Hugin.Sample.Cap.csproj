@@ -7,11 +7,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\host\Hugin.HostShared\Hugin.HostShared.csproj" />
+		<ProjectReference Include="..\Hugin.Sample.Domain\Hugin.Sample.Domain.csproj" />
 		<PackageReference Include="DotNetCore.CAP" Version="3.1.2" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\..\host\Hugin.HostShared\Hugin.HostShared.csproj" />
-		<ProjectReference Include="..\Hugin.Sample.Domain\Hugin.Sample.Domain.csproj" />
-	</ItemGroup>
 </Project>

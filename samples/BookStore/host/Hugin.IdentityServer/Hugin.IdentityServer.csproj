@@ -7,6 +7,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Hugin.HostShared\Hugin.HostShared.csproj" />
+		<ProjectReference Include="..\..\module\abp\src\Hugin.Module.Abp.Mvc\Hugin.Module.Abp.Mvc.csproj" />
+		<ProjectReference Include="..\..\module\abp\src\Volo.Abp.OAuth.Gitlab\Volo.Abp.OAuth.Gitlab.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Identity.EntityFrameworkCore\Hugin.Identity.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Sample.Application.Contracts\Hugin.Sample.Application.Contracts.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
@@ -45,15 +51,6 @@
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\modules\tenant-management\src\Volo.Abp.TenantManagement.Application\Volo.Abp.TenantManagement.Application.csproj" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\modules\tenant-management\src\Volo.Abp.TenantManagement.HttpApi\Volo.Abp.TenantManagement.HttpApi.csproj" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\modules\tenant-management\src\Volo.Abp.TenantManagement.Web\Volo.Abp.TenantManagement.Web.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\Hugin.HostShared\Hugin.HostShared.csproj" />
-		<ProjectReference Include="..\..\module\abp\src\Hugin.Module.Abp.Mvc\Hugin.Module.Abp.Mvc.csproj" />
-		<ProjectReference Include="..\..\module\abp\src\Volo.Abp.OAuth.Gitlab\Volo.Abp.OAuth.Gitlab.csproj" />
-		<ProjectReference Include="..\..\src\Hugin.Identity.EntityFrameworkCore\Hugin.Identity.EntityFrameworkCore.csproj" />
-		<ProjectReference Include="..\..\src\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
-		<ProjectReference Include="..\..\src\Hugin.Sample.Application.Contracts\Hugin.Sample.Application.Contracts.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

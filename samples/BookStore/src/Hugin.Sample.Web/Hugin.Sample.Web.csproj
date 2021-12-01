@@ -12,15 +12,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Hugin.Sample.HttpApi\Hugin.Sample.HttpApi.csproj" />
 		<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="5.0.*" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.AutoMapper\Volo.Abp.AutoMapper.csproj" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared\Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.csproj" />
 	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\Hugin.Sample.HttpApi\Hugin.Sample.HttpApi.csproj" />
-	</ItemGroup>
-
+	
 	<ItemGroup>
 		<EmbeddedResource Include="Localization\Json\*.json" />
 	</ItemGroup>
