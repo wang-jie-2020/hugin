@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     /*
      * 这个例子演示的是分布式事件操作

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace LG.NetCore.Sample.Migrations
+namespace Hugin.Sample.Migrations
 {
     public partial class AppendStadium : Migration
     {

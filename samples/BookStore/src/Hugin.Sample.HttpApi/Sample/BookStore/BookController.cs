@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Volo.Abp.Application.Dtos;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     /// <summary>
     /// SampleController

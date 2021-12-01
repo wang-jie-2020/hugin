@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace LG.NetCore.Application.Validates
+namespace Hugin.Application.Validates
 {
     /// <summary>
     /// 标注值类型不可为默认值

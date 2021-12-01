@@ -1,11 +1,10 @@
 ﻿using System.Reflection;
-using LG.NetCore.Sample.Localization;
+using Hugin.Sample.Localization;
 using Volo.Abp.Localization;
-using PermissionDefinitionProvider = LG.NetCore.Application.Permissions.PermissionDefinitionProvider;
 
-namespace LG.NetCore.Sample.Permissions
+namespace Hugin.Sample.Permissions
 {
-    public class SamplePermissionDefinitionProvider : PermissionDefinitionProvider
+    public class SamplePermissionDefinitionProvider : Hugin.Application.Permissions.PermissionDefinitionProvider
     {
         protected override LocalizableString L(string name)
         {

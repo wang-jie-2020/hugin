@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.Conventions;
 
-namespace LG.NetCore.Mvc.Conventions
+namespace Hugin.Mvc.Conventions
 {
     public class LGServiceConvention : AbpServiceConvention
     {

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Domain.Repository
+namespace Hugin.Domain.Repository
 {
     /// <summary>
     /// 仓储扩展方法类

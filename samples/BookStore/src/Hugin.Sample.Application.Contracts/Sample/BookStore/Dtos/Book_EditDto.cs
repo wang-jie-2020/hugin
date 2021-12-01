@@ -1,10 +1,10 @@
-﻿using LG.NetCore.Application.Dtos;
-using LG.NetCore.Application.Validates;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Hugin.Application.Dtos;
+using Hugin.Application.Validates;
 
-namespace LG.NetCore.Sample.BookStore.Dtos
+namespace Hugin.Sample.BookStore.Dtos
 {
     public class BookEditOutput : IHoused<BookEditDto>
     {

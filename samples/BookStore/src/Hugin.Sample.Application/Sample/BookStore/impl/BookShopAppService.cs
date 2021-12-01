@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Daos;
-using LG.NetCore.Sample.BookStore.Dtos;
-using LG.NetCore.Sample.BookStore.Permissions;
+using Hugin.Sample.BookStore.Daos;
+using Hugin.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore.Permissions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +15,7 @@ using Volo.Abp.Application.Dtos;
 using Volo.Abp.Data;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     /*
      * 这个例子演示的是重新集成的crud

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     public enum BookType
     {

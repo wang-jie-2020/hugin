@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Application.Filters
+namespace Hugin.Application.Filters
 {
     /// <summary>
     /// 标记查询字段

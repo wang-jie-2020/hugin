@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore
+﻿namespace Hugin
 {
     public static class MultiTenancyConsts
     {

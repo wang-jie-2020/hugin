@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 using Volo.Abp.Caching;
 using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Cache.CsRedis
+namespace Hugin.Cache.CsRedis
 {
     /*
      *  Note:不过度封装，封装内容只是考虑技术水平和常用

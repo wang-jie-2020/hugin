@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 
-namespace LG.NetCore.Identity.EntityFrameworkCore
+namespace Hugin.Identity.EntityFrameworkCore
 {
     public static class IdentityDbContextModelCreatingExtensions
     {

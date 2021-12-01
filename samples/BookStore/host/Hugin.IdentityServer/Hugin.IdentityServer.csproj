@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
-		<RootNamespace>LG.NetCore.IdentityServer</RootNamespace>
+		<RootNamespace>Hugin.IdentityServer</RootNamespace>
 		<PreserveCompilationReferences>true</PreserveCompilationReferences>
 	</PropertyGroup>
 

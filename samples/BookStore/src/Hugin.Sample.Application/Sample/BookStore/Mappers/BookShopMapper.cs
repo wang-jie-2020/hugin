@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using LG.NetCore.Sample.BookStore.Ctos;
-using LG.NetCore.Sample.BookStore.Daos;
-using LG.NetCore.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore.Ctos;
+using Hugin.Sample.BookStore.Daos;
+using Hugin.Sample.BookStore.Dtos;
 
-namespace LG.NetCore.Sample.BookStore.Mappers
+namespace Hugin.Sample.BookStore.Mappers
 {
     public class BookShopMapper : Profile
     {

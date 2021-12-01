@@ -1,4 +1,4 @@
-﻿using LG.NetCore.Identity.EntityFrameworkCore;
+﻿using Hugin.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
@@ -9,7 +9,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 
-namespace LG.NetCore.IdentityServer.EntityFrameworkCore
+namespace Hugin.IdentityServer.EntityFrameworkCore
 {
     public class IdentityServerHostMigrationsDbContext : AbpDbContext<IdentityServerHostMigrationsDbContext>
     {

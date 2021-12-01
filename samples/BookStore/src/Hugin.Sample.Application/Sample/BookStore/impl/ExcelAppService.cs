@@ -1,15 +1,15 @@
-﻿using Magicodes.ExporterAndImporter.Core;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using LG.NetCore.Infrastructure.Exporting;
+using Hugin.Infrastructure.Exporting;
+using Magicodes.ExporterAndImporter.Core;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     [SwaggerTag("Excel")]
     public class ExcelAppService : BaseAppService

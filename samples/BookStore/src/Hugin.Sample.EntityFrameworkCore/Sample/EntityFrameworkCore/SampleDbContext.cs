@@ -1,10 +1,10 @@
-﻿using LG.NetCore.EntityFrameworkCore;
-using LG.NetCore.Sample.BookStore;
-using LG.NetCore.Sample.Stadiums;
+﻿using Hugin.EntityFrameworkCore;
+using Hugin.Sample.BookStore;
+using Hugin.Sample.Stadiums;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 
-namespace LG.NetCore.Sample.EntityFrameworkCore
+namespace Hugin.Sample.EntityFrameworkCore
 {
     [ConnectionStringName(SampleConsts.DbProperties.ConnectionStringName)]
     public class SampleDbContext : LGDbContext<SampleDbContext>

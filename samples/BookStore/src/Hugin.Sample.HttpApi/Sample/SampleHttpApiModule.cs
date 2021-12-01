@@ -1,11 +1,11 @@
-﻿using LG.NetCore.Sample.Localization;
+﻿using Hugin.Sample.Localization;
 using Localization.Resources.AbpUi;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcModule),

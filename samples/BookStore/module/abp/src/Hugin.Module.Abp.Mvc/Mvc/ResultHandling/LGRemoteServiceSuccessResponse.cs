@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Mvc.ResultHandling
+﻿namespace Hugin.Mvc.ResultHandling
 {
     public class LGRemoteServiceSuccessResponse
     {

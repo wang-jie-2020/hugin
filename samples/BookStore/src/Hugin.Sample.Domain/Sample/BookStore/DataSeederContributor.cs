@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
-using LG.NetCore.Domain.Entities;
-using LG.NetCore.Domain.Repository;
+using Hugin.Domain.Entities;
+using Hugin.Domain.Repository;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Guids;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     public class DataSeederContributor : IDataSeedContributor, ITransientDependency
     {

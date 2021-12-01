@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using LG.NetCore.Infrastructure.Helpers;
+using Hugin.Infrastructure.Helpers;
 using Volo.Abp;
 using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Localization;
 
-namespace LG.NetCore.Application.Permissions
+namespace Hugin.Application.Permissions
 {
     /*
      * 设计上按照三层权限组织的，例:

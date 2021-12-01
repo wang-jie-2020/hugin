@@ -1,7 +1,7 @@
-﻿using LG.NetCore.Sample.Localization;
+﻿using Hugin.Sample.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI.RazorPages;
 
-namespace LG.NetCore.Web.Pages
+namespace Hugin.Web.Pages
 {
     public abstract class BasePageModel : AbpPageModel
     {

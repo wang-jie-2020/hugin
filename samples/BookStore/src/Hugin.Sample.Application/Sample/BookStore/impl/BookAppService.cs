@@ -1,18 +1,18 @@
-﻿using LG.NetCore.Sample.BookStore.Daos;
-using LG.NetCore.Sample.BookStore.Dtos;
-using LG.NetCore.Sample.BookStore.Permissions;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Swashbuckle.AspNetCore.Annotations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hugin.Sample.BookStore.Daos;
+using Hugin.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore.Permissions;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     /*
      *  这个例子演示的是abp的crud集成，不完全匹配实际需要

@@ -1,7 +1,7 @@
-﻿using LG.NetCore.Sample.Localization;
+﻿using Hugin.Sample.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI.RazorPages;
 
-namespace LG.NetCore.Sample.Web.Pages
+namespace Hugin.Sample.Web.Pages
 {
     /* Inherit your PageModel classes from this class.
      */

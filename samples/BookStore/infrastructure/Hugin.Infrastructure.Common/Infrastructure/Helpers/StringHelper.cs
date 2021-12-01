@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LG.NetCore.Infrastructure.Helpers
+namespace Hugin.Infrastructure.Helpers
 {
     public static class StringHelper
     {

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Dtos;
-using LG.NetCore.Sample.BookStore.Permissions;
+using Hugin.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore.Permissions;
 using Microsoft.AspNetCore.Authorization;
 using Swashbuckle.AspNetCore.Annotations;
 using Volo.Abp.Application.Dtos;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     /*
      * 这个例子演示的是不做集成时的crud

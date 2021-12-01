@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using Volo.Abp;
 using Volo.Abp.Domain.Entities.Auditing;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     /// <summary>
     /// 作者

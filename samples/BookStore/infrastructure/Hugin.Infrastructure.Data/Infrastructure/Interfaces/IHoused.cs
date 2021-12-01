@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Infrastructure.Interfaces
+﻿namespace Hugin.Infrastructure.Interfaces
 {
     public interface IHoused<T>
     {

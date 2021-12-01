@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace LG.NetCore.Sample.EntityFrameworkCore
+namespace Hugin.Sample.EntityFrameworkCore
 {
     public class
         SampleHostMigrationsDbContextFactory : IDesignTimeDbContextFactory<

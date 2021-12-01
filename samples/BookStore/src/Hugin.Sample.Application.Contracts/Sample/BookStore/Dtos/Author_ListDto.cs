@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using Volo.Abp.Application.Dtos;
 
-namespace LG.NetCore.Sample.BookStore.Dtos
+namespace Hugin.Sample.BookStore.Dtos
 {
     //public class AuthorOutput : IHoused<AuthorDto>
     //{

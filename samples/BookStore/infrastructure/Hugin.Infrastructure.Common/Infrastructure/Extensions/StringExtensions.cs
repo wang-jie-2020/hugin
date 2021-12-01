@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Infrastructure.Extensions
+namespace Hugin.Infrastructure.Extensions
 {
     public static class StringExtensions
     {

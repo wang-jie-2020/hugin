@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     /*
      * 在abp的设计中，仓储接口的设计是在Domain中的，它在EFCore中实现

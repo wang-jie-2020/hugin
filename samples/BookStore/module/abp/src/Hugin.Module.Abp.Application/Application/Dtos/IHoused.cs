@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Application.Dtos
+﻿namespace Hugin.Application.Dtos
 {
     public interface IHoused<T>
     {

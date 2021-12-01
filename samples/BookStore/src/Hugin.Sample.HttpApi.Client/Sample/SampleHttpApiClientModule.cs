@@ -2,7 +2,7 @@
 using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     [DependsOn(
         typeof(AbpHttpClientModule),

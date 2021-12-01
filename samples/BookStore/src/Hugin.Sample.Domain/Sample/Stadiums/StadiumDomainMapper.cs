@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Volo.Abp.MultiStadium;
 
-namespace LG.NetCore.Sample.Stadiums
+namespace Hugin.Sample.Stadiums
 {
     public class StadiumDomainMapper : Profile
     {

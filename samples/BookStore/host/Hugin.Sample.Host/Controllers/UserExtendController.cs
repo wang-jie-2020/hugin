@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
-using LG.NetCore.Identity.Users;
+using Hugin.Identity.Users;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Identity;
 using Volo.Abp.TenantManagement;
 
-namespace LG.NetCore.Sample.Controllers
+namespace Hugin.Sample.Controllers
 {
     [Area("identity")]
     [ControllerName("UserExtend")]

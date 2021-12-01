@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using LG.NetCore.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore.Dtos;
 
-namespace LG.NetCore.Sample.Web.Pages.BookStore.Books
+namespace Hugin.Sample.Web.Pages.BookStore.Books
 {
     public class BookMapper : Profile
     {

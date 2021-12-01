@@ -1,7 +1,7 @@
-﻿using LG.NetCore.Sample.EntityFrameworkCore;
+﻿using Hugin.Sample.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     [DependsOn(
         typeof(SampleEntityFrameworkCoreTestModule)

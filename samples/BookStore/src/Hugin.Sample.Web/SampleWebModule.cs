@@ -1,5 +1,5 @@
-﻿using LG.NetCore.Sample.BookStore.Permissions;
-using LG.NetCore.Sample.Localization;
+﻿using Hugin.Sample.BookStore.Permissions;
+using Hugin.Sample.Localization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AspNetCore.Mvc.Localization;
@@ -10,7 +10,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 
-namespace LG.NetCore.Sample.Web
+namespace Hugin.Sample.Web
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcUiThemeSharedModule),

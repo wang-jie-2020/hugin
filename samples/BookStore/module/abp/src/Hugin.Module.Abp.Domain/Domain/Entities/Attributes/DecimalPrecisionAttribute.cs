@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Domain.Entities.Attributes
+namespace Hugin.Domain.Entities.Attributes
 {
     /// <summary>
     /// Decimal精度

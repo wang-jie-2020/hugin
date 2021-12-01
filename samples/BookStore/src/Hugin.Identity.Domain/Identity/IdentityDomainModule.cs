@@ -1,7 +1,7 @@
 ﻿using Volo.Abp.Domain;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Identity
+namespace Hugin.Identity
 {
     [DependsOn(
         typeof(AbpDddDomainModule)

@@ -1,8 +1,8 @@
-﻿using LG.NetCore.Sample.Localization;
+﻿using Hugin.Sample.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     [ApiExplorerSettings(GroupName = "sample")]
     public abstract class BaseController : AbpController

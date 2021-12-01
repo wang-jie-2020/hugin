@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.SettingManagement;
 
-namespace LG.NetCore.IdentityServer.Controllers
+namespace Hugin.IdentityServer.Controllers
 {
     /*
      *  1.SettingDefinitionProvider 定义，虽然在示例中是在Domain定义的，但在现在的结构下，通过模块的ApplicationContracts和DomainShared或许更好

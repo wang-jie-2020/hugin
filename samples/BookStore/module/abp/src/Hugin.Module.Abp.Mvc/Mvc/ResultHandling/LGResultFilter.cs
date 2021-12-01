@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Volo.Abp.Http;
 
-namespace LG.NetCore.Mvc.ResultHandling
+namespace Hugin.Mvc.ResultHandling
 {
     /*
      *  因abp的httpClient在设计时未考虑到可能出现的封装，故不再封装

@@ -1,15 +1,15 @@
-﻿using LG.NetCore.Application.Services;
-using LG.NetCore.Domain.Entities;
-using LG.NetCore.Infrastructure.Exporting;
-using LG.NetCore.Sample.Localization;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Hugin.Application.Services;
+using Hugin.Domain.Entities;
+using Hugin.Infrastructure.Exporting;
+using Hugin.Sample.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     public abstract class BaseCrudStopAppService<TEntity, TKey, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput>
         : BaseCrudStopAppService<TEntity, TKey, TEntityDto, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput, TCreateOrUpdateInput>

@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Application.Permissions
+namespace Hugin.Application.Permissions
 {
     public interface IPermissionDefine
     {

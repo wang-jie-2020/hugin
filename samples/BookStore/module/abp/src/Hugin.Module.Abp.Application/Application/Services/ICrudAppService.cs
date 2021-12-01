@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Application.Services
+﻿namespace Hugin.Application.Services
 {
     public interface ICrudAppService<TEntity, TGetOutputDto, TGetEditOutputDto, TKey, in TGetListInput, in TCreateOrUpdateInput>
         : ICrudAppService<TEntity, TGetOutputDto, TGetOutputDto, TGetEditOutputDto, TKey, TGetListInput, TCreateOrUpdateInput, TCreateOrUpdateInput>

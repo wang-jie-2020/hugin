@@ -1,6 +1,6 @@
 ﻿using Magicodes.ExporterAndImporter.Excel;
 
-namespace LG.NetCore.Infrastructure.Exporting
+namespace Hugin.Infrastructure.Exporting
 {
     [ExcelExporter(TableStyle = OfficeOpenXml.Table.TableStyles.Light10, AutoCenter = true, AutoFitAllColumn = true)]
     [ExcelImporter(IsLabelingError = true)]

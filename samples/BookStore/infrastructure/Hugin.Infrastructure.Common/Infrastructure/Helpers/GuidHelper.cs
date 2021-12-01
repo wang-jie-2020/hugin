@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Infrastructure.Helpers
+namespace Hugin.Infrastructure.Helpers
 {
     /// <summary>
     /// COMB（有序的Guid，Guid与时间混合型）类型操作类

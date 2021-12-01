@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Etos;
+using Hugin.Sample.BookStore.Etos;
 using Swashbuckle.AspNetCore.Annotations;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Uow;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     /*
      * 这个例子演示的是本地事件操作

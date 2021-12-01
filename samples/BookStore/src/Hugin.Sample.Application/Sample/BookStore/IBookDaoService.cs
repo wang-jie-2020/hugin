@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using LG.NetCore.Sample.BookStore.Daos;
+using Hugin.Sample.BookStore.Daos;
 using Volo.Abp.DependencyInjection;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     public interface IBookDaoService : ITransientDependency
     {

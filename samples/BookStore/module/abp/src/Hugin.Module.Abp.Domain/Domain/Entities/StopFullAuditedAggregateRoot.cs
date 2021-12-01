@@ -1,7 +1,7 @@
 ﻿using System;
 using Volo.Abp.Domain.Entities.Auditing;
 
-namespace LG.NetCore.Domain.Entities
+namespace Hugin.Domain.Entities
 {
     public abstract class StopFullAuditedAggregateRoot<TKey> : FullAuditedAggregateRoot<TKey>, IStopAudited
     {

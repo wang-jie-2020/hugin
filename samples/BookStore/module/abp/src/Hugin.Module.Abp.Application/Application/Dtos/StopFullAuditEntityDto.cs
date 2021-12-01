@@ -1,8 +1,8 @@
-﻿using LG.NetCore.Domain.Entities;
-using System;
+﻿using System;
+using Hugin.Domain.Entities;
 using Volo.Abp.Application.Dtos;
 
-namespace LG.NetCore.Application.Dtos
+namespace Hugin.Application.Dtos
 {
     public abstract class StopFullAuditEntityDto<TKey> : FullAuditedEntityDto<TKey>, IStopAudited
     {

@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Sample.BookStore
+﻿namespace Hugin.Sample.BookStore
 {
     public static partial class BookStoreConsts
     {

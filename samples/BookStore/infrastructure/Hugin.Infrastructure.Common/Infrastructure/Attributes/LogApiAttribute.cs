@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace LG.NetCore.Infrastructure.Attributes
+namespace Hugin.Infrastructure.Attributes
 {
     /// <summary>
     /// aop-log

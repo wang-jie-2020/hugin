@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Etos;
+using Hugin.Sample.BookStore.Etos;
 using Volo.Abp.EventBus;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     public class BookStoreManager : BaseDomainManager,
         IBookStoreManager,

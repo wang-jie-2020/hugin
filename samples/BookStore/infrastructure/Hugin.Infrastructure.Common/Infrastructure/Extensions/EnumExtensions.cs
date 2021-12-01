@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Infrastructure.Extensions
+namespace Hugin.Infrastructure.Extensions
 {
     /// <summary>
     /// 枚举扩展方法类

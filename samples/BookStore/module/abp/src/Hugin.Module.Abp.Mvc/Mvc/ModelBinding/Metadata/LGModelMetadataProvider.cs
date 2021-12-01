@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 using Microsoft.Extensions.Options;
 using Volo.Abp.AspNetCore.Mvc.ModelBinding.Metadata;
 
-namespace LG.NetCore.Mvc.ModelBinding.Metadata
+namespace Hugin.Mvc.ModelBinding.Metadata
 {
     public class LGModelMetadataProvider : AbpModelMetadataProvider
     {

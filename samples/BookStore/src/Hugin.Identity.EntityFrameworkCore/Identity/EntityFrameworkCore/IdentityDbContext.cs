@@ -2,7 +2,7 @@
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace LG.NetCore.Identity.EntityFrameworkCore
+namespace Hugin.Identity.EntityFrameworkCore
 {
     [ConnectionStringName("Default")]
     public class IdentityDbContext : AbpDbContext<IdentityDbContext>

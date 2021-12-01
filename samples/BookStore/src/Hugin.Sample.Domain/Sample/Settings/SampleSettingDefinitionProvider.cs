@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Settings;
 
-namespace LG.NetCore.Sample.Settings
+namespace Hugin.Sample.Settings
 {
     public class SampleSettingDefinitionProvider : SettingDefinitionProvider
     {

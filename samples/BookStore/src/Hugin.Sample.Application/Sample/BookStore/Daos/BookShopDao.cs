@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LG.NetCore.Sample.BookStore.Daos
+namespace Hugin.Sample.BookStore.Daos
 {
     public class BookShopDao
     {

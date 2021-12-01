@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Sample.BookStore.Btos
+namespace Hugin.Sample.BookStore.Btos
 {
     public class BookJobArgs
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Domain.Entities
+namespace Hugin.Domain.Entities
 {
     public interface IStopAudited : IStop
     {

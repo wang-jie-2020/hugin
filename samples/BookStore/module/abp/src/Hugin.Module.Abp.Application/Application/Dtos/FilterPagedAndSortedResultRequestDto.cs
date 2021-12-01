@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Application.Dtos;
 
-namespace LG.NetCore.Application.Dtos
+namespace Hugin.Application.Dtos
 {
     public class FilterPagedAndSortedResultRequestDto : PagedAndSortedResultRequestDto
     {

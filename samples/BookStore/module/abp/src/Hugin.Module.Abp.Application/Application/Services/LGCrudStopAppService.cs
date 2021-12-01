@@ -1,13 +1,13 @@
-﻿using LG.NetCore.Application.Dtos;
-using LG.NetCore.Domain.Entities;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Hugin.Application.Dtos;
+using Hugin.Domain.Entities;
 using Volo.Abp;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Application.Services
+namespace Hugin.Application.Services
 {
     /// <summary>
     ///  stop的application基类

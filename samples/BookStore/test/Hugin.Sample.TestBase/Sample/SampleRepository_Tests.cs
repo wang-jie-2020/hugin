@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     /* Write your custom repository tests like that, in this project, as abstract classes.
      * Then inherit these abstract classes from EF Core & MongoDB test projects.

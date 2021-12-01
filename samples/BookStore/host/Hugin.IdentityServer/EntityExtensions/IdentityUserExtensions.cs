@@ -2,7 +2,7 @@
 using Volo.Abp.Data;
 using Volo.Abp.Identity;
 
-namespace LG.NetCore.IdentityServer.EntityExtensions
+namespace Hugin.IdentityServer.EntityExtensions
 {
     public static class IdentityUserExtensions
     {

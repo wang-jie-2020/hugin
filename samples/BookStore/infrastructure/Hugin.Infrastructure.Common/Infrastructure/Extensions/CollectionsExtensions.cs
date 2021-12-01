@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace LG.NetCore.Infrastructure.Extensions
+namespace Hugin.Infrastructure.Extensions
 {
     public static class CollectionsExtensions
     {

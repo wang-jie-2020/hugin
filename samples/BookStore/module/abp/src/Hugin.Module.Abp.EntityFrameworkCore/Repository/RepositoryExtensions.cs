@@ -6,7 +6,7 @@ using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
 using Z.EntityFramework.Plus;
 
-namespace LG.NetCore.Repository
+namespace Hugin.Repository
 {
     /// <summary>
     /// 仓储扩展方法类

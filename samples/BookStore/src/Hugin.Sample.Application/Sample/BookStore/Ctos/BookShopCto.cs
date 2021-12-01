@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using LG.NetCore.Sample.BookStore.Daos;
+using Hugin.Sample.BookStore.Daos;
 using Volo.Abp.Caching;
 using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Sample.BookStore.Ctos
+namespace Hugin.Sample.BookStore.Ctos
 {
     /// <summary>
     /// BookShop Cache

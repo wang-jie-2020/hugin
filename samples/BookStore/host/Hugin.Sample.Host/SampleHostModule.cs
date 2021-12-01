@@ -1,16 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
 using DotNetCore.CAP;
 using DotNetCore.CAP.Internal;
 using Hangfire;
 using Hangfire.MySql;
-using LG.NetCore.Cache.CsRedis;
-using LG.NetCore.Domain.Entities;
-using LG.NetCore.Identity;
-using LG.NetCore.Infrastructure.Cap;
-using LG.NetCore.Mvc;
-using LG.NetCore.Sample.EntityFrameworkCore;
-using LG.NetCore.Sample.Localization;
-using LG.NetCore.Sample.Security;
-using LG.NetCore.Sample.Swagger;
+using Hugin.Cache.CsRedis;
+using Hugin.Domain.Entities;
+using Hugin.Identity;
+using Hugin.Infrastructure.Cap;
+using Hugin.Mvc;
+using Hugin.Sample.EntityFrameworkCore;
+using Hugin.Sample.Localization;
+using Hugin.Sample.Security;
+using Hugin.Sample.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -19,11 +24,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.MultiStadium;
 using Volo.Abp.AspNetCore.Mvc;
@@ -50,7 +50,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.Threading;
 using Volo.Abp.VirtualFileSystem;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     [DependsOn(
         //引入服务

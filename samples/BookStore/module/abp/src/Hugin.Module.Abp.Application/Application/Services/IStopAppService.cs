@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace LG.NetCore.Application.Services
+namespace Hugin.Application.Services
 {
     public interface IStopAppService<in TKey>
     {

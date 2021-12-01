@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 
-namespace LG.NetCore.Infrastructure.Extensions
+namespace Hugin.Infrastructure.Extensions
 {
     public static class ReflectionExtensions
     {

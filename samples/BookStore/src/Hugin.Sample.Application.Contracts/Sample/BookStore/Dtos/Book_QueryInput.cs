@@ -1,6 +1,6 @@
-﻿using LG.NetCore.Application.Dtos;
+﻿using Hugin.Application.Dtos;
 
-namespace LG.NetCore.Sample.BookStore.Dtos
+namespace Hugin.Sample.BookStore.Dtos
 {
     public class BookQueryInput : FilterPagedAndSortedResultRequestDto
     {

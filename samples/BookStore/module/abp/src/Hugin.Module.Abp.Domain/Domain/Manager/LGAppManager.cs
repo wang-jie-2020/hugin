@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Domain.Services;
 using Volo.Abp.MultiStadium;
 using Volo.Abp.ObjectMapping;
 
-namespace LG.NetCore.Domain.Manager
+namespace Hugin.Domain.Manager
 {
     public abstract class LGAppManager : DomainService
     {

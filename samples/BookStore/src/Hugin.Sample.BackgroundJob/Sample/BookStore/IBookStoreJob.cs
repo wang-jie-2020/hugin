@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Btos;
+using Hugin.Sample.BookStore.Btos;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     public interface IBookStoreJob
     {

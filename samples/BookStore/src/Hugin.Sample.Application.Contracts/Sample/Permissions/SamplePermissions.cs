@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Reflection;
 
-namespace LG.NetCore.Sample.Permissions
+namespace Hugin.Sample.Permissions
 {
     internal class SamplePermissions
     {

@@ -1,6 +1,6 @@
-﻿using LG.NetCore.Sample.BookStore.impl;
+﻿using Hugin.Sample.BookStore.impl;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     public class AuthorManager_Tests : SampleDomainTestBase
     {

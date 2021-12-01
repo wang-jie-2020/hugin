@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     public interface IBookStoreEvent
     {

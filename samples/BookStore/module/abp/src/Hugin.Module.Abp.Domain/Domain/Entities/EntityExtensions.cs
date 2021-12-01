@@ -3,7 +3,7 @@ using System.Reflection;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Domain.Entities
+namespace Hugin.Domain.Entities
 {
     public static class EntityExtensions
     {

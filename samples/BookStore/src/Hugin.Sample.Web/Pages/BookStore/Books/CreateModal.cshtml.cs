@@ -4,13 +4,13 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore;
-using LG.NetCore.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore;
+using Hugin.Sample.BookStore.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Form;
 
-namespace LG.NetCore.Sample.Web.Pages.BookStore.Books
+namespace Hugin.Sample.Web.Pages.BookStore.Books
 {
     public class CreateModalModel : BasePageModel
     {

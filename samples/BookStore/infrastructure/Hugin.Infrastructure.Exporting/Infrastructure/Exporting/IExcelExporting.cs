@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace LG.NetCore.Infrastructure.Exporting
+namespace Hugin.Infrastructure.Exporting
 {
     public interface IExcelExporting
     {

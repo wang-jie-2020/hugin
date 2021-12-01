@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace LG.NetCore.Web
+namespace Hugin.Web
 {
     public class Startup
     {

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Volo.Abp.Application.Dtos;
 
-namespace LG.NetCore.Application.Services
+namespace Hugin.Application.Services
 {
     public interface IQueryAppService<TEntity, TGetOutputDto, in TKey, in TGetListInput>
         : IQueryAppService<TEntity, TGetOutputDto, TGetOutputDto, TKey, TGetListInput>

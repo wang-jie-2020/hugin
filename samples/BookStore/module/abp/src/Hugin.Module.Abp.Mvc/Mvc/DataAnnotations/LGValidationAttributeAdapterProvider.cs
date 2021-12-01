@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.DataAnnotations;
 using Microsoft.Extensions.Localization;
-using System.ComponentModel.DataAnnotations;
 using Volo.Abp.AspNetCore.Mvc.DataAnnotations;
 
-namespace LG.NetCore.Mvc.DataAnnotations
+namespace Hugin.Mvc.DataAnnotations
 {
     public class LGValidationAttributeAdapterProvider : AbpValidationAttributeAdapterProvider
     {

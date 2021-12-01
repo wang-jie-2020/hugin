@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Caching;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Cache.CsRedis
+namespace Hugin.Cache.CsRedis
 {
     [DependsOn(
         typeof(AbpCachingModule)

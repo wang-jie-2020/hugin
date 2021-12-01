@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using Volo.Abp.Domain.Entities;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     /// <summary>
     /// 书店售卖书籍

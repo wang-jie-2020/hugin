@@ -1,8 +1,8 @@
-﻿using LG.NetCore.Sample;
+﻿using Hugin.Sample;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Ui.Branding;
 
-namespace LG.NetCore.Web
+namespace Hugin.Web
 {
     [Dependency(ReplaceServices = true)]
     public class SampleBrandingProvider : DefaultBrandingProvider

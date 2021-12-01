@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc.Controllers;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Collections.Generic;
 
-namespace LG.NetCore.Sample.Swagger
+namespace Hugin.Sample.Swagger
 {
     public class StadiumHeaderFilter : IOperationFilter
     {

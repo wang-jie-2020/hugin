@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Sample.BookStore.Permissions
+﻿namespace Hugin.Sample.BookStore.Permissions
 {
     public partial class BookStorePermissions
     {

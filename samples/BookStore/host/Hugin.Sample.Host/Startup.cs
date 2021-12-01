@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     public class Startup
     {

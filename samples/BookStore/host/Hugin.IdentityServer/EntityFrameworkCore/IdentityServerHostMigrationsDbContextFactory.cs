@@ -1,10 +1,10 @@
-﻿using LG.NetCore.Sample.IdentityMappingExtensions;
+﻿using System.IO;
+using Hugin.IdentityServer.IdentityMappingExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using System.IO;
 
-namespace LG.NetCore.IdentityServer.EntityFrameworkCore
+namespace Hugin.IdentityServer.EntityFrameworkCore
 {
     public class IdentityServerHostMigrationsDbContextFactory : IDesignTimeDbContextFactory<IdentityServerHostMigrationsDbContext>
     {

@@ -7,7 +7,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 
-namespace LG.NetCore.Web
+namespace Hugin.Web
 {
     public class Program
     {

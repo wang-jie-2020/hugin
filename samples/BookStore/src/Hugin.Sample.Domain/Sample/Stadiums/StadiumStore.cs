@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.MultiStadium;
 
-namespace LG.NetCore.Sample.Stadiums
+namespace Hugin.Sample.Stadiums
 {
     public class StadiumStore : BaseDomainManager, IStadiumStore
     {

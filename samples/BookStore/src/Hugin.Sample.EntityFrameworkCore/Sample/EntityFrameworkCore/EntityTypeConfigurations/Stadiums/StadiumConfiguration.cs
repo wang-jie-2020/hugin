@@ -1,9 +1,9 @@
-﻿using LG.NetCore.Sample.Stadiums;
+﻿using Hugin.Sample.Stadiums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
-namespace LG.NetCore.Sample.EntityFrameworkCore.EntityTypeConfigurations.Stadiums
+namespace Hugin.Sample.EntityFrameworkCore.EntityTypeConfigurations.Stadiums
 {
     public class StadiumConfiguration : IEntityTypeConfiguration<Stadium>
     {

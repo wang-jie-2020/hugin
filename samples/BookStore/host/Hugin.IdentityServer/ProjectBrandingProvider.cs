@@ -1,7 +1,7 @@
 ﻿using Volo.Abp.DependencyInjection;
 using Volo.Abp.Ui.Branding;
 
-namespace LG.NetCore.IdentityServer
+namespace Hugin.IdentityServer
 {
     [Dependency(ReplaceServices = true)]
     public class ProjectBrandingProvider : DefaultBrandingProvider

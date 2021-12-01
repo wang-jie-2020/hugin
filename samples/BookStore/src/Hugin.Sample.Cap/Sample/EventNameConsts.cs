@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Sample
+﻿namespace Hugin.Sample
 {
     internal static class EventNameConsts
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace LG.NetCore.IdentityServer.Migrations
+namespace Hugin.IdentityServer.Migrations
 {
     public partial class Initial : Migration
     {

@@ -1,14 +1,14 @@
-﻿using LG.NetCore.Infrastructure.Exporting;
-using LG.NetCore.Sample.Localization;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using LG.NetCore.Application.Services;
+using Hugin.Application.Services;
+using Hugin.Infrastructure.Exporting;
+using Hugin.Sample.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     public abstract class BaseCrudAppService<TEntity, TKey, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput>
            : BaseCrudAppService<TEntity, TKey, TEntityDto, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput, TCreateOrUpdateInput>

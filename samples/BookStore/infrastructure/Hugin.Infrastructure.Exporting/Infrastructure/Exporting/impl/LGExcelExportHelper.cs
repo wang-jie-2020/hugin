@@ -1,12 +1,11 @@
-﻿using Magicodes.ExporterAndImporter.Core;
-using Magicodes.ExporterAndImporter.Core.Extension;
-using Magicodes.ExporterAndImporter.Excel.Utility;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Magicodes.ExporterAndImporter.Core;
+using Magicodes.ExporterAndImporter.Core.Extension;
+using Magicodes.ExporterAndImporter.Excel.Utility;
 
-namespace LG.NetCore.Infrastructure.Exporting.impl
+namespace Hugin.Infrastructure.Exporting.impl
 {
     public class LGExcelExportHelper<T> : ExportHelper<T> where T : class
     {

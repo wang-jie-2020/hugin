@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using LG.NetCore.Domain.Entities;
+using Hugin.Domain.Entities;
 using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     /// <summary>
     /// 书店

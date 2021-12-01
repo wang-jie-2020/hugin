@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Options;
-using System.Threading.Tasks;
 using Volo.Abp.AspNetCore.ExceptionHandling;
 using Volo.Abp.AspNetCore.Mvc.ExceptionHandling;
 using Volo.Abp.Json;
 
-namespace LG.NetCore.Mvc.ExceptionHandling
+namespace Hugin.Mvc.ExceptionHandling
 {
     public class LGExceptionFilter : AbpExceptionFilter
     {

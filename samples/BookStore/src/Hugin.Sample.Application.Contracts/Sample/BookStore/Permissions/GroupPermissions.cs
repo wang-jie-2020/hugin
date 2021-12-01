@@ -1,8 +1,8 @@
-﻿using LG.NetCore.Application.Permissions;
-using LG.NetCore.Sample.Permissions;
+﻿using Hugin.Application.Permissions;
+using Hugin.Sample.Permissions;
 using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Sample.BookStore.Permissions
+namespace Hugin.Sample.BookStore.Permissions
 {
     /// <summary>
     /// <see cref="SamplePermissionDefinitionProvider"/>

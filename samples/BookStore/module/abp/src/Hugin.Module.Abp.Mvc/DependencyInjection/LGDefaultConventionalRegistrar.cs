@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Volo.Abp.DependencyInjection;
 
-namespace LG.NetCore.DependencyInjection
+namespace Hugin.DependencyInjection
 {
     public class LGDefaultConventionalRegistrar : DefaultConventionalRegistrar
     {

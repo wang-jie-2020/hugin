@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using CSRedis;
 
-namespace LG.NetCore.Infrastructure.Cache.CsRedis
+namespace Hugin.Infrastructure.Cache.CsRedis
 {
     public static class RedisClientFactory
     {

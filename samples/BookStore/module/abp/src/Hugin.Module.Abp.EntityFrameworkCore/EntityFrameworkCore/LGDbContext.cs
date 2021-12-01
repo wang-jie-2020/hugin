@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
-using LG.NetCore.Domain.Entities;
+using Hugin.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Volo.Abp;
@@ -9,7 +9,7 @@ using Volo.Abp.MultiStadium;
 using Volo.Abp.MultiTenancy;
 using Volo.Abp.Users;
 
-namespace LG.NetCore.EntityFrameworkCore
+namespace Hugin.EntityFrameworkCore
 {
     public abstract class LGDbContext<TDbContext> : AbpDbContext<TDbContext> where TDbContext : DbContext
     {

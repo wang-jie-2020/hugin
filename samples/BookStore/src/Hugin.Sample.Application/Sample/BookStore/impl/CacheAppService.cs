@@ -1,12 +1,12 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using LG.NetCore.Cache.CsRedis;
-using LG.NetCore.Sample.BookStore.Ctos;
-using LG.NetCore.Sample.BookStore.Dtos;
+using Hugin.Cache.CsRedis;
+using Hugin.Sample.BookStore.Ctos;
+using Hugin.Sample.BookStore.Dtos;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     /*
      * 这个例子演示的是缓存操作

@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using LG.NetCore.Sample;
-using LG.NetCore.Sample.Localization;
-using LG.NetCore.Sample.Web;
+using Hugin.Sample;
+using Hugin.Sample.Localization;
+using Hugin.Sample.Web;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,7 +31,7 @@ using Volo.Abp.UI.Navigation;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
 
-namespace LG.NetCore.Web
+namespace Hugin.Web
 {
     [DependsOn(
         //引入服务

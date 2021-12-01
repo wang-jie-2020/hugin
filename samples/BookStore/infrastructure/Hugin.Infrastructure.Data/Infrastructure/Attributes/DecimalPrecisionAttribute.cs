@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Infrastructure.Attributes
+namespace Hugin.Infrastructure.Attributes
 {
     /// <summary>
     /// Decimal精度

@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Infrastructure
+﻿namespace Hugin.Infrastructure
 {
     public class Singleton<T> where T : new()
     {

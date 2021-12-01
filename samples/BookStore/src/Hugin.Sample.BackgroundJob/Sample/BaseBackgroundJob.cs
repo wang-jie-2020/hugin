@@ -6,7 +6,7 @@ using Volo.Abp.Guids;
 using Volo.Abp.Timing;
 using Volo.Abp.Uow;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
 #if DEBUG
     [Queue(Global.Identifier)]

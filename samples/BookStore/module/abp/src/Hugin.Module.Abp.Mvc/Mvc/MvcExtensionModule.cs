@@ -1,6 +1,6 @@
-﻿using LG.NetCore.DependencyInjection;
-using LG.NetCore.Mvc.Conventions;
-using LG.NetCore.Mvc.ExceptionHandling;
+﻿using Hugin.DependencyInjection;
+using Hugin.Mvc.Conventions;
+using Hugin.Mvc.ExceptionHandling;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -13,7 +13,7 @@ using Volo.Abp.AspNetCore.Mvc.Conventions;
 using Volo.Abp.AspNetCore.Mvc.ExceptionHandling;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Mvc
+namespace Hugin.Mvc
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcModule)

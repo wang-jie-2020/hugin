@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Sample.Settings
+﻿namespace Hugin.Sample.Settings
 {
     public static class SampleSettings
     {

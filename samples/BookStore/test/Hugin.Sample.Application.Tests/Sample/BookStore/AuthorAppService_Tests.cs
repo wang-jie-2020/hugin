@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore.Dtos;
 using Shouldly;
 using Xunit;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     public class AuthorAppService_Tests : SampleApplicationTestBase
     {

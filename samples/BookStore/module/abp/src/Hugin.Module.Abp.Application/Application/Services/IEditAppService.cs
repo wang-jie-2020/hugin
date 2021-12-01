@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace LG.NetCore.Application.Services
+namespace Hugin.Application.Services
 {
     public interface IEditAppService<TGetOutputDto, TGetEditOutputDto, TKey, in TCreateOrUpdateInput>
     : IEditAppService<TGetOutputDto, TGetEditOutputDto, TKey, TCreateOrUpdateInput, TCreateOrUpdateInput>

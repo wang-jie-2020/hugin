@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace LG.NetCore.Infrastructure.Helpers
+namespace Hugin.Infrastructure.Helpers
 {
     public static class SecurityHelper
     {

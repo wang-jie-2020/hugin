@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace LG.NetCore.Infrastructure.Helpers
+namespace Hugin.Infrastructure.Helpers
 {
     public static class ReflectionHelper
     {

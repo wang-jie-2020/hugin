@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Permissions;
-using LG.NetCore.Sample.Localization;
+using Hugin.Sample.BookStore.Permissions;
+using Hugin.Sample.Localization;
 using Volo.Abp.UI.Navigation;
 
-namespace LG.NetCore.Sample.Web
+namespace Hugin.Sample.Web
 {
     public class SampleMenuContributor : IMenuContributor
     {

@@ -4,7 +4,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
-		<RootNamespace>LG.NetCore.Sample</RootNamespace>
+		<RootNamespace>Hugin.Sample</RootNamespace>
 		<PreserveCompilationReferences>true</PreserveCompilationReferences>
 	</PropertyGroup>
 

@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using LG.NetCore.Application.Dtos;
-using LG.NetCore.Application.Filters;
-using LG.NetCore.Domain.Entities;
-using LG.NetCore.Infrastructure.Extensions;
+using Hugin.Application.Dtos;
+using Hugin.Application.Filters;
+using Hugin.Domain.Entities;
+using Hugin.Infrastructure.Extensions;
 using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Auditing;
@@ -15,7 +14,7 @@ using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Application.Services
+namespace Hugin.Application.Services
 {
     /*
      *  ConfigureAwait(false)

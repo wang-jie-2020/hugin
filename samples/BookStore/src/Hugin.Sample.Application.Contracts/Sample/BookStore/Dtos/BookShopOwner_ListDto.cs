@@ -1,7 +1,7 @@
 ﻿using System;
 using Volo.Abp.Application.Dtos;
 
-namespace LG.NetCore.Sample.BookStore.Dtos
+namespace Hugin.Sample.BookStore.Dtos
 {
     public class BookShopOwnerDto : EntityDto<Guid>
     {

@@ -4,7 +4,7 @@ using Volo.Abp.DependencyInjection;
 using Volo.Abp.Identity.Settings;
 using Volo.Abp.SettingManagement;
 
-namespace LG.NetCore.IdentityServer.DataSeed
+namespace Hugin.IdentityServer.DataSeed
 {
     public class IdentityOptionsDataSeeder : IDataSeedContributor, ITransientDependency
     {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Magicodes.ExporterAndImporter.Excel;
 
-namespace LG.NetCore.Infrastructure.Exporting.impl
+namespace Hugin.Infrastructure.Exporting.impl
 {
     public class ExcelExporting : IExcelExporting
     {

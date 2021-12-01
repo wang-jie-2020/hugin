@@ -1,7 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace LG.NetCore.Sample.Swagger
+namespace Hugin.Sample.Swagger
 {
     public class EmptyDocumentFilter : IDocumentFilter
     {

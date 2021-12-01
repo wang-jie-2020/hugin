@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Sample.BookStore.Daos
+﻿namespace Hugin.Sample.BookStore.Daos
 {
     public class BookDao
     {

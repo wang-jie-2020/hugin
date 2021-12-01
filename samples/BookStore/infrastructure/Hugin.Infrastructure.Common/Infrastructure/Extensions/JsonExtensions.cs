@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace LG.NetCore.Infrastructure.Extensions
+namespace Hugin.Infrastructure.Extensions
 {
     /// <summary>
     /// JsonString的扩展方法类

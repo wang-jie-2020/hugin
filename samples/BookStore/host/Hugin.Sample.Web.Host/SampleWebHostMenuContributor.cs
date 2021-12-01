@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.Localization;
+using Hugin.Sample.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.Users;
 
-namespace LG.NetCore.Web
+namespace Hugin.Web
 {
     public class SampleWebHostMenuContributor : IMenuContributor
     {

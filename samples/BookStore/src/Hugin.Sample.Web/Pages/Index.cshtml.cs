@@ -1,4 +1,4 @@
-namespace LG.NetCore.Sample.Web.Pages
+namespace Hugin.Sample.Web.Pages
 {
     public class IndexModel : BasePageModel
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Sample.BookStore.Etos
+namespace Hugin.Sample.BookStore.Etos
 {
     public class BookErrorEventArgs
     {

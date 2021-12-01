@@ -1,9 +1,9 @@
-﻿using Magicodes.ExporterAndImporter.Excel;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Magicodes.ExporterAndImporter.Excel;
 
-namespace LG.NetCore.Infrastructure.Exporting.impl
+namespace Hugin.Infrastructure.Exporting.impl
 {
     public class LGExcelExporter : ExcelExporter
     {

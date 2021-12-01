@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using LG.NetCore.Sample.BookStore.Etos;
+using Hugin.Sample.BookStore.Etos;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
 
     public class BookStoreEvent : BaseCapEvent, IBookStoreEvent

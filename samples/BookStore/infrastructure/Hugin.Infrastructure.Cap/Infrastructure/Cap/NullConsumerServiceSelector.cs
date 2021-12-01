@@ -1,7 +1,7 @@
-﻿using DotNetCore.CAP.Internal;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DotNetCore.CAP.Internal;
 
-namespace LG.NetCore.Infrastructure.Cap
+namespace Hugin.Infrastructure.Cap
 {
     public class NullConsumerServiceSelector : IConsumerServiceSelector
     {

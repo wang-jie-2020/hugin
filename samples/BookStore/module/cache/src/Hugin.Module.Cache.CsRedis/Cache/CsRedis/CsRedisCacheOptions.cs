@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Cache.CsRedis
+﻿namespace Hugin.Cache.CsRedis
 {
     public class CsRedisCacheOptions
     {

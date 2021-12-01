@@ -1,12 +1,12 @@
-﻿using Hangfire;
-using LG.NetCore.Sample.BookStore.Btos;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Hangfire;
+using Hugin.Sample.BookStore.Btos;
+using Microsoft.Extensions.Logging;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Uow;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     public class BookStoreJob : BaseBackgroundJob, IBookStoreJob
     {

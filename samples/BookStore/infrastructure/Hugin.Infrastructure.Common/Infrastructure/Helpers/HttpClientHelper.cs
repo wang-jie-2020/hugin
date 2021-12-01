@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace LG.NetCore.Infrastructure.Helpers
+namespace Hugin.Infrastructure.Helpers
 {
     /// <summary>
     /// Http请求的帮助类

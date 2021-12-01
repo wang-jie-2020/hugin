@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Domain.Entities
+﻿namespace Hugin.Domain.Entities
 {
     public interface IStop
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Application.Dtos
+namespace Hugin.Application.Dtos
 {
     public class DefaultStopDto<TKey> : StopEntityDto<TKey>
     {

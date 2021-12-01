@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Sample.EntityFrameworkCore
+﻿namespace Hugin.Sample.EntityFrameworkCore
 {
     public abstract class SampleEntityFrameworkCoreTestBase : SampleTestBase<SampleEntityFrameworkCoreTestModule>
     {

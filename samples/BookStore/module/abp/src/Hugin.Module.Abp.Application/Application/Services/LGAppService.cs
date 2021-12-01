@@ -4,7 +4,7 @@ using Volo.Abp.AutoMapper;
 using Volo.Abp.EventBus.Local;
 using Volo.Abp.MultiStadium;
 
-namespace LG.NetCore.Application.Services
+namespace Hugin.Application.Services
 {
     public abstract class LGAppService : ApplicationService
     {

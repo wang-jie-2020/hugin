@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using LG.NetCore.IdentityServer.EntityExtensions;
+using Hugin.IdentityServer.EntityExtensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Volo.Abp.Identity;
@@ -11,7 +10,7 @@ using Volo.Abp.Security.Claims;
 using IdentityRole = Volo.Abp.Identity.IdentityRole;
 using IdentityUser = Volo.Abp.Identity.IdentityUser;
 
-namespace LG.NetCore.IdentityServer.Security
+namespace Hugin.IdentityServer.Security
 {
     public class LGUserClaimsPrincipalFactory : AbpUserClaimsPrincipalFactory
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LG.NetCore.Application.Dtos;
-using LG.NetCore.Application.Filters;
-using LG.NetCore.Infrastructure.Extensions;
+using Hugin.Application.Dtos;
+using Hugin.Application.Filters;
+using Hugin.Infrastructure.Extensions;
 
-namespace LG.NetCore.Sample.BookStore.Dtos
+namespace Hugin.Sample.BookStore.Dtos
 {
     //public class BookShopOutput : IHoused<BookShopDto>
     //{

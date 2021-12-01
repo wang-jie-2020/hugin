@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Infrastructure.Interfaces
+namespace Hugin.Infrastructure.Interfaces
 {
     public interface IStadium
     {

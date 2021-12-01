@@ -5,7 +5,7 @@ using Volo.Abp.Domain.Entities;
 using Volo.Abp.Http;
 using Volo.Abp.Validation;
 
-namespace LG.NetCore.Mvc.ExceptionHandling
+namespace Hugin.Mvc.ExceptionHandling
 {
     public class LGRemoteServiceErrorResponse : RemoteServiceErrorResponse
     {

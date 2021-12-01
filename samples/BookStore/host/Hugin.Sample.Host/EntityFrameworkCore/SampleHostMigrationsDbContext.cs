@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace LG.NetCore.Sample.EntityFrameworkCore
+namespace Hugin.Sample.EntityFrameworkCore
 {
     public class SampleHostMigrationsDbContext : AbpDbContext<SampleHostMigrationsDbContext>
     {

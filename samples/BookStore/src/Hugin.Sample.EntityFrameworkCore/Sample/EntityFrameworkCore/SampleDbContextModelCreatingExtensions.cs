@@ -1,12 +1,12 @@
-﻿using LG.NetCore.Domain.Entities.Attributes;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
+using Hugin.Domain.Entities.Attributes;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 
-namespace LG.NetCore.Sample.EntityFrameworkCore
+namespace Hugin.Sample.EntityFrameworkCore
 {
     public static class SampleDbContextModelCreatingExtensions
     {

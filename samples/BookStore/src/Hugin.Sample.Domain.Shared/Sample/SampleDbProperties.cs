@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Sample
+﻿namespace Hugin.Sample
 {
     public static partial class SampleConsts
     {

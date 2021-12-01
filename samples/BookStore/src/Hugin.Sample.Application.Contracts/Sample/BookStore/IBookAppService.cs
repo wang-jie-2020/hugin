@@ -1,9 +1,9 @@
 ﻿using System;
-using LG.NetCore.Sample.BookStore.Dtos;
+using Hugin.Sample.BookStore.Dtos;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
-namespace LG.NetCore.Sample.BookStore
+namespace Hugin.Sample.BookStore
 {
     /*
      * 虽然abp提供了一些基础封装ICrudAppService，但这些封装不太适合直接使用

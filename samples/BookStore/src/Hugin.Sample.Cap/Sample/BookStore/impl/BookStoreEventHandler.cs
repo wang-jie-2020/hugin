@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using DotNetCore.CAP;
-using LG.NetCore.Sample.BookStore.Etos;
+using Hugin.Sample.BookStore.Etos;
 
-namespace LG.NetCore.Sample.BookStore.impl
+namespace Hugin.Sample.BookStore.impl
 {
     /*
      *  通常情况下事务的处理和事务的发布不会在一起，这里只是做个例子

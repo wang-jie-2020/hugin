@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace LG.NetCore.Cache.CsRedis
+namespace Hugin.Cache.CsRedis
 {
     public static class CsRedisCacheExtensions
     {

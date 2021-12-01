@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 using Volo.Abp.AspNetCore.Mvc.Validation;
 
-namespace LG.NetCore.Mvc.ModelBinding.Metadata
+namespace Hugin.Mvc.ModelBinding.Metadata
 {
     /*
      *  我认为aspnetcore团队设计这块时，是推荐Mvc.Options.ModelMetadataDetailsProviders.Add(IValidationMetadataProvider myProvider)

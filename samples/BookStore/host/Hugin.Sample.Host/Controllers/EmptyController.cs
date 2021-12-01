@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace LG.NetCore.Sample.Controllers
+namespace Hugin.Sample.Controllers
 {
     [Route("api/empty/authorize")]
     public class EmptyController : AbpController

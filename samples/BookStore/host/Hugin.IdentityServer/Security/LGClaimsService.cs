@@ -4,8 +4,7 @@ using IdentityServer4.Services;
 using Microsoft.Extensions.Logging;
 using Volo.Abp.IdentityServer;
 
-
-namespace LG.NetCore.IdentityServer.Security
+namespace Hugin.IdentityServer.Security
 {
     public class LGClaimsService : AbpClaimsService
     {

@@ -1,7 +1,7 @@
-﻿using LG.NetCore.Domain.Entities;
+﻿using Hugin.Domain.Entities;
 using Volo.Abp.Application.Dtos;
 
-namespace LG.NetCore.Application.Dtos
+namespace Hugin.Application.Dtos
 {
     public abstract class StopEntityDto<TKey> : EntityDto<TKey>, IStop
     {

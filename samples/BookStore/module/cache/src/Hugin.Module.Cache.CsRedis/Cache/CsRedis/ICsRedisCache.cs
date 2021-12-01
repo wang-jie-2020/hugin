@@ -4,7 +4,7 @@ using CSRedis;
 using JetBrains.Annotations;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace LG.NetCore.Cache.CsRedis
+namespace Hugin.Cache.CsRedis
 {
     public interface ICsRedisCache
     {

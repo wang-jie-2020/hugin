@@ -1,8 +1,8 @@
-﻿using LG.NetCore.Application.Services;
-using LG.NetCore.Sample.Localization;
+﻿using Hugin.Application.Services;
+using Hugin.Sample.Localization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LG.NetCore.Sample
+namespace Hugin.Sample
 {
     [ApiExplorerSettings(GroupName = ApiGroups.Sample)]
     public abstract class BaseAppService : LGAppService

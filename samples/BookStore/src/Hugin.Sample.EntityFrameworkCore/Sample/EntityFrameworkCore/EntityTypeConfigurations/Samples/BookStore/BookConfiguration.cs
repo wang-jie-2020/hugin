@@ -1,9 +1,9 @@
-﻿using LG.NetCore.Sample.BookStore;
+﻿using Hugin.Sample.BookStore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
-namespace LG.NetCore.Sample.EntityFrameworkCore.EntityTypeConfigurations.Samples.BookStore
+namespace Hugin.Sample.EntityFrameworkCore.EntityTypeConfigurations.Samples.BookStore
 {
     public class BookConfiguration : IEntityTypeConfiguration<Book>
     {
