@@ -136,14 +136,14 @@ namespace Hugin.Web
                 return;
             }
 
-#if DEBUG
-            Configure<AbpVirtualFileSystemOptions>(options =>
-            {
-                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain", Path.DirectorySeparatorChar)));
-                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application.Contracts", Path.DirectorySeparatorChar)));
-                options.FileSets.ReplaceEmbeddedByPhysical<SampleWebModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Web", Path.DirectorySeparatorChar)));
-            });
-#endif
+//#if DEBUG
+//            Configure<AbpVirtualFileSystemOptions>(options =>
+//            {
+//                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain", Path.DirectorySeparatorChar)));
+//                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application.Contracts", Path.DirectorySeparatorChar)));
+//                options.FileSets.ReplaceEmbeddedByPhysical<SampleWebModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Web", Path.DirectorySeparatorChar)));
+//            });
+//#endif
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)

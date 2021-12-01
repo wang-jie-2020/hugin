@@ -251,15 +251,15 @@ namespace Hugin.Sample
                 return;
             }
 
-#if DEBUG
-            Configure<AbpVirtualFileSystemOptions>(options =>
-            {
-                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain.Shared", Path.DirectorySeparatorChar)));
-                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain", Path.DirectorySeparatorChar)));
-                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application.Contracts", Path.DirectorySeparatorChar)));
-                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application", Path.DirectorySeparatorChar)));
-            });
-#endif
+//#if DEBUG
+//            Configure<AbpVirtualFileSystemOptions>(options =>
+//            {
+//                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain.Shared", Path.DirectorySeparatorChar)));
+//                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain", Path.DirectorySeparatorChar)));
+//                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application.Contracts", Path.DirectorySeparatorChar)));
+//                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application", Path.DirectorySeparatorChar)));
+//            });
+//#endif
 
             context.Services.AddAbpSwaggerGenWithOAuth(configuration["AuthServer:Authority"],
                     scopes: new Dictionary<string, string>
