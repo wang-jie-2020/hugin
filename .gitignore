@@ -256,5 +256,5 @@ paket-files/
 [Ll]og/
 [Ll]ogs/
 
-# temp jwt key
+# temporary jwt key
 *.jwk
