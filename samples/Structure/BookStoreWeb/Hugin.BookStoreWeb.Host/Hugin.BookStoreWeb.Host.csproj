@@ -10,8 +10,8 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
-		<ProjectReference Include="..\..\BookStore\Hugin.Sample.HttpApi.Client\Hugin.Sample.HttpApi.Client.csproj" />
-		<ProjectReference Include="..\Hugin.Sample.Web\Hugin.Sample.Web.csproj" />
+		<ProjectReference Include="..\..\BookStore\Hugin.BookStore.HttpApi.Client\Hugin.BookStore.HttpApi.Client.csproj" />
+		<ProjectReference Include="..\Hugin.BookStoreWeb.Web\Hugin.BookStoreWeb.Web.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />

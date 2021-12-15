@@ -12,7 +12,7 @@
 		<ProjectReference Include="..\..\_extensions\Volo.Abp.OAuth.Gitlab\Volo.Abp.OAuth.Gitlab.csproj" />
 		<ProjectReference Include="..\Hugin.Identity.EntityFrameworkCore\Hugin.Identity.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
-		<ProjectReference Include="..\..\BookStore\Hugin.Sample.Application.Contracts\Hugin.Sample.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\BookStore\Hugin.BookStore.Application.Contracts\Hugin.BookStore.Application.Contracts.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />

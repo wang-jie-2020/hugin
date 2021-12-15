@@ -13,10 +13,10 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Exporting\Hugin.Infrastructure.Exporting.csproj" />
-		<ProjectReference Include="..\Hugin.Sample.Application.Contracts\Hugin.Sample.Application.Contracts.csproj" />
-		<ProjectReference Include="..\Hugin.Sample.Domain\Hugin.Sample.Domain.csproj" />
-		<ProjectReference Include="..\Hugin.Sample.BackgroundJob\Hugin.Sample.BackgroundJob.csproj" />
-		<ProjectReference Include="..\Hugin.Sample.Cap\Hugin.Sample.Cap.csproj" />
+		<ProjectReference Include="..\Hugin.BookStore.Application.Contracts\Hugin.BookStore.Application.Contracts.csproj" />
+		<ProjectReference Include="..\Hugin.BookStore.Domain\Hugin.BookStore.Domain.csproj" />
+		<ProjectReference Include="..\Hugin.BookStore.BackgroundJob\Hugin.BookStore.BackgroundJob.csproj" />
+		<ProjectReference Include="..\Hugin.BookStore.Cap\Hugin.BookStore.Cap.csproj" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.9" />
 		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
