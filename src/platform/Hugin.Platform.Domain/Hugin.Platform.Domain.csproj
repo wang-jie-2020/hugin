@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Ddd.Domain" Version="4.1.2" />
+		<PackageReference Include="Volo.Abp.AutoMapper" Version="4.1.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\modules\cache\src\LG.Cache.CsRedis\LG.Cache.CsRedis.csproj" />
+		<ProjectReference Include="..\LG.NetCore.Platform.Data\LG.NetCore.Platform.Data.csproj" />
+		<ProjectReference Include="..\LG.NetCore.Platform.Domain.Shared\LG.NetCore.Platform.Domain.Shared.csproj" />
+	</ItemGroup>
+
+</Project>

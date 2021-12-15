@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<DocumentationFile>bin\$(Configuration)\LG.NetCore.Terminal.HttpApi.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.1.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\host\LG.NetCore.HostShared\LG.NetCore.HostShared.csproj" />
+		<ProjectReference Include="..\LG.NetCore.Terminal.Application.Contracts\LG.NetCore.Terminal.Application.Contracts.csproj" />
+	</ItemGroup>
+
+</Project>

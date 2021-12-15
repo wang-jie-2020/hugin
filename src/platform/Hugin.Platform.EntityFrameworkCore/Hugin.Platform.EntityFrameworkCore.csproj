@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="4.1.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\modules\abp\src\LG.Abp.EntityFrameworkCore\LG.Abp.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\LG.NetCore.Platform.Domain\LG.NetCore.Platform.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

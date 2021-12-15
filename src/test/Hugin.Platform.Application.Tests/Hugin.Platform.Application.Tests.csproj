@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\platform\LG.NetCore.Platform.Application\LG.NetCore.Platform.Application.csproj" />
+		<ProjectReference Include="..\LG.NetCore.Platform.Domain.Tests\LG.NetCore.Platform.Domain.Tests.csproj" />
+	</ItemGroup>
+
+</Project>

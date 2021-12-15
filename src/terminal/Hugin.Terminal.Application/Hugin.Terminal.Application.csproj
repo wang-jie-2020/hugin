@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<DocumentationFile>bin\$(Configuration)\LG.NetCore.Terminal.Application.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
+		<PackageReference Include="Volo.Abp.AutoMapper" Version="4.1.2" />
+		<PackageReference Include="Volo.Abp.Ddd.Application" Version="4.1.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\host\LG.NetCore.HostShared\LG.NetCore.HostShared.csproj" />
+		<ProjectReference Include="..\..\platform\LG.NetCore.Platform.Domain\LG.NetCore.Platform.Domain.csproj" />
+		<ProjectReference Include="..\LG.NetCore.Terminal.Application.Contracts\LG.NetCore.Terminal.Application.Contracts.csproj" />
+		<ProjectReference Include="..\LG.NetCore.Terminal.BackgroundJob\LG.NetCore.Terminal.BackgroundJob.csproj" />
+		<ProjectReference Include="..\LG.NetCore.Terminal.Cap\LG.NetCore.Terminal.Cap.csproj" />
+	</ItemGroup>
+
+</Project>
