@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Common\Hugin.Infrastructure.Common.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Domain\Hugin.Abp.Domain.csproj" />
+		<ProjectReference Include="..\Hugin.Sample.Domain.Shared\Hugin.Sample.Domain.Shared.csproj" />
+		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Domain\Volo.Abp.Ddd.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

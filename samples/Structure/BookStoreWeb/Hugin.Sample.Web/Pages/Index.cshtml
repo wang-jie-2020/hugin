@@ -1,0 +1,9 @@
+﻿@page
+@using Hugin.Sample.Localization
+@using Microsoft.Extensions.Localization
+@model Hugin.Sample.Web.Pages.IndexModel
+@inject IStringLocalizer<SampleResource> L
+@{
+}
+<h1>Sample</h1>
+<p>@L["SamplePageMessage"]</p>
