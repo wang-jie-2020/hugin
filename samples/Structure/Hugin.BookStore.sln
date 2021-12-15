@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hugin.Infrastructure.Log.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hugin.Infrastructure.Exporting.MagicIE", "_infrastructure\Hugin.Infrastructure.Exporting.MagicIE\Hugin.Infrastructure.Exporting.MagicIE.csproj", "{B011BD65-43EB-4434-A954-69208858CB49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hugin.Cache.CsRedis", "_extensions\Hugin.Cache.CsRedis\Hugin.Cache.CsRedis.csproj", "{FE9058E1-5860-4FC5-BAFF-208CA74E17C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{B011BD65-43EB-4434-A954-69208858CB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B011BD65-43EB-4434-A954-69208858CB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B011BD65-43EB-4434-A954-69208858CB49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9058E1-5860-4FC5-BAFF-208CA74E17C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9058E1-5860-4FC5-BAFF-208CA74E17C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9058E1-5860-4FC5-BAFF-208CA74E17C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9058E1-5860-4FC5-BAFF-208CA74E17C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{7A8EE763-C19B-4627-AE2E-037A026FCFC6} = {32B4D9F5-064C-48E1-856B-E15635D6CAE3}
 		{3F5C1778-3E61-4EE8-9D2D-6391E1974CBE} = {32B4D9F5-064C-48E1-856B-E15635D6CAE3}
 		{B011BD65-43EB-4434-A954-69208858CB49} = {32B4D9F5-064C-48E1-856B-E15635D6CAE3}
+		{FE9058E1-5860-4FC5-BAFF-208CA74E17C9} = {C512EB78-45D3-44B8-B6F7-649224873A75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03AD04CE-9418-4E4F-ACA5-221DFAD10580}
