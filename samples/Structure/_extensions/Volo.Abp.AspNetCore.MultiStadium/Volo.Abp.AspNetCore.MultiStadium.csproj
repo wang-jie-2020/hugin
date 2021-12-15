@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<RootNamespace />
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.AspNetCore\Volo.Abp.AspNetCore.csproj" />
+		<ProjectReference Include="..\Volo.Abp.MultiStadium\Volo.Abp.MultiStadium.csproj" />
+	</ItemGroup>
+
+</Project>
