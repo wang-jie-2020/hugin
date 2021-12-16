@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Hugin.Sample
 {
     [ApiExplorerSettings(GroupName = ApiGroups.Sample)]
-    public abstract class BaseAppService : LGAppService
+    public abstract class BaseAppService : HuginApplicationService
     {
         protected BaseAppService()
         {

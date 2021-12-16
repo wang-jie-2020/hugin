@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using Hugin.Infrastructure.Exporting;
+using Hugin.Infrastructure.Exporting.Magicodes;
 using Magicodes.ExporterAndImporter.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

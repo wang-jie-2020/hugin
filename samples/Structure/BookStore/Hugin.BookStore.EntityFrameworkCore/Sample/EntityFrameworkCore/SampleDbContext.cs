@@ -7,7 +7,7 @@ using Volo.Abp.Data;
 namespace Hugin.Sample.EntityFrameworkCore
 {
     [ConnectionStringName(SampleConsts.DbProperties.ConnectionStringName)]
-    public class SampleDbContext : LGDbContext<SampleDbContext>
+    public class SampleDbContext : HuginDbContext<SampleDbContext>
     {
         #region Samples
 

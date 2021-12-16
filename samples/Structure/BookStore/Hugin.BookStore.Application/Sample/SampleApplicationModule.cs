@@ -1,5 +1,5 @@
 ﻿using Hugin.Infrastructure.Exporting;
-using Hugin.Infrastructure.Exporting.impl;
+using Hugin.Infrastructure.Exporting.Magicodes;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Application;
 using Volo.Abp.AutoMapper;
@@ -29,7 +29,7 @@ namespace Hugin.Sample
                 options.AddMaps<SampleApplicationModule>(validate: false);
             });
 
-            context.Services.AddTransient<IExcelExporting, ExcelExporting>();
+            context.Services.AddTransient<IExcelExporting, MagicodesExcelExporting>();
         }
     }
 }

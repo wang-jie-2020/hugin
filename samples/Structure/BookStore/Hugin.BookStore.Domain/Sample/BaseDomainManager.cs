@@ -2,7 +2,7 @@
 
 namespace Hugin.Sample
 {
-    public abstract class BaseDomainManager : LGAppManager
+    public abstract class BaseDomainManager : HuginDomainManager
     {
         protected BaseDomainManager()
         {
