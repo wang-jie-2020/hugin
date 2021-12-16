@@ -1,9 +1,10 @@
-﻿using Volo.Abp.Modularity;
+﻿using Hugin.BookStore;
+using Volo.Abp.Modularity;
 
 namespace Hugin.Sample
 {
     [DependsOn(
-        typeof(SampleDomainModule)
+        typeof(BookShopDomainModule)
     )]
     public class SampleCapModule : AbpModule
     {

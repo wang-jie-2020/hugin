@@ -1,4 +1,5 @@
-﻿using Hugin.Infrastructure.Exporting;
+﻿using Hugin.BookStore;
+using Hugin.Infrastructure.Exporting;
 using Hugin.Infrastructure.Exporting.Magicodes;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Application;
@@ -10,7 +11,7 @@ namespace Hugin.Sample
     [DependsOn(
         typeof(AbpDddApplicationModule),
         typeof(AbpAutoMapperModule),
-        typeof(SampleDomainModule),
+        typeof(BookShopDomainModule),
         typeof(SampleApplicationContractsModule),
         typeof(SampleBackgroundJobModule),
         typeof(SampleCapModule)

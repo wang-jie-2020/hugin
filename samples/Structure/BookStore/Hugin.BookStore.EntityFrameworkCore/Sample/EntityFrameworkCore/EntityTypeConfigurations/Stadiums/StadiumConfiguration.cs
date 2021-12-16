@@ -1,5 +1,5 @@
 ﻿using Hugin.BookStore;
-using Hugin.Stadiums;
+using Hugin.BookStore.Stadiums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Volo.Abp.EntityFrameworkCore.Modeling;

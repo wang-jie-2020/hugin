@@ -6,7 +6,7 @@ using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Domain.Repositories;
 
-namespace Hugin.Stadiums
+namespace Hugin.BookStore.Stadiums
 {
     public class DataSeederContributor : IDataSeedContributor, ITransientDependency
     {

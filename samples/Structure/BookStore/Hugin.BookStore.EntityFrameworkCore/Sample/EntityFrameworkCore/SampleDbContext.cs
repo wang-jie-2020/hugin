@@ -1,7 +1,7 @@
 ﻿using Hugin.BookStore;
+using Hugin.BookStore.Stadiums;
 using Hugin.EntityFrameworkCore;
 using Hugin.Sample.BookStore;
-using Hugin.Stadiums;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 

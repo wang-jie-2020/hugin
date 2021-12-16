@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.MultiStadium;
 
-namespace Hugin.Stadiums
+namespace Hugin.BookStore.Stadiums
 {
     public class StadiumStore : BaseDomainManager, IStadiumStore
     {

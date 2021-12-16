@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Volo.Abp.MultiStadium;
 
-namespace Hugin.Stadiums
+namespace Hugin.BookStore.Stadiums
 {
-    public class StadiumDomainMapper : Profile
+    public class StadiumMapper : Profile
     {
-        public StadiumDomainMapper()
+        public StadiumMapper()
         {
             CreateMap<Stadium, StadiumConfiguration>();
         }

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Hugin.BookStore;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 
-namespace Hugin.Stadiums
+namespace Hugin.BookStore.Stadiums
 {
     /// <summary>
     /// 场馆

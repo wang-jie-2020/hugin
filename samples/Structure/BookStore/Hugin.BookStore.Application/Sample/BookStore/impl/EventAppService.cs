@@ -36,7 +36,7 @@ namespace Hugin.Sample.BookStore.impl
             await LocalEventBus.PublishAsync(
                 new BookEventArgs
                 {
-                    Id = id
+                    BookId = id
                 }
             );
         }
@@ -54,14 +54,14 @@ namespace Hugin.Sample.BookStore.impl
             await LocalEventBus.PublishAsync(
                 new BookEventArgs
                 {
-                    Id = id
+                    BookId = id
                 }
             );
 
             await LocalEventBus.PublishAsync(
                 new BookErrorEventArgs
                 {
-                    Id = id
+                    BookId = id
                 }
             );
         }
@@ -82,7 +82,7 @@ namespace Hugin.Sample.BookStore.impl
             await LocalEventBus.PublishAsync(
                 new BookEventArgs
                 {
-                    Id = id
+                    BookId = id
                 }
             );
 
@@ -98,7 +98,7 @@ namespace Hugin.Sample.BookStore.impl
                     await LocalEventBus.PublishAsync(
                         new BookErrorEventArgs
                         {
-                            Id = id
+                            BookId = id
                         }
                     );
                 }

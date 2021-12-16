@@ -1,8 +1,8 @@
 ﻿using Volo.Abp.Settings;
 
-namespace Hugin.Settings
+namespace Hugin.BookStore.Settings
 {
-    public class SampleSettingDefinitionProvider : SettingDefinitionProvider
+    public class BookStoreSettingDefinitionProvider : SettingDefinitionProvider
     {
         public override void Define(ISettingDefinitionContext context)
         {
