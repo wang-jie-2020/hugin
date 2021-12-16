@@ -1,4 +1,4 @@
-﻿using Hugin.Sample.Localization;
+﻿using Hugin.BookStore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
@@ -9,7 +9,7 @@ namespace Hugin.Sample
     {
         protected BaseController()
         {
-            LocalizationResource = typeof(SampleResource);
+            LocalizationResource = typeof(BookStoreResource);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Hugin.BookStore;
 using Hugin.Sample.BookStore.Ctos;
 using Hugin.Sample.BookStore.Daos;
 using Hugin.Sample.BookStore.Dtos;

@@ -7,13 +7,14 @@ using DotNetCore.CAP;
 using DotNetCore.CAP.Internal;
 using Hangfire;
 using Hangfire.MySql;
+using Hugin.BookStore;
+using Hugin.BookStore.Localization;
 using Hugin.Cache.CsRedis;
 using Hugin.Domain.Entities;
 using Hugin.Identity;
 using Hugin.Infrastructure.Cap;
 using Hugin.Mvc;
 using Hugin.Sample.EntityFrameworkCore;
-using Hugin.Sample.Localization;
 using Hugin.Sample.Security;
 using Hugin.Sample.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -127,7 +128,7 @@ namespace Hugin.Sample
             context.Services.AddHangfire(options =>
             {
                 options.UseStorage(new MySqlStorage(
-                    configuration.GetConnectionString(SampleConsts.DbProperties.ConnectionStringName),
+                    configuration.GetConnectionString(BookStoreConsts.DbProperties.ConnectionStringName),
                     new MySqlStorageOptions
                     {
                         TablesPrefix = "hangfire."
@@ -152,7 +153,7 @@ namespace Hugin.Sample
 
             context.Services.AddCap(options =>
             {
-                options.UseMySql(configuration.GetConnectionString(SampleConsts.DbProperties.ConnectionStringName));
+                options.UseMySql(configuration.GetConnectionString(BookStoreConsts.DbProperties.ConnectionStringName));
                 options.UseRabbitMQ(config =>
                 {
                     config.HostName = configuration["RabbitMQ:HostName"];
@@ -181,7 +182,7 @@ namespace Hugin.Sample
 
             Configure<AbpLocalizationOptions>(options =>
             {
-                options.DefaultResourceType = typeof(SampleResource);
+                options.DefaultResourceType = typeof(BookStoreResource);
                 options.Languages.Add(new LanguageInfo("en", "en", "English"));
                 options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
             });
@@ -215,7 +216,7 @@ namespace Hugin.Sample
                 options.ConventionalControllers
                     .Create(typeof(SampleApplicationModule).Assembly, opt =>
                     {
-                        opt.RootPath = SampleConsts.NameLower;
+                        opt.RootPath = BookStoreConsts.NameLower;
                     });
             });
 

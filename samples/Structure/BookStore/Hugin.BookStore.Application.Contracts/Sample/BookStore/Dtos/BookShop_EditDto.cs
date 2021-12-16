@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Hugin.Application.Dtos;
+using Hugin.BookStore;
 
 namespace Hugin.Sample.BookStore.Dtos
 {
@@ -21,14 +22,14 @@ namespace Hugin.Sample.BookStore.Dtos
         /// 编码
         /// </summary>
         [Required]
-        [MaxLength(SampleConsts.Lengths.Small)]
+        [MaxLength(BookStoreConsts.EntityLengths.Default)]
         public string Code { get; set; }
 
         /// <summary>
         /// 名称
         /// </summary>
         [Required]
-        [MaxLength(SampleConsts.Lengths.Small)]
+        [MaxLength(BookStoreConsts.EntityLengths.Default)]
         public string Name { get; set; }
 
         /// <summary>

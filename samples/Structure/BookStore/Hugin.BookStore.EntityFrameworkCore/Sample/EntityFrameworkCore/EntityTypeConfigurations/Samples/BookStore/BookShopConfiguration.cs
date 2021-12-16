@@ -1,4 +1,5 @@
-﻿using Hugin.Sample.BookStore;
+﻿using Hugin.BookStore;
+using Hugin.Sample.BookStore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Volo.Abp.EntityFrameworkCore.Modeling;
@@ -9,7 +10,7 @@ namespace Hugin.Sample.EntityFrameworkCore.EntityTypeConfigurations.Samples.Book
     {
         public void Configure(EntityTypeBuilder<BookShop> builder)
         {
-            builder.ToTable(SampleConsts.DbProperties.DbTablePrefix + nameof(BookShop));
+            builder.ToTable(BookStoreConsts.DbProperties.DbTablePrefix + nameof(BookShop));
             builder.ConfigureByConvention();
         }
     }

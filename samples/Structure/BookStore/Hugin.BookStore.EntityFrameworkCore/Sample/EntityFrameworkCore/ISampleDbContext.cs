@@ -1,9 +1,10 @@
-﻿using Volo.Abp.Data;
+﻿using Hugin.BookStore;
+using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace Hugin.Sample.EntityFrameworkCore
 {
-    [ConnectionStringName(SampleConsts.DbProperties.ConnectionStringName)]
+    [ConnectionStringName(BookStoreConsts.DbProperties.ConnectionStringName)]
     public interface ISampleDbContext : IEfCoreDbContext
     {
     }

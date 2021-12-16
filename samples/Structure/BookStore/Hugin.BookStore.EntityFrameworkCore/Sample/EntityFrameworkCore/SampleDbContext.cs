@@ -1,12 +1,13 @@
-﻿using Hugin.EntityFrameworkCore;
+﻿using Hugin.BookStore;
+using Hugin.EntityFrameworkCore;
 using Hugin.Sample.BookStore;
-using Hugin.Sample.Stadiums;
+using Hugin.Stadiums;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 
 namespace Hugin.Sample.EntityFrameworkCore
 {
-    [ConnectionStringName(SampleConsts.DbProperties.ConnectionStringName)]
+    [ConnectionStringName(BookStoreConsts.DbProperties.ConnectionStringName)]
     public class SampleDbContext : HuginDbContext<SampleDbContext>
     {
         #region Samples

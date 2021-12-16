@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hugin.BookStore;
 using Hugin.Sample.BookStore.Dtos;
 using Hugin.Sample.BookStore.Permissions;
 using Microsoft.AspNetCore.Authorization;

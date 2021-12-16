@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Hugin.Sample.Localization;
+using Hugin.BookStore.Localization;
 using Volo.Abp.Localization;
 
 namespace Hugin.Sample.Permissions
@@ -8,7 +8,7 @@ namespace Hugin.Sample.Permissions
     {
         protected override LocalizableString L(string name)
         {
-            return LocalizableString.Create<SampleResource>("Permission:" + name);
+            return LocalizableString.Create<BookStoreResource>("Permission:" + name);
         }
 
         protected override string RootPermission => SamplePermissions.RootName;

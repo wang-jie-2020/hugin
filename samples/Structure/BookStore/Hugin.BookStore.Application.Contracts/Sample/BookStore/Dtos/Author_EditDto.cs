@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Hugin.Application.Dtos;
+using Hugin.BookStore;
 
 namespace Hugin.Sample.BookStore.Dtos
 {
@@ -36,7 +37,7 @@ namespace Hugin.Sample.BookStore.Dtos
         /// <summary>
         /// 个人简介
         /// </summary>
-        [MaxLength(SampleConsts.Lengths.Big)]
+        [MaxLength(BookStoreConsts.EntityLengths.More)]
         [DisplayName("个人简介")]
         public string Profile { get; set; }
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Hugin.BookStore;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
 
@@ -9,7 +10,7 @@ namespace Hugin.Sample
         typeof(SampleApplicationContractsModule))]
     public class SampleHttpApiClientModule : AbpModule
     {
-        public const string RemoteServiceName = SampleConsts.Name;
+        public const string RemoteServiceName = BookStoreConsts.Name;
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {

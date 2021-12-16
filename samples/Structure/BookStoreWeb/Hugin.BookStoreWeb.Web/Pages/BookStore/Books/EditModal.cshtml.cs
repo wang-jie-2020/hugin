@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Hugin.BookStore;
+using Hugin.BookStore.Enums;
 using Hugin.Sample.BookStore;
 using Hugin.Sample.BookStore.Dtos;
 using Microsoft.AspNetCore.Mvc;

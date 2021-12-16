@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Hugin.Application.Dtos;
 using Hugin.Application.Validates;
+using Hugin.BookStore;
+using Hugin.BookStore.Enums;
 
 namespace Hugin.Sample.BookStore.Dtos
 {
@@ -23,7 +25,7 @@ namespace Hugin.Sample.BookStore.Dtos
         /// 名称
         /// </summary>
         [Required]
-        [MaxLength(SampleConsts.Lengths.Small)]
+        [MaxLength(BookStoreConsts.EntityLengths.Default)]
         [DisplayName("名称")]
         public string Name { get; set; }
 

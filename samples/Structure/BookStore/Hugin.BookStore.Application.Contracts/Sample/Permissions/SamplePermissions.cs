@@ -1,10 +1,11 @@
-﻿using Volo.Abp.Reflection;
+﻿using Hugin.BookStore;
+using Volo.Abp.Reflection;
 
 namespace Hugin.Sample.Permissions
 {
     internal class SamplePermissions
     {
-        public const string RootName = SampleConsts.Name;
+        public const string RootName = BookStoreConsts.Name;
 
         public static string[] GetAll()
         {

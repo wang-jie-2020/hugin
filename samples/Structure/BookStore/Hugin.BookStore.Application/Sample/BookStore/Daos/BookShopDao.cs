@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Hugin.BookStore;
 
 namespace Hugin.Sample.BookStore.Daos
 {

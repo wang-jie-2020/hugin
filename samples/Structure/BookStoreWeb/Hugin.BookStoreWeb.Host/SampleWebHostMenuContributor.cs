@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Hugin.Sample.Localization;
+using Hugin.BookStore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.UI.Navigation;
@@ -30,7 +30,7 @@ namespace Hugin.Web
         private void AddLogoutItemToMenu(MenuConfigurationContext context)
         {
             var currentUser = context.ServiceProvider.GetRequiredService<ICurrentUser>();
-            var l = context.GetLocalizer<SampleResource>();
+            var l = context.GetLocalizer<BookStoreResource>();
 
             if (currentUser.IsAuthenticated)
             {

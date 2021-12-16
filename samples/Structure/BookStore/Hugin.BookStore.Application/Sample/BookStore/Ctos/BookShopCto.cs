@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Hugin.BookStore;
 using Hugin.Sample.BookStore.Daos;
 using Volo.Abp.Caching;
 using Volo.Abp.MultiTenancy;

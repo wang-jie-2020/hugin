@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Hugin.Application.Services;
+using Hugin.BookStore.Localization;
 using Hugin.Infrastructure.Exporting;
-using Hugin.Sample.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
@@ -34,7 +34,7 @@ namespace Hugin.Sample
     {
         protected BaseCrudAppService(IRepository<TEntity, TKey> repository) : base(repository)
         {
-            LocalizationResource = typeof(SampleResource);
+            LocalizationResource = typeof(BookStoreResource);
             ObjectMapperContext = typeof(SampleApplicationModule);
         }
 

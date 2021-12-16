@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Hugin.BookStore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -14,8 +15,8 @@ namespace Hugin.Sample.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<SampleHostMigrationsDbContext>().UseMySql(
-                configuration.GetConnectionString(SampleConsts.DbProperties.ConnectionStringName),
-                ServerVersion.AutoDetect(configuration.GetConnectionString(SampleConsts.DbProperties.ConnectionStringName)));
+                configuration.GetConnectionString(BookStoreConsts.DbProperties.ConnectionStringName),
+                ServerVersion.AutoDetect(configuration.GetConnectionString(BookStoreConsts.DbProperties.ConnectionStringName)));
 
             return new SampleHostMigrationsDbContext(builder.Options);
         }

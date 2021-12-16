@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
+using Hugin.BookStore.Localization;
 using Hugin.Sample.BookStore.Permissions;
-using Hugin.Sample.Localization;
 using Volo.Abp.UI.Navigation;
 
 namespace Hugin.Sample.Web
@@ -17,7 +17,7 @@ namespace Hugin.Sample.Web
 
         private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
         {
-            var l = context.GetLocalizer<SampleResource>();
+            var l = context.GetLocalizer<BookStoreResource>();
 
             var sampleMenu = new ApplicationMenuItem(name: "Sample", displayName: l["Menu:Sample"]);
             context.Menu.AddItem(sampleMenu);

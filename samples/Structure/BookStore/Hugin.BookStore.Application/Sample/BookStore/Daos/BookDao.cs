@@ -1,4 +1,6 @@
-﻿namespace Hugin.Sample.BookStore.Daos
+﻿using Hugin.BookStore;
+
+namespace Hugin.Sample.BookStore.Daos
 {
     public class BookDao
     {

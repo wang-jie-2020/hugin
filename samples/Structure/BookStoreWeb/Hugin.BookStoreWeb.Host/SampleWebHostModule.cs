@@ -1,7 +1,8 @@
 using System;
 using System.IO;
+using Hugin.BookStore;
+using Hugin.BookStore.Localization;
 using Hugin.Sample;
-using Hugin.Sample.Localization;
 using Hugin.Sample.Web;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -62,8 +63,8 @@ namespace Hugin.Web
             context.Services.PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
             {
                 options.AddAssemblyResource(
-                    typeof(SampleResource),
-                    typeof(SampleDomainSharedModule).Assembly,
+                    typeof(BookStoreResource),
+                    typeof(BookStoreDomainSharedModule).Assembly,
                     typeof(SampleApplicationContractsModule).Assembly,
                     typeof(SampleWebModule).Assembly
                 ); ;

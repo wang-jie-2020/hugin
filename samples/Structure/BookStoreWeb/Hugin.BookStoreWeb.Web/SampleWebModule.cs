@@ -1,5 +1,5 @@
-﻿using Hugin.Sample.BookStore.Permissions;
-using Hugin.Sample.Localization;
+﻿using Hugin.BookStore.Localization;
+using Hugin.Sample.BookStore.Permissions;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AspNetCore.Mvc.Localization;
@@ -24,7 +24,7 @@ namespace Hugin.Sample.Web
             //AbpMvcDataAnnotationsLocalizationOptions似乎只在AbpTagHelperLocalizer中引用
             context.Services.PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
             {
-                options.AddAssemblyResource(typeof(SampleResource), typeof(SampleWebModule).Assembly);
+                options.AddAssemblyResource(typeof(BookStoreResource), typeof(SampleWebModule).Assembly);
             });
 
             PreConfigure<IMvcBuilder>(mvcBuilder =>
@@ -55,7 +55,7 @@ namespace Hugin.Sample.Web
                  *  但这种操作是否真的是必要的？毕竟模块下的本地化资源应该不太多
                  */
                 options.Resources
-                    .Get<SampleResource>()
+                    .Get<BookStoreResource>()
                     .AddVirtualJson("/Localization/Json");
             });
 

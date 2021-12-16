@@ -1,5 +1,5 @@
 ﻿using Hugin.Application.Services;
-using Hugin.Sample.Localization;
+using Hugin.BookStore.Localization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hugin.Sample
@@ -9,7 +9,7 @@ namespace Hugin.Sample
     {
         protected BaseAppService()
         {
-            LocalizationResource = typeof(SampleResource);
+            LocalizationResource = typeof(BookStoreResource);
             ObjectMapperContext = typeof(SampleApplicationModule);
         }
     }

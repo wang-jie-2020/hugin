@@ -1,4 +1,4 @@
-﻿using Hugin.Sample.Localization;
+﻿using Hugin.BookStore.Localization;
 using Localization.Resources.AbpUi;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AspNetCore.Mvc;
@@ -26,7 +26,7 @@ namespace Hugin.Sample
             Configure<AbpLocalizationOptions>(options =>
             {
                 options.Resources
-                    .Get<SampleResource>()
+                    .Get<BookStoreResource>()
                     .AddBaseTypes(typeof(AbpUiResource));
             });
         }

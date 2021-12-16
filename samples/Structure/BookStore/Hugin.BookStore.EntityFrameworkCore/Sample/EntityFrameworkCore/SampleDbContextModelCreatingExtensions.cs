@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
+using Hugin.BookStore;
 using Hugin.Domain.Entities.Attributes;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
@@ -17,8 +18,8 @@ namespace Hugin.Sample.EntityFrameworkCore
             Check.NotNull(builder, nameof(builder));
 
             var options = new SampleModelBuilderConfigurationOptions(
-                SampleConsts.DbProperties.DbTablePrefix,
-                SampleConsts.DbProperties.DbSchema);
+                BookStoreConsts.DbProperties.DbTablePrefix,
+                BookStoreConsts.DbProperties.DbSchema);
 
             optionsAction?.Invoke(options);
 

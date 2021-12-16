@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Hangfire;
+using Hugin.BookStore;
 using Hugin.Sample.BookStore.Btos;
 using Microsoft.Extensions.Logging;
 using Volo.Abp.Domain.Repositories;
