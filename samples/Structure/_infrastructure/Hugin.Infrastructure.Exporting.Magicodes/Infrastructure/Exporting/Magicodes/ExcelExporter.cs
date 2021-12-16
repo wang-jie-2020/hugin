@@ -9,7 +9,7 @@ namespace Hugin.Infrastructure.Exporting.Magicodes
     {
         public Task<byte[]> ExportAsBytes<T>(ICollection<T> dataItems) where T : class, new()
         {
-            var helper = new MagicodesExcelExportHelper<T>();
+            var helper = new ExcelExportHelper<T>();
 
             var type = typeof(T);
             var exportAttribute = type.GetCustomAttributes(true).SingleOrDefault(p => p is ExcelExporterAttribute);

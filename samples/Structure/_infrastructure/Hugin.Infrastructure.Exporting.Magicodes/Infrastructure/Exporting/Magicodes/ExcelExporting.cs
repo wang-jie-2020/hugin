@@ -8,7 +8,7 @@ using Magicodes.ExporterAndImporter.Excel;
 
 namespace Hugin.Infrastructure.Exporting.Magicodes
 {
-    public class MagicodesExcelExporting : IExcelExporting
+    public class ExcelExporting : IExcelExporting
     {
         public async Task<byte[]> ExportAsync<T>(List<T> data) where T : class, new()
         {

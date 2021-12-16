@@ -7,7 +7,7 @@ using Magicodes.ExporterAndImporter.Excel.Utility;
 
 namespace Hugin.Infrastructure.Exporting.Magicodes
 {
-    public class MagicodesExcelExportHelper<T> : ExportHelper<T> where T : class
+    public class ExcelExportHelper<T> : ExportHelper<T> where T : class
     {
         protected override List<PropertyInfo> SortedProperties
         {

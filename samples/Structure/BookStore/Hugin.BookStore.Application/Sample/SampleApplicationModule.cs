@@ -29,7 +29,7 @@ namespace Hugin.Sample
                 options.AddMaps<SampleApplicationModule>(validate: false);
             });
 
-            context.Services.AddTransient<IExcelExporting, MagicodesExcelExporting>();
+            context.Services.AddTransient<IExcelExporting, ExcelExporting>();
         }
     }
 }
