@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Hugin.BookStore;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Hugin.Sample.BookStore.impl
@@ -18,7 +19,7 @@ namespace Hugin.Sample.BookStore.impl
 
         public async Task PublishEventAsync()
         {
-            await _bookStoreEvent.PublishEventAsync();
+            await _bookStoreEvent.PublishBookStoreEventAsync();
         }
     }
 }

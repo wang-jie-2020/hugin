@@ -14,7 +14,7 @@ namespace Hugin.Sample
         typeof(BookShopDomainModule),
         typeof(SampleApplicationContractsModule),
         typeof(SampleBackgroundJobModule),
-        typeof(SampleCapModule)
+        typeof(BookStoreCapModule)
         )]
     public class SampleApplicationModule : AbpModule
     {

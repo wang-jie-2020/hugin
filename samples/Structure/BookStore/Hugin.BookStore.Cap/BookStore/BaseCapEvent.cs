@@ -6,7 +6,7 @@ using Volo.Abp.Guids;
 using Volo.Abp.Timing;
 using Volo.Abp.Uow;
 
-namespace Hugin.Sample
+namespace Hugin.BookStore
 {
     public abstract class BaseCapEvent : ITransientDependency
     {

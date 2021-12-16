@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Hugin.BookStore;
 using Hugin.BookStore.Etos;
-using Hugin.Sample.BookStore.Etos;
 using Swashbuckle.AspNetCore.Annotations;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Uow;

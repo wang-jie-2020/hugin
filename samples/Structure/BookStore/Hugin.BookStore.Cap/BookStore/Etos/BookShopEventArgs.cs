@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hugin.Sample.BookStore.Etos
+namespace Hugin.BookStore.Etos
 {
     public class BookShopEventArgs
     {

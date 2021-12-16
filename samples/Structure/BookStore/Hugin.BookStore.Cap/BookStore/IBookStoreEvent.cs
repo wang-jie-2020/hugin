@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 
-namespace Hugin.Sample.BookStore
+namespace Hugin.BookStore
 {
     public interface IBookStoreEvent
     {
-        Task PublishEventAsync();
+        Task PublishBookStoreEventAsync();
     }
 }
 
