@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hugin.BookStore.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace Hugin.Sample.EntityFrameworkCore
@@ -14,7 +15,7 @@ namespace Hugin.Sample.EntityFrameworkCore
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ConfigureSample();
+            modelBuilder.ConfigureBookStore();
         }
     }
 }

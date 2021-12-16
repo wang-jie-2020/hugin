@@ -1,16 +1,14 @@
-﻿using Hugin.BookStore;
-using Hugin.BookStore.Stadiums;
+﻿using Hugin.BookStore.Stadiums;
 using Hugin.EntityFrameworkCore;
-using Hugin.Sample.BookStore;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 
-namespace Hugin.Sample.EntityFrameworkCore
+namespace Hugin.BookStore.EntityFrameworkCore
 {
     [ConnectionStringName(BookStoreConsts.DbProperties.ConnectionStringName)]
-    public class SampleDbContext : HuginDbContext<SampleDbContext>
+    public class BookStoreDbContext : HuginDbContext<BookStoreDbContext>
     {
-        #region Samples
+        #region BookStore
 
         public DbSet<Book> Books { get; set; }
 
@@ -26,7 +24,7 @@ namespace Hugin.Sample.EntityFrameworkCore
 
         public DbSet<Stadium> Stadiums { get; set; }
 
-        public SampleDbContext(DbContextOptions<SampleDbContext> options)
+        public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options)
             : base(options)
         {
 
@@ -35,8 +33,7 @@ namespace Hugin.Sample.EntityFrameworkCore
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
-            builder.ConfigureSample();
+            builder.ConfigureBookStore();
         }
     }
 }

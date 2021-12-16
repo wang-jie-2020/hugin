@@ -1,10 +1,9 @@
-﻿using Hugin.BookStore;
-using Hugin.BookStore.Stadiums;
+﻿using Hugin.BookStore.Stadiums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
-namespace Hugin.Sample.EntityFrameworkCore.EntityTypeConfigurations.Stadiums
+namespace Hugin.BookStore.EntityFrameworkCore.EntityTypeConfigurations.Stadiums
 {
     public class StadiumConfiguration : IEntityTypeConfiguration<Stadium>
     {

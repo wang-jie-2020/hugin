@@ -2,28 +2,27 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using Hugin.BookStore;
 using Hugin.Domain.Entities.Attributes;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 
-namespace Hugin.Sample.EntityFrameworkCore
+namespace Hugin.BookStore.EntityFrameworkCore
 {
-    public static class SampleDbContextModelCreatingExtensions
+    public static class BookStoreDbContextModelCreatingExtensions
     {
-        public static void ConfigureSample(
+        public static void ConfigureBookStore(
             this ModelBuilder builder,
-            Action<SampleModelBuilderConfigurationOptions> optionsAction = null)
+            Action<BookStoreModelBuilderConfigurationOptions> optionsAction = null)
         {
             Check.NotNull(builder, nameof(builder));
 
-            var options = new SampleModelBuilderConfigurationOptions(
+            var options = new BookStoreModelBuilderConfigurationOptions(
                 BookStoreConsts.DbProperties.DbTablePrefix,
                 BookStoreConsts.DbProperties.DbSchema);
 
             optionsAction?.Invoke(options);
 
-            #region Samples
+            #region BookStore
 
             /* Configure all entities here. Example:
 
@@ -48,7 +47,7 @@ namespace Hugin.Sample.EntityFrameworkCore
             #endregion
 
             //configurations
-            builder.ApplyConfigurationsFromAssembly(typeof(SampleDbContextModelCreatingExtensions).Assembly);
+            builder.ApplyConfigurationsFromAssembly(typeof(BookStoreDbContextModelCreatingExtensions).Assembly);
 
             //decimal
             foreach (var model in builder.Model.GetEntityTypes())

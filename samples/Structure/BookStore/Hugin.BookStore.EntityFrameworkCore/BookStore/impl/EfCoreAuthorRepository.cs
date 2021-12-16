@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Threading.Tasks;
-using Hugin.BookStore;
-using Hugin.Sample.EntityFrameworkCore;
+using Hugin.BookStore.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Hugin.Sample.BookStore.impl
+namespace Hugin.BookStore.impl
 {
-    public class EfCoreAuthorRepository : EfCoreRepository<SampleDbContext, Author, Guid>, IAuthorRepository
+    public class EfCoreAuthorRepository : EfCoreRepository<BookStoreDbContext, Author, Guid>, IAuthorRepository
     {
-        public EfCoreAuthorRepository(IDbContextProvider<SampleDbContext> dbContextProvider)
+        public EfCoreAuthorRepository(IDbContextProvider<BookStoreDbContext> dbContextProvider)
             : base(dbContextProvider)
         {
         }

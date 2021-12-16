@@ -8,6 +8,7 @@ using DotNetCore.CAP.Internal;
 using Hangfire;
 using Hangfire.MySql;
 using Hugin.BookStore;
+using Hugin.BookStore.EntityFrameworkCore;
 using Hugin.BookStore.Localization;
 using Hugin.Cache.CsRedis;
 using Hugin.Domain.Entities;
@@ -75,7 +76,7 @@ namespace Hugin.Sample
         typeof(AbpTenantManagementHttpApiClientModule),
         //引入项目
         typeof(SampleApplicationModule),
-        typeof(SampleEntityFrameworkCoreModule),
+        typeof(BookStoreEntityFrameworkCoreModule),
         typeof(SampleHttpApiModule),
         typeof(IdentityHttpApiClientModule)
     )]

@@ -1,10 +1,8 @@
-﻿using Hugin.BookStore;
-using Hugin.Sample.BookStore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
-namespace Hugin.Sample.EntityFrameworkCore.EntityTypeConfigurations.Samples.BookStore
+namespace Hugin.BookStore.EntityFrameworkCore.EntityTypeConfigurations
 {
     public class BookShopConfiguration : IEntityTypeConfiguration<BookShop>
     {
