@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hugin.BookStore
 {
-    [ApiExplorerSettings(GroupName = ApiGroups.Sample)]
+    [ApiExplorerSettings(GroupName = ApiGroups.BookStore)]
     public abstract class BaseAppService : HuginApplicationService
     {
         protected BaseAppService()

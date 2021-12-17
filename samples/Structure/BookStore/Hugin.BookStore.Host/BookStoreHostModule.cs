@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
 using DotNetCore.CAP;
 using DotNetCore.CAP.Internal;
 using Hangfire;
@@ -24,6 +19,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.MultiStadium;
 using Volo.Abp.AspNetCore.Mvc;
@@ -64,7 +64,7 @@ namespace Hugin.BookStore
         typeof(AbpAspNetCoreMultiStadiumModule),
         //引入模块
         typeof(AbpAuditLoggingEntityFrameworkCoreModule),
-        //typeof(AbpTenantManagementEntityFrameworkCoreModule),
+        //typeof(AbpTenantManagementEntityFrameworkCoreModule), //考虑不直接引用数据库方式
         //typeof(AbpPermissionManagementEntityFrameworkCoreModule),
         //typeof(AbpSettingManagementEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreMvcClientModule),
@@ -81,7 +81,7 @@ namespace Hugin.BookStore
     {
         private const string DefaultCorsPolicyName = "Default";
 
-        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.DefaultGroup, ApiGroups.SampleGroup };
+        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.BookStoreGroup };
 
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
@@ -281,10 +281,10 @@ namespace Hugin.BookStore
                                 return docName == groupName;
                             }
 
-                            return docName == ApiGroups.Default;
+                            return docName == ApiGroups.Abp;
                         });
 
-                        options.EnableAnnotations();
+                        options.EnableAnnotations(); 
                         options.CustomSchemaIds(type => type.FullName);
                         options.DescribeAllParametersInCamelCase();
                         options.OperationFilter<StadiumHeaderFilter>();

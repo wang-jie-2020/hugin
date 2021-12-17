@@ -24,7 +24,7 @@ namespace Hugin.BookStore
         }
     }
 
-    [ApiExplorerSettings(GroupName = ApiGroups.Sample)]
+    [ApiExplorerSettings(GroupName = ApiGroups.BookStore)]
     public abstract class BaseCrudStopAppService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
         : LGCrudStopAppService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
     where TKey : struct

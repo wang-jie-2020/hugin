@@ -6,31 +6,31 @@ namespace Hugin
     {
         const string ApiVersion = "1.0.0";
 
-        public const string Default = "default";
+        public const string Abp = "abp";
 
-        public const string Sample = "sample";
+        public const string BookStore = "bookStore";
 
-        public static readonly ApiInfo DefaultGroup = new ApiInfo
+        public static readonly ApiInfo AbpGroup = new ApiInfo
         {
-            Name = ApiGroups.Default,
-            DisplayName = "Default API",
+            Name = ApiGroups.Abp,
+            DisplayName = "ABP API",
             OpenApiInfo = new OpenApiInfo
             {
                 Version = ApiVersion,
-                Title = ApiGroups.Default + " api",
-                Description = "框架默认接口"
+                Title = ApiGroups.Abp + " api",
+                Description = "ABP"
             }
         };
 
-        public static readonly ApiInfo SampleGroup = new ApiInfo
+        public static readonly ApiInfo BookStoreGroup = new ApiInfo
         {
-            Name = ApiGroups.Sample,
-            DisplayName = "示例",
+            Name = ApiGroups.BookStore,
+            DisplayName = "BookStore API",
             OpenApiInfo = new OpenApiInfo
             {
                 Version = ApiVersion,
-                Title = ApiGroups.Sample + " api",
-                Description = "示例接口"
+                Title = ApiGroups.BookStore + " api",
+                Description = "BookStore"
             }
         };
     }

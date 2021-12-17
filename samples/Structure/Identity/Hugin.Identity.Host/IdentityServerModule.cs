@@ -106,7 +106,7 @@ namespace Hugin.IdentityServer
     {
         private const string DefaultCorsPolicyName = "Default";
 
-        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.DefaultGroup, ApiGroups.SampleGroup };
+        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.BookStoreGroup };
 
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
@@ -261,7 +261,7 @@ namespace Hugin.IdentityServer
                             return docName == groupName;
                         }
 
-                        return docName == ApiGroups.Default;
+                        return docName == ApiGroups.Abp;
                     });
 
                     options.EnableAnnotations();
