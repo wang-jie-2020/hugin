@@ -1,6 +1,6 @@
 ﻿{
   "profiles": {
-    "SampleHost": {
+    "BookStore": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:44392",

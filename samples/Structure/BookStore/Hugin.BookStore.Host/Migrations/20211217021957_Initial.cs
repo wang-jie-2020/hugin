@@ -1,14 +1,14 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Hugin.Sample.Migrations
+namespace Hugin.BookStore.Migrations
 {
     public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Sample_Author",
+                name: "BookStore_Author",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false),
@@ -24,11 +24,11 @@ namespace Hugin.Sample.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Sample_Author", x => x.Id);
+                    table.PrimaryKey("PK_BookStore_Author", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Sample_Book",
+                name: "BookStore_Book",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false),
@@ -47,11 +47,11 @@ namespace Hugin.Sample.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Sample_Book", x => x.Id);
+                    table.PrimaryKey("PK_BookStore_Book", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Sample_BookInBookShop",
+                name: "BookStore_BookInBookShop",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false),
@@ -61,11 +61,11 @@ namespace Hugin.Sample.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Sample_BookInBookShop", x => x.Id);
+                    table.PrimaryKey("PK_BookStore_BookInBookShop", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Sample_BookShop",
+                name: "BookStore_BookShop",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false),
@@ -73,7 +73,7 @@ namespace Hugin.Sample.Migrations
                     Name = table.Column<string>(type: "varchar(100) CHARACTER SET utf8mb4", maxLength: 100, nullable: false, comment: "名称"),
                     TenantId = table.Column<Guid>(type: "char(36)", nullable: true, comment: "租户Id"),
                     OwnerId = table.Column<Guid>(type: "char(36)", nullable: true, comment: "Boss"),
-                    UserId = table.Column<Guid>(type: "char(36)", nullable: false, comment: "UserId"),
+                    UserId = table.Column<Guid>(type: "char(36)", nullable: true, comment: "UserId"),
                     ExtraProperties = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "varchar(40) CHARACTER SET utf8mb4", maxLength: 40, nullable: true),
                     CreationTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
@@ -89,11 +89,11 @@ namespace Hugin.Sample.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Sample_BookShop", x => x.Id);
+                    table.PrimaryKey("PK_BookStore_BookShop", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Sample_BookShopOwner",
+                name: "BookStore_BookShopOwner",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false),
@@ -101,31 +101,56 @@ namespace Hugin.Sample.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Sample_BookShopOwner", x => x.Id);
+                    table.PrimaryKey("PK_BookStore_BookShopOwner", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BookStore_Stadium",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "char(36)", nullable: false),
+                    Name = table.Column<string>(type: "varchar(100) CHARACTER SET utf8mb4", maxLength: 100, nullable: false, comment: "名称"),
+                    TenantId = table.Column<Guid>(type: "char(36)", nullable: true, comment: "租户Id"),
+                    ExtraProperties = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "varchar(40) CHARACTER SET utf8mb4", maxLength: 40, nullable: true),
+                    CreationTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    CreatorId = table.Column<Guid>(type: "char(36)", nullable: true),
+                    LastModificationTime = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    LastModifierId = table.Column<Guid>(type: "char(36)", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false, defaultValue: false),
+                    DeleterId = table.Column<Guid>(type: "char(36)", nullable: true),
+                    DeletionTime = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BookStore_Stadium", x => x.Id);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Sample_Author_Name",
-                table: "Sample_Author",
+                name: "IX_BookStore_Author_Name",
+                table: "BookStore_Author",
                 column: "Name");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Sample_Author");
+                name: "BookStore_Author");
 
             migrationBuilder.DropTable(
-                name: "Sample_Book");
+                name: "BookStore_Book");
 
             migrationBuilder.DropTable(
-                name: "Sample_BookInBookShop");
+                name: "BookStore_BookInBookShop");
 
             migrationBuilder.DropTable(
-                name: "Sample_BookShop");
+                name: "BookStore_BookShop");
 
             migrationBuilder.DropTable(
-                name: "Sample_BookShopOwner");
+                name: "BookStore_BookShopOwner");
+
+            migrationBuilder.DropTable(
+                name: "BookStore_Stadium");
         }
     }
 }
