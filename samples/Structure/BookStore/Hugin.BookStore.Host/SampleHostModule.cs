@@ -75,9 +75,9 @@ namespace Hugin.Sample
         typeof(AbpIdentityHttpApiClientModule),
         typeof(AbpTenantManagementHttpApiClientModule),
         //引入项目
-        typeof(SampleApplicationModule),
+        typeof(BookStoreApplicationModule),
         typeof(BookStoreEntityFrameworkCoreModule),
-        typeof(SampleHttpApiModule),
+        typeof(BookStoreHttpApiModule),
         typeof(IdentityHttpApiClientModule)
     )]
     public class SampleHostModule : AbpModule
@@ -215,7 +215,7 @@ namespace Hugin.Sample
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
                 options.ConventionalControllers
-                    .Create(typeof(SampleApplicationModule).Assembly, opt =>
+                    .Create(typeof(BookStoreApplicationModule).Assembly, opt =>
                     {
                         opt.RootPath = BookStoreConsts.NameLower;
                     });
@@ -292,11 +292,11 @@ namespace Hugin.Sample
                         options.DescribeAllParametersInCamelCase();
                         options.OperationFilter<StadiumHeaderFilter>();
                         options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
-                            typeof(SampleApplicationModule).Assembly.GetName().Name + ".xml"));
+                            typeof(BookStoreApplicationModule).Assembly.GetName().Name + ".xml"));
                         options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
                             typeof(BookStoreApplicationContractsModule).Assembly.GetName().Name + ".xml"));
                         options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
-                            typeof(SampleHttpApiModule).Assembly.GetName().Name + ".xml"));
+                            typeof(BookStoreHttpApiModule).Assembly.GetName().Name + ".xml"));
                     });
 
             context.Services.AddMiniProfiler(options => { options.RouteBasePath = "/profiler"; }).AddEntityFramework();

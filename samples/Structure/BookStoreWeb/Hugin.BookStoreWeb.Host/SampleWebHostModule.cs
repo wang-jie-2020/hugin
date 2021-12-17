@@ -54,7 +54,7 @@ namespace Hugin.Web
         typeof(AbpPermissionManagementHttpApiClientModule),
         //引入项目
         typeof(SampleWebModule),
-        typeof(SampleHttpApiClientModule)
+        typeof(BookStoreHttpApiClientModule)
         )]
     public class SampleWebHostModule : AbpModule
     {

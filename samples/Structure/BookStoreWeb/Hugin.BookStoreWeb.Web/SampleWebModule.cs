@@ -1,4 +1,5 @@
-﻿using Hugin.BookStore.Localization;
+﻿using Hugin.BookStore;
+using Hugin.BookStore.Localization;
 using Hugin.BookStore.Permissions;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +16,7 @@ namespace Hugin.Sample.Web
     [DependsOn(
         typeof(AbpAspNetCoreMvcUiThemeSharedModule),
         typeof(AbpAutoMapperModule),
-        typeof(SampleHttpApiModule)
+        typeof(BookStoreHttpApiModule)
         )]
     public class SampleWebModule : AbpModule
     {

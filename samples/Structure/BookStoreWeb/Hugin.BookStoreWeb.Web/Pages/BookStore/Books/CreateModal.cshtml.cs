@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Hugin.BookStore;
 using Hugin.BookStore.Dtos;
 using Hugin.BookStore.Enums;
-using Hugin.Sample.BookStore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Form;
