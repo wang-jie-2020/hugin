@@ -102,7 +102,7 @@ namespace Hugin.IdentityServer
         typeof(IdentityEntityFrameworkCoreModule),
         typeof(BookStoreApplicationContractsModule)
     )]
-    public class SampleIdentityServerModule : AbpModule
+    public class IdentityServerModule : AbpModule
     {
         private const string DefaultCorsPolicyName = "Default";
 
@@ -127,7 +127,7 @@ namespace Hugin.IdentityServer
             PreConfigure<IIdentityServerBuilder>(builder =>
             {
                 //Certificate
-                var certificate = Assembly.GetEntryAssembly().GetManifestResourceStream(typeof(SampleIdentityServerModule).Namespace + ".ids4.pfx");
+                var certificate = Assembly.GetEntryAssembly().GetManifestResourceStream(typeof(IdentityServerModule).Namespace + ".ids4.pfx");
                 if (certificate == null)
                 {
                     throw new FileNotFoundException("certificate missing");
@@ -139,8 +139,8 @@ namespace Hugin.IdentityServer
                 builder.AddSigningCredential(new X509Certificate2(buffer, "lg"));
 
                 //UserClaims
-                builder.Services.Replace(ServiceDescriptor.Transient<IObjectAccessor<IUserClaimsPrincipalFactory<IdentityUser>>, ObjectAccessor<LGUserClaimsPrincipalFactory>>());
-                builder.Services.Replace(ServiceDescriptor.Transient<IClaimsService, LGClaimsService>());
+                builder.Services.Replace(ServiceDescriptor.Transient<IObjectAccessor<IUserClaimsPrincipalFactory<IdentityUser>>, ObjectAccessor<HuginUserClaimsPrincipalFactory>>());
+                builder.Services.Replace(ServiceDescriptor.Transient<IClaimsService, HuginClaimsService>());
             });
         }
 
@@ -202,10 +202,10 @@ namespace Hugin.IdentityServer
                 options.ApplicationName = "AuthServer";
             });
 
-            context.Services.AddAutoMapperObjectMapper<SampleIdentityServerModule>();
+            context.Services.AddAutoMapperObjectMapper<IdentityServerModule>();
             Configure<AbpAutoMapperOptions>(options =>
             {
-                options.AddMaps<SampleIdentityServerModule>();
+                options.AddMaps<IdentityServerModule>();
             });
 
             context.Services.AddCors(options =>

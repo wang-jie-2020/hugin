@@ -9,7 +9,7 @@ namespace Hugin.IdentityServer
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<SampleIdentityServerModule>();
+            services.AddApplication<IdentityServerModule>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)

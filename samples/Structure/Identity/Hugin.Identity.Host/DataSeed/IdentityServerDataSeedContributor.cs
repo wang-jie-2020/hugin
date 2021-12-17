@@ -30,7 +30,7 @@ namespace Hugin.IdentityServer.DataSeed
         private readonly IPermissionDataSeeder _permissionDataSeeder;
         private readonly IConfiguration _configuration;
         private readonly ICurrentTenant _currentTenant;
-        private readonly IObjectMapper<SampleIdentityServerModule> _objectMapper;
+        private readonly IObjectMapper<IdentityServerModule> _objectMapper;
 
         public IdentityServerDataSeedContributor(
             IClientRepository clientRepository,
@@ -41,7 +41,7 @@ namespace Hugin.IdentityServer.DataSeed
             IPermissionDataSeeder permissionDataSeeder,
             IConfiguration configuration,
             ICurrentTenant currentTenant,
-            IObjectMapper<SampleIdentityServerModule> objectMapper)
+            IObjectMapper<IdentityServerModule> objectMapper)
         {
             _clientRepository = clientRepository;
             _apiResourceRepository = apiResourceRepository;

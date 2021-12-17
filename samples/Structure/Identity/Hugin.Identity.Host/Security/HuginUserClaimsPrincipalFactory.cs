@@ -12,9 +12,9 @@ using IdentityUser = Volo.Abp.Identity.IdentityUser;
 
 namespace Hugin.IdentityServer.Security
 {
-    public class LGUserClaimsPrincipalFactory : AbpUserClaimsPrincipalFactory
+    public class HuginUserClaimsPrincipalFactory : AbpUserClaimsPrincipalFactory
     {
-        public LGUserClaimsPrincipalFactory(UserManager<IdentityUser> userManager,
+        public HuginUserClaimsPrincipalFactory(UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager,
             IOptions<IdentityOptions> options,
             ICurrentPrincipalAccessor currentPrincipalAccessor,
