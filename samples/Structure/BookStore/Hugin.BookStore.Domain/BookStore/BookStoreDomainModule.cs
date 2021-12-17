@@ -13,14 +13,14 @@ namespace Hugin.BookStore
         typeof(AbpAutoMapperModule),
         typeof(BookStoreDomainSharedModule)
     )]
-    public class BookShopDomainModule : AbpModule
+    public class BookStoreDomainModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddAutoMapperObjectMapper<BookShopDomainModule>();
+            context.Services.AddAutoMapperObjectMapper<BookStoreDomainModule>();
             Configure<AbpAutoMapperOptions>(options =>
             {
-                options.AddMaps<BookShopDomainModule>(validate: false);
+                options.AddMaps<BookStoreDomainModule>(validate: false);
             });
 
             context.Services.Replace(ServiceDescriptor.Transient<IStadiumStore, StadiumStore>());

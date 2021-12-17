@@ -6,7 +6,7 @@ namespace Hugin.BookStore
     {
         protected BaseDomainManager()
         {
-            ObjectMapperContext = typeof(BookShopDomainModule);
+            ObjectMapperContext = typeof(BookStoreDomainModule);
         }
     }
 }

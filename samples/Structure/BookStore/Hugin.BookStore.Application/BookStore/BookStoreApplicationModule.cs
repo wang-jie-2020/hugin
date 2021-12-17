@@ -10,7 +10,7 @@ namespace Hugin.BookStore
     [DependsOn(
         typeof(AbpDddApplicationModule),
         typeof(AbpAutoMapperModule),
-        typeof(BookShopDomainModule),
+        typeof(BookStoreDomainModule),
         typeof(BookStoreApplicationContractsModule),
         typeof(BookStoreBackgroundJobModule),
         typeof(BookStoreCapModule)

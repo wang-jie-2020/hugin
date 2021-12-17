@@ -81,7 +81,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStoreWeb.Host", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStoreWeb.Web", "BookStoreWeb\Hugin.BookStoreWeb.Web\Hugin.BookStoreWeb.Web.csproj", "{7FF293A0-7A64-46DE-AC6C-3872734E9F97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hugin.Infrastructure.Exporting.Magicodes", "_infrastructure\Hugin.Infrastructure.Exporting.Magicodes\Hugin.Infrastructure.Exporting.Magicodes.csproj", "{5E2E2933-7FCE-4697-BBD0-271594786FAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.Infrastructure.Exporting.Magicodes", "_infrastructure\Hugin.Infrastructure.Exporting.Magicodes\Hugin.Infrastructure.Exporting.Magicodes.csproj", "{5E2E2933-7FCE-4697-BBD0-271594786FAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStore.Application.Tests", "test\Hugin.BookStore.Application.Tests\Hugin.BookStore.Application.Tests.csproj", "{EC6816FA-D1A7-43C8-8C26-980AA7BB7A59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStore.Domain.Tests", "test\Hugin.BookStore.Domain.Tests\Hugin.BookStore.Domain.Tests.csproj", "{48FBA8E7-EBC2-4D4B-8DCE-6ECC05FCF3A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStore.EntityFrameworkCore.Tests", "test\Hugin.BookStore.EntityFrameworkCore.Tests\Hugin.BookStore.EntityFrameworkCore.Tests.csproj", "{96596FE2-9A6D-45EB-982F-4EF3B58B6118}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStore.TestBase", "test\Hugin.BookStore.TestBase\Hugin.BookStore.TestBase.csproj", "{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -225,6 +235,22 @@ Global
 		{5E2E2933-7FCE-4697-BBD0-271594786FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E2E2933-7FCE-4697-BBD0-271594786FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E2E2933-7FCE-4697-BBD0-271594786FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6816FA-D1A7-43C8-8C26-980AA7BB7A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6816FA-D1A7-43C8-8C26-980AA7BB7A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6816FA-D1A7-43C8-8C26-980AA7BB7A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6816FA-D1A7-43C8-8C26-980AA7BB7A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48FBA8E7-EBC2-4D4B-8DCE-6ECC05FCF3A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48FBA8E7-EBC2-4D4B-8DCE-6ECC05FCF3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48FBA8E7-EBC2-4D4B-8DCE-6ECC05FCF3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48FBA8E7-EBC2-4D4B-8DCE-6ECC05FCF3A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96596FE2-9A6D-45EB-982F-4EF3B58B6118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96596FE2-9A6D-45EB-982F-4EF3B58B6118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96596FE2-9A6D-45EB-982F-4EF3B58B6118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96596FE2-9A6D-45EB-982F-4EF3B58B6118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -263,6 +289,10 @@ Global
 		{C9D197FC-6DE3-4D6F-9D39-08CA460C2F09} = {AC453ACB-92B0-4D68-ADD8-C124A38FBCC0}
 		{7FF293A0-7A64-46DE-AC6C-3872734E9F97} = {AC453ACB-92B0-4D68-ADD8-C124A38FBCC0}
 		{5E2E2933-7FCE-4697-BBD0-271594786FAC} = {32B4D9F5-064C-48E1-856B-E15635D6CAE3}
+		{EC6816FA-D1A7-43C8-8C26-980AA7BB7A59} = {AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}
+		{48FBA8E7-EBC2-4D4B-8DCE-6ECC05FCF3A7} = {AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}
+		{96596FE2-9A6D-45EB-982F-4EF3B58B6118} = {AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}
+		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE} = {AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03AD04CE-9418-4E4F-ACA5-221DFAD10580}

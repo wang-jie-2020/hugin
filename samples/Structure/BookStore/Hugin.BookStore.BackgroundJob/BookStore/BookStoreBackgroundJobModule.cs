@@ -3,7 +3,7 @@
 namespace Hugin.BookStore
 {
     [DependsOn(
-        typeof(BookShopDomainModule)
+        typeof(BookStoreDomainModule)
     )]
     public class BookStoreBackgroundJobModule : AbpModule
     {
