@@ -2,13 +2,13 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Hugin.Web
+namespace Hugin.BookStoreWeb
 {
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<SampleWebHostModule>();
+            services.AddApplication<BookStoreWebHostModule>();
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)

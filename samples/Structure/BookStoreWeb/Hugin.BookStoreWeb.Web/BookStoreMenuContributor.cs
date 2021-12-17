@@ -3,9 +3,9 @@ using Hugin.BookStore.Localization;
 using Hugin.BookStore.Permissions;
 using Volo.Abp.UI.Navigation;
 
-namespace Hugin.Sample.Web
+namespace Hugin.BookStoreWeb.Web
 {
-    public class SampleMenuContributor : IMenuContributor
+    public class BookStoreMenuContributor : IMenuContributor
     {
         public async Task ConfigureMenuAsync(MenuConfigurationContext context)
         {

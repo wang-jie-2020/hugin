@@ -1,4 +1,4 @@
-namespace Hugin.Sample.Web.Pages
+namespace Hugin.BookStoreWeb.Web.Pages
 {
     public class IndexModel : BasePageModel
     {

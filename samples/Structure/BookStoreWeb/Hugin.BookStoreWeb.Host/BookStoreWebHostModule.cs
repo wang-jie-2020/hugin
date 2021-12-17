@@ -1,9 +1,7 @@
 using System;
-using System.IO;
 using Hugin.BookStore;
 using Hugin.BookStore.Localization;
-using Hugin.Sample;
-using Hugin.Sample.Web;
+using Hugin.BookStoreWeb.Web;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,9 +28,8 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.UI.Navigation.Urls;
-using Volo.Abp.VirtualFileSystem;
 
-namespace Hugin.Web
+namespace Hugin.BookStoreWeb
 {
     [DependsOn(
         //引入服务
@@ -53,10 +50,10 @@ namespace Hugin.Web
         typeof(AbpTenantManagementHttpApiClientModule),
         typeof(AbpPermissionManagementHttpApiClientModule),
         //引入项目
-        typeof(SampleWebModule),
+        typeof(BookStoreWebModule),
         typeof(BookStoreHttpApiClientModule)
         )]
-    public class SampleWebHostModule : AbpModule
+    public class BookStoreWebHostModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
@@ -66,7 +63,7 @@ namespace Hugin.Web
                     typeof(BookStoreResource),
                     typeof(BookStoreDomainSharedModule).Assembly,
                     typeof(BookStoreApplicationContractsModule).Assembly,
-                    typeof(SampleWebModule).Assembly
+                    typeof(BookStoreWebModule).Assembly
                 ); ;
             });
         }
@@ -121,7 +118,7 @@ namespace Hugin.Web
 
             Configure<AbpNavigationOptions>(options =>
             {
-                options.MenuContributors.Add(new SampleWebHostMenuContributor(configuration));
+                options.MenuContributors.Add(new BookStoreWebHostMenuContributor(configuration));
             });
 
             ConfigureDevelopmentServices(context);

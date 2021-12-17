@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.AspNetCore.Mvc.Authentication;
 
-namespace Hugin.Web.Controllers
+namespace Hugin.BookStoreWeb.Controllers
 {
     public class AccountController : ChallengeAccountController
     {

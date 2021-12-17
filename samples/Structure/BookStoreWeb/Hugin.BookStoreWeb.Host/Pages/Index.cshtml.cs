@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 
-namespace Hugin.Web.Pages
+namespace Hugin.BookStoreWeb.Pages
 {
     public class IndexModel : BasePageModel
     {

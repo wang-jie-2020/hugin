@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Form;
 
-namespace Hugin.Sample.Web.Pages.BookStore.Books
+namespace Hugin.BookStoreWeb.Web.Pages.BookStore.Books
 {
     public class EditModalModel : BasePageModel
     {

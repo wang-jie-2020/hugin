@@ -1,12 +1,11 @@
 ﻿using Hugin.BookStore;
-using Hugin.Sample;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Ui.Branding;
 
-namespace Hugin.Web
+namespace Hugin.BookStoreWeb
 {
     [Dependency(ReplaceServices = true)]
-    public class SampleBrandingProvider : DefaultBrandingProvider
+    public class BookStoreBrandingProvider : DefaultBrandingProvider
     {
         public override string AppName => BookStoreConsts.Name;
     }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Hugin.BookStore.Dtos;
 
-namespace Hugin.Sample.Web.Pages.BookStore.Books
+namespace Hugin.BookStoreWeb.Web.Pages.BookStore.Books
 {
     public class BookMapper : Profile
     {

@@ -7,7 +7,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 
-namespace Hugin.Web
+namespace Hugin.BookStoreWeb
 {
     public class Program
     {

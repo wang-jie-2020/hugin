@@ -6,13 +6,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.Users;
 
-namespace Hugin.Web
+namespace Hugin.BookStoreWeb
 {
-    public class SampleWebHostMenuContributor : IMenuContributor
+    public class BookStoreWebHostMenuContributor : IMenuContributor
     {
         private readonly IConfiguration _configuration;
 
-        public SampleWebHostMenuContributor(IConfiguration configuration)
+        public BookStoreWebHostMenuContributor(IConfiguration configuration)
         {
             _configuration = configuration;
         }

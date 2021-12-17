@@ -1,7 +1,7 @@
 ﻿using Hugin.BookStore.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI.RazorPages;
 
-namespace Hugin.Sample.Web.Pages
+namespace Hugin.BookStoreWeb.Web.Pages
 {
     /* Inherit your PageModel classes from this class.
      */
@@ -10,7 +10,7 @@ namespace Hugin.Sample.Web.Pages
         protected BasePageModel()
         {
             LocalizationResourceType = typeof(BookStoreResource);
-            ObjectMapperContext = typeof(SampleWebModule);
+            ObjectMapperContext = typeof(BookStoreWebModule);
         }
     }
 }

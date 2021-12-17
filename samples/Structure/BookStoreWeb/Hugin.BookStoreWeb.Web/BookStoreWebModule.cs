@@ -11,26 +11,26 @@ using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 
-namespace Hugin.Sample.Web
+namespace Hugin.BookStoreWeb.Web
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcUiThemeSharedModule),
         typeof(AbpAutoMapperModule),
         typeof(BookStoreHttpApiModule)
         )]
-    public class SampleWebModule : AbpModule
+    public class BookStoreWebModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
             //AbpMvcDataAnnotationsLocalizationOptions似乎只在AbpTagHelperLocalizer中引用
             context.Services.PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
             {
-                options.AddAssemblyResource(typeof(BookStoreResource), typeof(SampleWebModule).Assembly);
+                options.AddAssemblyResource(typeof(BookStoreResource), typeof(BookStoreWebModule).Assembly);
             });
 
             PreConfigure<IMvcBuilder>(mvcBuilder =>
             {
-                mvcBuilder.AddApplicationPartIfNotExists(typeof(SampleWebModule).Assembly);
+                mvcBuilder.AddApplicationPartIfNotExists(typeof(BookStoreWebModule).Assembly);
             });
         }
 
@@ -38,12 +38,12 @@ namespace Hugin.Sample.Web
         {
             Configure<AbpNavigationOptions>(options =>
             {
-                options.MenuContributors.Add(new SampleMenuContributor());
+                options.MenuContributors.Add(new BookStoreMenuContributor());
             });
 
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.AddEmbedded<SampleWebModule>();
+                options.FileSets.AddEmbedded<BookStoreWebModule>();
             });
 
             Configure<AbpLocalizationOptions>(options =>
@@ -60,10 +60,10 @@ namespace Hugin.Sample.Web
                     .AddVirtualJson("/Localization/Json");
             });
 
-            context.Services.AddAutoMapperObjectMapper<SampleWebModule>();
+            context.Services.AddAutoMapperObjectMapper<BookStoreWebModule>();
             Configure<AbpAutoMapperOptions>(options =>
             {
-                options.AddMaps<SampleWebModule>();
+                options.AddMaps<BookStoreWebModule>();
             });
 
             Configure<RazorPagesOptions>(options =>
