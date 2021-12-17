@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using Hugin.BookStore;
 using Hugin.Identity.EntityFrameworkCore;
 using Hugin.IdentityServer.IdentityMappingExtensions;
 using Hugin.IdentityServer.Security;

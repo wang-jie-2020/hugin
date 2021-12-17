@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Hugin.Sample.BookStore.Btos;
+using Hugin.BookStore;
+using Hugin.BookStore.Btos;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Hugin.Sample.BookStore.impl
@@ -40,7 +41,7 @@ namespace Hugin.Sample.BookStore.impl
 
         public async Task UowWork()
         {
-            await _bookStoreJob.CheckBookJob(new BookJobArgs
+            await _bookStoreJob.UnitOfWorkJobs(new BookJobArgs
             {
                 BookId = new Guid("53ADE93E-5B6E-407C-A0D2-9ED0C05EDA29")
             });
