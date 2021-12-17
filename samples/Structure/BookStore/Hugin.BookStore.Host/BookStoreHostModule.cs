@@ -7,17 +7,15 @@ using DotNetCore.CAP;
 using DotNetCore.CAP.Internal;
 using Hangfire;
 using Hangfire.MySql;
-using Hugin.BookStore;
 using Hugin.BookStore.EntityFrameworkCore;
 using Hugin.BookStore.Localization;
+using Hugin.BookStore.Security;
+using Hugin.BookStore.Swagger;
 using Hugin.Cache.CsRedis;
 using Hugin.Domain.Entities;
 using Hugin.Identity;
 using Hugin.Infrastructure.Cap;
 using Hugin.Mvc;
-using Hugin.Sample.EntityFrameworkCore;
-using Hugin.Sample.Security;
-using Hugin.Sample.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -50,9 +48,8 @@ using Volo.Abp.Settings;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.Threading;
-using Volo.Abp.VirtualFileSystem;
 
-namespace Hugin.Sample
+namespace Hugin.BookStore
 {
     [DependsOn(
         //引入服务
@@ -80,7 +77,7 @@ namespace Hugin.Sample
         typeof(BookStoreHttpApiModule),
         typeof(IdentityHttpApiClientModule)
     )]
-    public class SampleHostModule : AbpModule
+    public class BookStoreHostModule : AbpModule
     {
         private const string DefaultCorsPolicyName = "Default";
 

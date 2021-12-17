@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Hugin.Sample
+namespace Hugin.BookStore
 {
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<SampleHostModule>();
+            services.AddApplication<BookStoreHostModule>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace Hugin.Sample.Controllers
+namespace Hugin.BookStore.Controllers
 {
     public class HomeController : AbpController
     {

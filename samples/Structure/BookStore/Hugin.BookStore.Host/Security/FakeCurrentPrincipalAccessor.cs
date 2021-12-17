@@ -3,7 +3,7 @@ using System.Security.Claims;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Security.Claims;
 
-namespace Hugin.Sample.Security
+namespace Hugin.BookStore.Security
 {
     [ExposeServices(IncludeSelf = true, IncludeDefaults = false)]
     public class FakeCurrentPrincipalAccessor : ThreadCurrentPrincipalAccessor

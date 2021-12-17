@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Hugin.Sample.Swagger
+namespace Hugin.BookStore.Swagger
 {
     public class StadiumHeaderFilter : IOperationFilter
     {

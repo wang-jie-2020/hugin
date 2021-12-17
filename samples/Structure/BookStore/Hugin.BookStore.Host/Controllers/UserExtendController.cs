@@ -5,7 +5,7 @@ using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Identity;
 using Volo.Abp.TenantManagement;
 
-namespace Hugin.Sample.Controllers
+namespace Hugin.BookStore.Controllers
 {
     [Area("identity")]
     [ControllerName("UserExtend")]

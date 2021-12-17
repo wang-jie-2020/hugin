@@ -4,7 +4,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
-		<RootNamespace>Hugin.Sample</RootNamespace>
+		<RootNamespace>Hugin.BookStore</RootNamespace>
 		<PreserveCompilationReferences>true</PreserveCompilationReferences>
 	</PropertyGroup>
 
