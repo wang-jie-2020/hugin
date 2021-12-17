@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Hangfire;
-using Hugin.BookStore;
-using Hugin.Sample.BookStore.Btos;
+using Hugin.BookStore.Btos;
 using Microsoft.Extensions.Logging;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Uow;
 
-namespace Hugin.Sample.BookStore.impl
+namespace Hugin.BookStore.impl
 {
     public class BookStoreJob : BaseBackgroundJob, IBookStoreJob
     {
@@ -110,7 +109,7 @@ namespace Hugin.Sample.BookStore.impl
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public async Task CheckBookJob(BookJobArgs args)
+        public async Task UnitOfWorkJobs(BookJobArgs args)
         {
             await Task.Run(() =>
             {

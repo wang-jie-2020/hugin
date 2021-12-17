@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Hugin.Sample.BookStore.Btos;
+using Hugin.BookStore.Btos;
 
-namespace Hugin.Sample.BookStore
+namespace Hugin.BookStore
 {
     public interface IBookStoreJob
     {
@@ -13,7 +13,7 @@ namespace Hugin.Sample.BookStore
 
         Task ContinuationJobs();
 
-        Task CheckBookJob(BookJobArgs args);
+        Task UnitOfWorkJobs(BookJobArgs args);
     }
 }
 

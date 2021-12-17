@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hugin.Sample.BookStore.Btos
+namespace Hugin.BookStore.Btos
 {
     public class BookShopJobArgs
     {
