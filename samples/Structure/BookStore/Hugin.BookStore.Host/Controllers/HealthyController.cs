@@ -4,11 +4,12 @@ using Volo.Abp.AspNetCore.Mvc;
 
 namespace Hugin.BookStore.Controllers
 {
-    [Route("api/empty/authorize")]
-    public class EmptyController : AbpController
+    [Route("api/healthy")]
+    public class HealthyController : AbpController
     {
         [Authorize]
         [HttpGet]
+        [Route("authorize")]
         public int Authorize()
         {
             return 1;

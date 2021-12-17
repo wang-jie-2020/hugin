@@ -7,8 +7,6 @@ using Volo.Abp.TenantManagement;
 
 namespace Hugin.BookStore.Controllers
 {
-    [Area("identity")]
-    [ControllerName("UserExtend")]
     [Route("api/identity/user-extend")]
     public class UserExtendController : AbpController
     {
