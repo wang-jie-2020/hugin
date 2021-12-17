@@ -1,4 +1,5 @@
-﻿using Hugin.BookStore.Localization;
+﻿using Hugin.BookStore;
+using Hugin.BookStore.Localization;
 using Localization.Resources.AbpUi;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AspNetCore.Mvc;
@@ -9,7 +10,7 @@ namespace Hugin.Sample
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcModule),
-        typeof(SampleApplicationContractsModule)
+        typeof(BookStoreApplicationContractsModule)
         )]
     public class SampleHttpApiModule : AbpModule
     {

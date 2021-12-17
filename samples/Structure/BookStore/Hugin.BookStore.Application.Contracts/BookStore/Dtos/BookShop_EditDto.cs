@@ -1,9 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Hugin.Application.Dtos;
-using Hugin.BookStore;
 
-namespace Hugin.Sample.BookStore.Dtos
+namespace Hugin.BookStore.Dtos
 {
     public class BookShopEditOutput : IHoused<BookShopEditDto>
     {

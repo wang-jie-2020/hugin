@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Hugin.Sample.BookStore.Dtos;
+using Hugin.BookStore.Dtos;
 
 namespace Hugin.Sample.Web.Pages.BookStore.Books
 {

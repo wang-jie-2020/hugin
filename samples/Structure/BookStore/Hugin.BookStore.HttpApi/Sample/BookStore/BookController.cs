@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Hugin.Sample.BookStore.Dtos;
+using Hugin.BookStore;
+using Hugin.BookStore.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Volo.Abp.Application.Dtos;

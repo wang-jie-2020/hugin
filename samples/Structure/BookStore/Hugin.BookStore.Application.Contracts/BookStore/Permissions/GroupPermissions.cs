@@ -1,8 +1,7 @@
 ﻿using Hugin.Application.Permissions;
-using Hugin.Sample.Permissions;
 using Volo.Abp.MultiTenancy;
 
-namespace Hugin.Sample.BookStore.Permissions
+namespace Hugin.BookStore.Permissions
 {
     /// <summary>
     /// <see cref="SamplePermissionDefinitionProvider"/>
@@ -11,9 +10,9 @@ namespace Hugin.Sample.BookStore.Permissions
     {
         public static class Group
         {
-            public const string Default = SamplePermissions.RootName + ".BookStore";
+            public const string Default = BookStoreConsts.Name + ".BookStore";
         }
 
-        public MultiTenancySides MultiTenancySide { get; } = MultiTenancySides.Both;
+        public MultiTenancySides MultiTenancySide { get; } = MultiTenancySides.Tenant;
     }
 }

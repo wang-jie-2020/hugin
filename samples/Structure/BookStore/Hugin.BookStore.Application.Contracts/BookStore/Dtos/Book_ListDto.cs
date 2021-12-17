@@ -1,10 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
-using Hugin.BookStore;
 using Hugin.BookStore.Enums;
 using Volo.Abp.Application.Dtos;
 
-namespace Hugin.Sample.BookStore.Dtos
+namespace Hugin.BookStore.Dtos
 {
     //public class BookOutput : IHoused<BookDto>
     //{

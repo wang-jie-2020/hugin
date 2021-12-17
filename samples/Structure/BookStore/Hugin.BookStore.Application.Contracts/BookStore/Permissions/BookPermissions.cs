@@ -1,4 +1,4 @@
-﻿namespace Hugin.Sample.BookStore.Permissions
+﻿namespace Hugin.BookStore.Permissions
 {
     public partial class BookStorePermissions
     {

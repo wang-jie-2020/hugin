@@ -3,10 +3,9 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Hugin.Application.Dtos;
 using Hugin.Application.Validates;
-using Hugin.BookStore;
 using Hugin.BookStore.Enums;
 
-namespace Hugin.Sample.BookStore.Dtos
+namespace Hugin.BookStore.Dtos
 {
     public class BookEditOutput : IHoused<BookEditDto>
     {

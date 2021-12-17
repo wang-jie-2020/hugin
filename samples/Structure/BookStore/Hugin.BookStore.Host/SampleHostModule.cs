@@ -294,7 +294,7 @@ namespace Hugin.Sample
                         options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
                             typeof(SampleApplicationModule).Assembly.GetName().Name + ".xml"));
                         options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
-                            typeof(SampleApplicationContractsModule).Assembly.GetName().Name + ".xml"));
+                            typeof(BookStoreApplicationContractsModule).Assembly.GetName().Name + ".xml"));
                         options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
                             typeof(SampleHttpApiModule).Assembly.GetName().Name + ".xml"));
                     });

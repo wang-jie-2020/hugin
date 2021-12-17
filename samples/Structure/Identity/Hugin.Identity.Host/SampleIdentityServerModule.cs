@@ -9,7 +9,6 @@ using Hugin.Identity.EntityFrameworkCore;
 using Hugin.IdentityServer.IdentityMappingExtensions;
 using Hugin.IdentityServer.Security;
 using Hugin.Mvc;
-using Hugin.Sample;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -101,7 +100,7 @@ namespace Hugin.IdentityServer
         typeof(AbpTenantManagementWebModule),
         //引入项目
         typeof(IdentityEntityFrameworkCoreModule),
-        typeof(SampleApplicationContractsModule)
+        typeof(BookStoreApplicationContractsModule)
     )]
     public class SampleIdentityServerModule : AbpModule
     {

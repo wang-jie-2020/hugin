@@ -7,7 +7,7 @@ namespace Hugin.Sample
 {
     [DependsOn(
         typeof(AbpHttpClientModule),
-        typeof(SampleApplicationContractsModule))]
+        typeof(BookStoreApplicationContractsModule))]
     public class SampleHttpApiClientModule : AbpModule
     {
         public const string RemoteServiceName = BookStoreConsts.Name;
@@ -15,7 +15,7 @@ namespace Hugin.Sample
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.AddHttpClientProxies(
-                typeof(SampleApplicationContractsModule).Assembly,
+                typeof(BookStoreApplicationContractsModule).Assembly,
                 RemoteServiceName
             );
         }

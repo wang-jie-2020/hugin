@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using Hugin.BookStore.Dtos;
 using Hugin.Cache.CsRedis;
 using Hugin.Sample.BookStore.Ctos;
-using Hugin.Sample.BookStore.Dtos;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 

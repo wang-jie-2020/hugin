@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using Volo.Abp.Application.Dtos;
 
-namespace Hugin.Sample.BookStore.Dtos
+namespace Hugin.BookStore.Dtos
 {
     //public class AuthorOutput : IHoused<AuthorDto>
     //{

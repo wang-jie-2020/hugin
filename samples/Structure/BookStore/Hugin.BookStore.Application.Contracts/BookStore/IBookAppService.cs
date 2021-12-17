@@ -1,9 +1,9 @@
 ﻿using System;
-using Hugin.Sample.BookStore.Dtos;
+using Hugin.BookStore.Dtos;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
-namespace Hugin.Sample.BookStore
+namespace Hugin.BookStore
 {
     /*
      * 虽然abp提供了一些基础封装ICrudAppService，但这些封装不太适合直接使用

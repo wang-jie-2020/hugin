@@ -5,7 +5,7 @@ using Hugin.Application.Dtos;
 using Hugin.Application.Filters;
 using Hugin.Infrastructure.Extensions;
 
-namespace Hugin.Sample.BookStore.Dtos
+namespace Hugin.BookStore.Dtos
 {
     //public class BookShopOutput : IHoused<BookShopDto>
     //{

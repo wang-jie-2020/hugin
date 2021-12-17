@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Hugin.BookStore.Localization;
-using Hugin.Sample.BookStore.Permissions;
+using Hugin.BookStore.Permissions;
 using Volo.Abp.UI.Navigation;
 
 namespace Hugin.Sample.Web

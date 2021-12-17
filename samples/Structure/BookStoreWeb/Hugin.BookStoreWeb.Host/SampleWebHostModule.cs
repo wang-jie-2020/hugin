@@ -65,7 +65,7 @@ namespace Hugin.Web
                 options.AddAssemblyResource(
                     typeof(BookStoreResource),
                     typeof(BookStoreDomainSharedModule).Assembly,
-                    typeof(SampleApplicationContractsModule).Assembly,
+                    typeof(BookStoreApplicationContractsModule).Assembly,
                     typeof(SampleWebModule).Assembly
                 ); ;
             });

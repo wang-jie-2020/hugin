@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Hugin.BookStore;
+using Hugin.BookStore.Dtos;
 using Hugin.Sample.BookStore.Daos;
-using Hugin.Sample.BookStore.Dtos;
 
 namespace Hugin.Sample.BookStore.Mappers
 {

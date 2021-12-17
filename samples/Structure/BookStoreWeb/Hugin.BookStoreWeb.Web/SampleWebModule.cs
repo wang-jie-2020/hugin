@@ -1,5 +1,5 @@
 ﻿using Hugin.BookStore.Localization;
-using Hugin.Sample.BookStore.Permissions;
+using Hugin.BookStore.Permissions;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AspNetCore.Mvc.Localization;

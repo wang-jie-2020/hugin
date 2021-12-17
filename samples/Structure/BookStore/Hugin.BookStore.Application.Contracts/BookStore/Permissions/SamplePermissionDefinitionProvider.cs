@@ -2,7 +2,7 @@
 using Hugin.BookStore.Localization;
 using Volo.Abp.Localization;
 
-namespace Hugin.Sample.Permissions
+namespace Hugin.BookStore.Permissions
 {
     public class SamplePermissionDefinitionProvider : Hugin.Application.Permissions.PermissionDefinitionProvider
     {
@@ -11,16 +11,13 @@ namespace Hugin.Sample.Permissions
             return LocalizableString.Create<BookStoreResource>("Permission:" + name);
         }
 
-        protected override string RootPermission => SamplePermissions.RootName;
+        protected override string RootPermission => BookStoreConsts.Name;
 
         protected override Assembly[] Assemblies => new[] { typeof(SamplePermissionDefinitionProvider).Assembly };
 
         public override void Define(Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext context)
         {
             base.Define(context);
-
-            //var group = context.AddGroup("Sample.PermissionTest");
-            //var child = group.AddPermission("Sample.PermissionTest.Child");
         }
     }
 }
