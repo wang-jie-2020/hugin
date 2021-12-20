@@ -4,7 +4,7 @@ using Volo.Abp.MultiTenancy;
 namespace Hugin.BookStore.Permissions
 {
     /// <summary>
-    /// <see cref="SamplePermissionDefinitionProvider"/>
+    /// <see cref="BookStorePermissionDefinitionProvider"/>
     /// </summary>
     public partial class BookStorePermissions : IPermissionDefine
     {

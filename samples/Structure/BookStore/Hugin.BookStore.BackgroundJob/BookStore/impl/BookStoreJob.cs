@@ -42,7 +42,7 @@ namespace Hugin.BookStore.impl
             await Task.CompletedTask;
         }
 
-        [Queue(Global.Identifier)]
+        [Queue("debug")]
         public async Task ExecImmediatelyJob2()
         {
             Console.WriteLine("ExecImmediatelyJob2");

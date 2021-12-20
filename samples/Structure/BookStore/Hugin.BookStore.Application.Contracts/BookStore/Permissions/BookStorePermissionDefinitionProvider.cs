@@ -4,7 +4,7 @@ using Volo.Abp.Localization;
 
 namespace Hugin.BookStore.Permissions
 {
-    public class SamplePermissionDefinitionProvider : Hugin.Application.Permissions.PermissionDefinitionProvider
+    public class BookStorePermissionDefinitionProvider : Hugin.Application.Permissions.PermissionDefinitionProvider
     {
         protected override LocalizableString L(string name)
         {
@@ -13,7 +13,7 @@ namespace Hugin.BookStore.Permissions
 
         protected override string RootPermission => BookStoreConsts.Name;
 
-        protected override Assembly[] Assemblies => new[] { typeof(SamplePermissionDefinitionProvider).Assembly };
+        protected override Assembly[] Assemblies => new[] { typeof(BookStorePermissionDefinitionProvider).Assembly };
 
         public override void Define(Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext context)
         {

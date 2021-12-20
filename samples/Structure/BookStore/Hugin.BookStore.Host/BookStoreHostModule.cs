@@ -7,7 +7,6 @@ using Hugin.BookStore.Localization;
 using Hugin.BookStore.Security;
 using Hugin.BookStore.Swagger;
 using Hugin.Cache.CsRedis;
-using Hugin.Domain.Entities;
 using Hugin.Identity;
 using Hugin.Infrastructure.Cap;
 using Hugin.Mvc;
@@ -41,7 +40,6 @@ using Volo.Abp.Http.Client.IdentityModel.Web;
 using Volo.Abp.Identity;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
-using Volo.Abp.MultiStadium;
 using Volo.Abp.MultiTenancy;
 using Volo.Abp.Security.Claims;
 using Volo.Abp.Settings;
@@ -64,9 +62,11 @@ namespace Hugin.BookStore
         typeof(AbpAspNetCoreMultiStadiumModule),
         //引入模块
         typeof(AbpAuditLoggingEntityFrameworkCoreModule),
-        //typeof(AbpTenantManagementEntityFrameworkCoreModule), //考虑不直接引用数据库方式
+        //数据共享方式1-数据库
+        //typeof(AbpTenantManagementEntityFrameworkCoreModule), 
         //typeof(AbpPermissionManagementEntityFrameworkCoreModule),
         //typeof(AbpSettingManagementEntityFrameworkCoreModule),
+        //数据共享方式2-HttpClient
         typeof(AbpAspNetCoreMvcClientModule),
         typeof(AbpHttpClientIdentityModelWebModule),
         typeof(AbpIdentityHttpApiClientModule),
@@ -93,6 +93,8 @@ namespace Hugin.BookStore
             var hostingEnvironment = context.Services.GetHostingEnvironment();
             var configuration = context.Services.GetConfiguration();
 
+            #region Persistent
+
             Configure<AbpDbContextOptions>(options =>
             {
                 options.UseMySQL(opt =>
@@ -101,27 +103,14 @@ namespace Hugin.BookStore
                 });
             });
 
-            //IUser的查询筛选默认不开启
-            Configure<AbpDataFilterOptions>(options =>
-            {
-                options.DefaultStates[typeof(IMultiUser)] = new DataFilterState(isEnabled: false);
-                options.DefaultStates[typeof(IMultiStadium)] = new DataFilterState(isEnabled: false);
-            });
-
-            #region Csredis
-
             Configure<CsRedisCacheOptions>(cacheOptions =>
             {
-                var redisConfiguration = configuration["Redis:Sample"];
+                var redisConfiguration = configuration["Redis:BookStore"];
                 if (!redisConfiguration.IsNullOrEmpty())
                 {
                     cacheOptions.ConnectionString = redisConfiguration;
                 }
             });
-
-            #endregion
-
-            #region Hangfire
 
             context.Services.AddHangfire(options =>
             {
@@ -138,16 +127,12 @@ namespace Hugin.BookStore
                 context.Services.AddHangfireServer(options =>
                 {
 #if DEBUG
-                    options.Queues = new[] { Global.Identifier };
+                    options.Queues = new[] { "debug" };
 #else
                     options.Queues = new[] { "default" };
 #endif
                 });
             }
-
-            #endregion
-
-            #region Cap
 
             context.Services.AddCap(options =>
             {
@@ -175,39 +160,16 @@ namespace Hugin.BookStore
 
             Configure<AbpDistributedCacheOptions>(options =>
             {
-                options.KeyPrefix = "Sample:";
-            });
-
-            Configure<AbpLocalizationOptions>(options =>
-            {
-                options.DefaultResourceType = typeof(BookStoreResource);
-                options.Languages.Add(new LanguageInfo("en", "en", "English"));
-                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
-            });
-
-            /*
-             *  依赖AbpAspNetCoreMvcClientModule模块时，默认的将ILanguageProvider、ISettingProvider指向Default远程
-             *  Web项目时非常合适，因为Web项目的全部资源都来自于Default远程
-             *  但API项目是否必要？
-             *  Note：这里可能出现错误，日后再看
-             */
-            context.Services.Replace(ServiceDescriptor.Transient<ILanguageProvider, DefaultLanguageProvider>());
-            context.Services.Replace(ServiceDescriptor.Transient<ISettingProvider, SettingProvider>());
-            Configure<AbpLocalizationOptions>(options =>
-            {
-                if (options.GlobalContributors.Contains<RemoteLocalizationContributor>())
-                {
-                    options.GlobalContributors.Remove<RemoteLocalizationContributor>();
-                }
+                options.KeyPrefix = BookStoreConsts.Name + ":";
             });
 
             context.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.Authority = configuration["AuthServer:Authority"];
-                    options.RequireHttpsMetadata = Convert.ToBoolean(configuration["AuthServer:RequireHttpsMetadata"]);
-                    options.Audience = configuration["AuthServer:Audience"];
-                });
+                 .AddJwtBearer(options =>
+                 {
+                     options.Authority = configuration["AuthServer:Authority"];
+                     options.RequireHttpsMetadata = Convert.ToBoolean(configuration["AuthServer:RequireHttpsMetadata"]);
+                     options.Audience = configuration["AuthServer:Audience"];
+                 });
 
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
@@ -237,6 +199,35 @@ namespace Hugin.BookStore
                 });
             });
 
+            Configure<AbpLocalizationOptions>(options =>
+            {
+                options.DefaultResourceType = typeof(BookStoreResource);
+                options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
+            });
+
+            ////DataFilter
+            //Configure<AbpDataFilterOptions>(options =>
+            //{
+            //    options.DefaultStates[typeof(IMultiUser)] = new DataFilterState(isEnabled: false);
+            //    options.DefaultStates[typeof(IMultiStadium)] = new DataFilterState(isEnabled: false);
+            //});
+
+            /*
+             *  依赖AbpAspNetCoreMvcClientModule模块时，默认的将ILanguageProvider、ISettingProvider指向Default远程
+             *  Web项目时非常合适，因为Web项目的全部资源都来自于Default远程
+             *  但API项目是否必要？Note：这里可能出现错误，日后再看
+             */
+            //context.Services.Replace(ServiceDescriptor.Transient<ILanguageProvider, DefaultLanguageProvider>());
+            //context.Services.Replace(ServiceDescriptor.Transient<ISettingProvider, SettingProvider>());
+            //Configure<AbpLocalizationOptions>(options =>
+            //{
+            //    if (options.GlobalContributors.Contains<RemoteLocalizationContributor>())
+            //    {
+            //        options.GlobalContributors.Remove<RemoteLocalizationContributor>();
+            //    }
+            //});
+
             ConfigureDevelopmentServices(context);
         }
 
@@ -250,20 +241,20 @@ namespace Hugin.BookStore
                 return;
             }
 
-//#if DEBUG
-//            Configure<AbpVirtualFileSystemOptions>(options =>
-//            {
-//                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain.Shared", Path.DirectorySeparatorChar)));
-//                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain", Path.DirectorySeparatorChar)));
-//                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application.Contracts", Path.DirectorySeparatorChar)));
-//                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application", Path.DirectorySeparatorChar)));
-//            });
-//#endif
+            //#if DEBUG
+            //            Configure<AbpVirtualFileSystemOptions>(options =>
+            //            {
+            //                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain.Shared", Path.DirectorySeparatorChar)));
+            //                options.FileSets.ReplaceEmbeddedByPhysical<SampleDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Domain", Path.DirectorySeparatorChar)));
+            //                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application.Contracts", Path.DirectorySeparatorChar)));
+            //                options.FileSets.ReplaceEmbeddedByPhysical<SampleApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, string.Format("..{0}..{0}src{0}LG.NetCore.Sample.Application", Path.DirectorySeparatorChar)));
+            //            });
+            //#endif
 
             context.Services.AddAbpSwaggerGenWithOAuth(configuration["AuthServer:Authority"],
                     scopes: new Dictionary<string, string>
                     {
-                        {"Sample", "示例"}
+                        {"BookStore", "示例"}
 
                     },
                     setupAction: options =>
@@ -284,7 +275,7 @@ namespace Hugin.BookStore
                             return docName == ApiGroups.Abp;
                         });
 
-                        options.EnableAnnotations(); 
+                        options.EnableAnnotations();
                         options.CustomSchemaIds(type => type.FullName);
                         options.DescribeAllParametersInCamelCase();
                         options.OperationFilter<StadiumHeaderFilter>();
@@ -302,8 +293,6 @@ namespace Hugin.BookStore
             context.Services.AddAlwaysAllowAuthorization();
             context.Services.Replace(ServiceDescriptor.Singleton<ICurrentPrincipalAccessor, FakeCurrentPrincipalAccessor>());
 #endif
-
-            //todo Cors?
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)

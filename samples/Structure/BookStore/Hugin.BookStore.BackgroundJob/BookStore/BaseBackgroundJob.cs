@@ -9,7 +9,7 @@ using Volo.Abp.Uow;
 namespace Hugin.BookStore
 {
 #if DEBUG
-    [Queue(Global.Identifier)]
+    [Queue("debug")]
 #endif
     public abstract class BaseBackgroundJob : ITransientDependency
     {
