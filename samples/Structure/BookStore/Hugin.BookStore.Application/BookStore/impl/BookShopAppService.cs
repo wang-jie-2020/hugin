@@ -137,21 +137,6 @@ namespace Hugin.BookStore.impl
             return query;
         }
 
-        public virtual async Task<FileContentResult> GetImportTemplate()
-        {
-            var buffer = await ExcelExport.ExportTemplateAsync<BookShopEditDto>();
-
-            return new FileContentResult(buffer, System.Net.Mime.MediaTypeNames.Application.Octet)
-            {
-                FileDownloadName = DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsx"
-            };
-        }
-
-        public virtual async Task ImportExcel(IFormFile formFile)
-        {
-            var items = await ExcelExport.ImportTemplateAsync<BookShopEditDto>(formFile.OpenReadStream());
-        }
-
         #region 一些mapper尝试
 
         //[HttpGet]
