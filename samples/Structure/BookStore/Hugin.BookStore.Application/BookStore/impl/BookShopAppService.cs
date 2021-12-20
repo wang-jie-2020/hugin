@@ -156,6 +156,32 @@ namespace Hugin.BookStore.impl
 
         //[HttpGet]
         //[Route("/api/sample/book-shop/test/from-list")]
+        //public async Task<List<BookShopDto>> LeftJoin()
+        //{
+        //    var query = from bookShop in Repository
+
+        //                join bookshopOwner in _bookShopOwnerRepository
+        //                    on bookShop.OwnerId equals bookshopOwner.Id into g
+        //                from bookshopOwner in g.DefaultIfEmpty()
+
+        //                let bookshopOwner2 = _bookShopOwnerRepository.FirstOrDefault(p => p.Id == bookShop.OwnerId) ?? new BookShopOwner()
+
+        //                select new BookShopDto
+        //                {
+        //                    Id = bookShop.Id,
+        //                    Code = bookShop.Code,
+        //                    OwnerName = bookshopOwner2.Name
+        //                };
+
+        //    query = query.Where(p => p.Name.Contains("jd") || p.OwnerName.Contains("jd"));
+
+        //    var entities = await AsyncExecuter.ToListAsync(query);
+
+        //    return entities;
+        //}
+
+        //[HttpGet]
+        //[Route("/api/sample/book-shop/test/from-list")]
         //public async Task<PagedResultDto<BookShopDto>> FromListMapperList(BookShopQueryInput input)
         //{
         //    var query = (IQueryable<BookShop>)Repository;
