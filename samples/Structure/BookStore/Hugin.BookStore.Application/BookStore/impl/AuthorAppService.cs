@@ -10,26 +10,18 @@ using Volo.Abp.Application.Dtos;
 
 namespace Hugin.BookStore.impl
 {
-    /*
-     * 这个例子演示的是不做集成时的crud
-     */
-    [SwaggerTag("作者")]
+    [SwaggerTag("NoBased Api")]
     [Authorize(BookStorePermissions.Author.Default)]
     public class AuthorAppService
         : BaseAppService, IAuthorAppService
     {
         private readonly IAuthorRepository _authorRepository;
         private readonly IAuthorManager _authorManager;
-        private readonly IBookAppService _bookAppService;
 
-        public AuthorAppService(
-            IAuthorRepository authorRepository,
-            IAuthorManager authorManager,
-            IBookAppService bookAppService)
+        public AuthorAppService(IAuthorRepository authorRepository, IAuthorManager authorManager)
         {
             _authorRepository = authorRepository;
             _authorManager = authorManager;
-            _bookAppService = bookAppService;
         }
 
         public async Task<AuthorDto> GetAsync(Guid id)
@@ -45,20 +37,13 @@ namespace Hugin.BookStore.impl
                 input.Sorting = nameof(Author.Name);
             }
 
-            var authors = await _authorRepository.GetListAsync(
-                input.SkipCount,
-                input.MaxResultCount,
-                input.Sorting,
-                input.Filter);
-
+            //abp示例就这么写的，但明显是不对的
+            var authors = await _authorRepository.GetListAsync(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);
             var totalCount = await AsyncExecuter.CountAsync<Author>(
                     _authorRepository.WhereIf(!input.Filter.IsNullOrWhiteSpace(),
                     author => author.Name.Contains(input.Filter)));
 
-            return new PagedResultDto<AuthorDto>(
-                totalCount,
-                ObjectMapper.Map<List<Author>, List<AuthorDto>>(authors)
-            );
+            return new PagedResultDto<AuthorDto>(totalCount, ObjectMapper.Map<List<Author>, List<AuthorDto>>(authors));
         }
 
         [Authorize(BookStorePermissions.Author.Create)]

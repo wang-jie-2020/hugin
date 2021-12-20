@@ -8,15 +8,15 @@ using Volo.Abp.Application.Dtos;
 namespace Hugin.BookStore
 {
     /// <summary>
-    /// SampleController
+    /// BookUpperController
     /// </summary>
-    [Route("api/controller/sample/bookstore/book")]
-    [SwaggerTag("书籍")]
-    public class BookController : BaseController, IBookAppService
+    [Route("api/controller/bookstore/book")]
+    [SwaggerTag("Controller Api")]
+    public class BookUpperController : BaseController, IBookAppService
     {
         private readonly IBookAppService _bookAppService;
 
-        public BookController(IBookAppService bookAppService)
+        public BookUpperController(IBookAppService bookAppService)
         {
             _bookAppService = bookAppService;
         }

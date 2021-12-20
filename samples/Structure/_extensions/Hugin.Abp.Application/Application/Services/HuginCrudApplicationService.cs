@@ -38,7 +38,7 @@ namespace Hugin.Application.Services
     /// <typeparam name="TCreateOrUpdateInput">实体新建或更新输入</typeparam>
 
     public abstract class HuginCrudApplicationService<TEntity, TKey, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput>
-           : LGCrudAppService<TEntity, TKey, TEntityDto, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput, TCreateOrUpdateInput>
+           : HuginCrudApplicationService<TEntity, TKey, TEntityDto, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput, TCreateOrUpdateInput>
     where TKey : struct
     where TEntity : class, IEntity<TKey>
     where TEntityEditDto : new()
@@ -62,7 +62,7 @@ namespace Hugin.Application.Services
     /// <typeparam name="TCreateInput">实体新建输入</typeparam>
     /// <typeparam name="TUpdateInput">实体更新输入</typeparam>
 
-    public abstract class LGCrudAppService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
+    public abstract class HuginCrudApplicationService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
         : HuginApplicationService,
             ICrudAppService<TEntity, TGetOutputDto, TGetListOutputDto, TGetEditOutputDto, TKey, TGetListInput, TCreateInput, TUpdateInput>
             where TKey : struct
@@ -75,7 +75,7 @@ namespace Hugin.Application.Services
         /// </summary>
         protected readonly IRepository<TEntity, TKey> Repository;
 
-        protected LGCrudAppService(IRepository<TEntity, TKey> repository)
+        protected HuginCrudApplicationService(IRepository<TEntity, TKey> repository)
         {
             Repository = repository;
 

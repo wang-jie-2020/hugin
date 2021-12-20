@@ -20,7 +20,7 @@ namespace Hugin.Application.Services
     /// <typeparam name="TGetEditOutputDto">实体编辑输出类型</typeparam>
     /// <typeparam name="TCreateOrUpdateInput">实体新建或更新输入</typeparam>
     public abstract class HuginCrudStopApplicationService<TEntity, TKey, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput>
-        : LGCrudStopAppService<TEntity, TKey, TEntityDto, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput, TCreateOrUpdateInput>
+        : HuginCrudStopApplicationService<TEntity, TKey, TEntityDto, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput, TCreateOrUpdateInput>
     where TKey : struct
     where TEntity : class, IEntity<TKey>, IStopAudited
     where TEntityEditDto : new()
@@ -43,15 +43,15 @@ namespace Hugin.Application.Services
     /// <typeparam name="TGetEditOutputDto">实体编辑输出类型</typeparam>
     /// <typeparam name="TCreateInput">实体新建输入</typeparam>
     /// <typeparam name="TUpdateInput">实体更新输入</typeparam>
-    public abstract class LGCrudStopAppService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
-        : LGCrudAppService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
+    public abstract class HuginCrudStopApplicationService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
+        : HuginCrudApplicationService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
             , IStopAppService<TKey>
     where TKey : struct
     where TEntity : class, IEntity<TKey>, IStopAudited
     where TEntityEditDto : new()
     where TGetEditOutputDto : new()
     {
-        protected LGCrudStopAppService(IRepository<TEntity, TKey> repository) : base(repository)
+        protected HuginCrudStopApplicationService(IRepository<TEntity, TKey> repository) : base(repository)
         {
 
         }
