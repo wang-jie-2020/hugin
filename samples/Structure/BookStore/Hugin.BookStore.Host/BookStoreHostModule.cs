@@ -85,6 +85,7 @@ namespace Hugin.BookStore
 
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
+            //Proxy
             //System.Net.WebRequest.DefaultWebProxy = new System.Net.WebProxy("127.0.0.1", 8888);
         }
 
@@ -218,15 +219,15 @@ namespace Hugin.BookStore
              *  Web项目时非常合适，因为Web项目的全部资源都来自于Default远程
              *  但API项目是否必要？Note：这里可能出现错误，日后再看
              */
-            //context.Services.Replace(ServiceDescriptor.Transient<ILanguageProvider, DefaultLanguageProvider>());
-            //context.Services.Replace(ServiceDescriptor.Transient<ISettingProvider, SettingProvider>());
-            //Configure<AbpLocalizationOptions>(options =>
-            //{
-            //    if (options.GlobalContributors.Contains<RemoteLocalizationContributor>())
-            //    {
-            //        options.GlobalContributors.Remove<RemoteLocalizationContributor>();
-            //    }
-            //});
+            context.Services.Replace(ServiceDescriptor.Transient<ILanguageProvider, DefaultLanguageProvider>());
+            context.Services.Replace(ServiceDescriptor.Transient<ISettingProvider, SettingProvider>());
+            Configure<AbpLocalizationOptions>(options =>
+            {
+                if (options.GlobalContributors.Contains<RemoteLocalizationContributor>())
+                {
+                    options.GlobalContributors.Remove<RemoteLocalizationContributor>();
+                }
+            });
 
             ConfigureDevelopmentServices(context);
         }

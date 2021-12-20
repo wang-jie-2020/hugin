@@ -4,7 +4,7 @@ using Volo.Abp.AspNetCore.Mvc;
 
 namespace Hugin.BookStore
 {
-    [ApiExplorerSettings(GroupName = "sample")]
+    [ApiExplorerSettings(GroupName = ApiGroups.BookStore)]
     public abstract class BaseController : AbpController
     {
         protected BaseController()
