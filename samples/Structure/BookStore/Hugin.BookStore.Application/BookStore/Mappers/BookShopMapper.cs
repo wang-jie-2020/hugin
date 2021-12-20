@@ -15,7 +15,8 @@ namespace Hugin.BookStore.Mappers
 
             CreateMap<BookShopDao, BookShopDto>()
                 .IncludeMembers(s => s.BookShop)
-                .ForMember(m => m.OwnerName, s => s.MapFrom(g => g.BookShopOwner.Name));
+                .ForMember(m => m.OwnerName,
+                    s => s.MapFrom(g => g.BookShopOwner.Name));
 
             CreateMap<BookShopCto, BookShopDao>();
             CreateMap<BookShopDao, BookShopCto>();

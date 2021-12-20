@@ -12,8 +12,6 @@ namespace Hugin.Application.Services
 
     public interface IQueryAppService<TEntity, TGetOutputDto, TGetListOutputDto, in TKey, in TGetListInput>
     {
-        IQueryable<TEntity> DefaultQuery { get; }
-
         Task<TGetOutputDto> GetAsync(TKey id);
 
         Task<PagedResultDto<TGetListOutputDto>> GetListAsync(TGetListInput input);

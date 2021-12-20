@@ -110,22 +110,9 @@ namespace Hugin.BookStore.impl
             return base.CancelStop(id);
         }
 
-        public override async Task<PagedResultDto<BookShopDto>> GetListAsync(BookShopQueryInput input)
+        protected override IQueryable<object> CreateDefaultQuery()
         {
-            var query = MapperAccessor.Mapper.ProjectTo<BookShopDto>(QueryBookShop());
-
-            query = ApplyFiltering(query, input);
-            var totalCount = await AsyncExecuter.CountAsync(query);
-
-            query = ApplySorting(query, input);
-            query = ApplyPaging(query, input);
-
-            var entityDtos = await AsyncExecuter.ToListAsync(query);
-
-            return new PagedResultDto<BookShopDto>(
-                totalCount,
-                entityDtos
-            );
+            return QueryBookShop();
         }
 
         public IQueryable<BookShopDao> QueryBookShop()
@@ -149,12 +136,6 @@ namespace Hugin.BookStore.impl
 
             return query;
         }
-
-        //public override async Task<BookShopDto> GetAsync(Guid id)
-        //{
-        //    var entity = await QueryBookShop().FirstOrDefaultAsync(p => p.BookShop.Id.Equals(id));
-        //    return ObjectMapper.Map<BookShopDao, BookShopDto>(entity);
-        //}
 
         public virtual async Task<FileContentResult> GetImportTemplate()
         {

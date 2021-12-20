@@ -90,6 +90,17 @@ namespace Hugin.Application.Services
         /// <returns></returns>
         public virtual async Task<TGetOutputDto> GetAsync(TKey id)
         {
+            if (typeof(TGetOutputDto).IsAssignableTo<IEntity<TKey>>())
+            {
+                var query = MapperAccessor.Mapper.ProjectTo<TGetOutputDto>(CreateDefaultQuery());
+                return await AsyncExecuter.FirstOrDefaultAsync(query, e => ((IEntity<TKey>)e).Id.Equals(id));
+            }
+            if (typeof(TGetOutputDto).IsAssignableTo<IEntityDto<TKey>>())
+            {
+                var query = MapperAccessor.Mapper.ProjectTo<TGetOutputDto>(CreateDefaultQuery());
+                return await AsyncExecuter.FirstOrDefaultAsync(query, e => ((IEntityDto<TKey>)e).Id.Equals(id));
+            }
+
             var entity = await Repository.GetAsync(id);
             return ObjectMapper.Map<TEntity, TGetOutputDto>(entity);
         }
@@ -101,6 +112,8 @@ namespace Hugin.Application.Services
         /// <returns></returns>
         public virtual async Task<PagedResultDto<TGetListOutputDto>> GetListAsync(TGetListInput input)
         {
+            #region Obsolete
+
             //var query = (IQueryable<TEntity>)Repository;
             //query = ApplyFiltering(query, input);
 
@@ -117,7 +130,9 @@ namespace Hugin.Application.Services
             //    entityDtos
             //);
 
-            var query = MapperAccessor.Mapper.ProjectTo<TGetListOutputDto>((IQueryable<TEntity>)Repository);
+            #endregion
+
+            var query = MapperAccessor.Mapper.ProjectTo<TGetListOutputDto>(CreateDefaultQuery());
 
             query = ApplyFiltering(query, input);
 
@@ -134,12 +149,7 @@ namespace Hugin.Application.Services
             );
         }
 
-        /// <summary>
-        /// 该实体默认查询
-        /// </summary>
-        public IQueryable<TEntity> DefaultQuery => CreateDefaultQuery();
-
-        protected virtual IQueryable<TEntity> CreateDefaultQuery()
+        protected virtual IQueryable<object> CreateDefaultQuery()
         {
             return ApplyDefaultSorting(Repository);
         }

@@ -9,7 +9,7 @@ namespace Hugin.BookStore
     /// <summary>
     /// 书店
     /// </summary>
-    public class BookShop : StopFullAuditedAggregateRoot<Guid>, IMultiTenant, IMultiUser
+    public class BookShop : StopFullAuditedAggregateRoot<Guid>
     {
         /// <summary>
         /// 编码
@@ -28,22 +28,10 @@ namespace Hugin.BookStore
         public string Name { get; set; }
 
         /// <summary>
-        /// 租户Id
-        /// </summary>
-        [Description("租户Id")]
-        public Guid? TenantId { get; protected set; }
-
-        /// <summary>
         /// Boss
         /// </summary>
         [Description("Boss")]
         public Guid? OwnerId { get; set; }
-
-        /// <summary>
-        /// UserId
-        /// </summary>
-        [Description("UserId")]
-        public Guid? UserId { get; protected set; }
 
         /// <summary>
         /// 提供私有构造函数以实现序列化
@@ -54,14 +42,11 @@ namespace Hugin.BookStore
         }
 
         /// <summary>
-        /// 不强制要求租户，但要考虑赋值，因为Tenant是只读的
+        /// 提供公共构造函数以实现约束
         /// </summary>
-        /// <param name="tenantId"></param>
-        /// <param name="userId"></param>
-        public BookShop(Guid? tenantId, Guid userId)
+        public BookShop(string code, string name)
         {
-            TenantId = tenantId;
-            UserId = userId;
+
         }
     }
 }

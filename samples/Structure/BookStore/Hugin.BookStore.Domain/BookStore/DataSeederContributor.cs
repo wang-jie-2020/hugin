@@ -74,20 +74,16 @@ namespace Hugin.BookStore
                     //BookShop
                     if (!(await _bookShopRepository.AnyAsync(p => p.Code.Equals(BookShopType.TaoBao))))
                     {
-                        await _bookShopRepository.InsertAsync(new BookShop(tenantId: null, userId: new Guid("39fcd22b-4db5-14a7-ac7d-e81fe8edebba"))
+                        await _bookShopRepository.InsertAsync(new BookShop(BookShopType.TaoBao, "淘宝")
                         {
-                            Code = BookShopType.TaoBao,
-                            Name = "淘宝",
                             OwnerId = new Guid("5aebb468-9d50-4eaa-a6cc-dec91f8a291b"),
                         }.TrySetId(new Guid("9cfc821e-a1c3-4a84-8130-1970e6441279")));
                     }
 
                     if (!(await _bookShopRepository.AnyAsync(p => p.Code.Equals(BookShopType.JingDong))))
                     {
-                        await _bookShopRepository.InsertAsync(new BookShop(tenantId: null, userId: Guid.Empty)
+                        await _bookShopRepository.InsertAsync(new BookShop(BookShopType.JingDong, "京东")
                         {
-                            Code = BookShopType.JingDong,
-                            Name = "京东",
                             OwnerId = new Guid("b3a23042-9786-45b1-82de-f3f146040f88"),
                             IsStop = true
                         }.TrySetId(new Guid("65ae0986-c50f-4100-b890-807f8f9b44b3"))
@@ -96,11 +92,7 @@ namespace Hugin.BookStore
 
                     if (!(await _bookShopRepository.AnyAsync(p => p.Code.Equals(BookShopType.DangDang))))
                     {
-                        await _bookShopRepository.InsertAsync(new BookShop(tenantId: null, userId: new Guid("2e701e62-0953-4dd3-910b-dc6cc93ccb0d"))
-                        {
-                            Code = BookShopType.DangDang,
-                            Name = "当当网"
-                        }.TrySetId(new Guid("77e523d4-8625-4a7d-94c3-1aa25b3765ee")));
+                        await _bookShopRepository.InsertAsync(new BookShop(BookShopType.DangDang, "当当网").TrySetId(new Guid("77e523d4-8625-4a7d-94c3-1aa25b3765ee")));
                     }
 
                     //Author

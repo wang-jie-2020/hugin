@@ -4,9 +4,15 @@ using Volo.Abp.AspNetCore.Mvc;
 
 namespace Hugin.BookStore.Controllers
 {
-    [Route("api/healthy")]
-    public class HealthyController : AbpController
+    [Route("api/healthCheck")]
+    public class HealthCheckController : AbpController
     {
+        [HttpGet]
+        public IActionResult HeathCheck()
+        {
+            return Ok();
+        }
+
         [Authorize]
         [HttpGet]
         [Route("authorize")]
