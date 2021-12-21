@@ -129,7 +129,7 @@ namespace Hugin.BookStore.impl
 
             book.Price = new Random().Next() * 1111.11m;
             await _bookRepository.UpdateAsync(book);
-            throw new Exception("lalala");
+            throw new Exception("Throw Uow Exception");
         }
 
         /*
@@ -145,7 +145,7 @@ namespace Hugin.BookStore.impl
 
                 book.Price = new Random().Next() * 1111.11m;
                 await _bookRepository.UpdateAsync(book);
-                throw new Exception("lalala");
+                throw new Exception("Throw Uow Exception");
             }
         }
     }

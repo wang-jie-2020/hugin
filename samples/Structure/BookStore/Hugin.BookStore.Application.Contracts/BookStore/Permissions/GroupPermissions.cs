@@ -13,6 +13,6 @@ namespace Hugin.BookStore.Permissions
             public const string Default = BookStoreConsts.Name + ".BookStore";
         }
 
-        public MultiTenancySides MultiTenancySide { get; } = MultiTenancySides.Tenant;
+        public MultiTenancySides MultiTenancySide { get; } = MultiTenancySides.Both;
     }
 }

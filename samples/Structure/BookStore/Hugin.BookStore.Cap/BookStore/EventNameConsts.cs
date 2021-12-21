@@ -5,8 +5,10 @@
      */
     internal static class EventNameConsts
     {
-        public const string YourEvent = "{YourEventName}" + Global.Identifier;
-
-        public const string BookStoreEvent = "bookstore" + Global.Identifier;
+#if DEBUG
+        public const string BookStoreEvent = "bookStoreEventDebug";
+#else
+        public const string BookStoreEvent = "bookStoreEvent";
+#endif
     }
 }

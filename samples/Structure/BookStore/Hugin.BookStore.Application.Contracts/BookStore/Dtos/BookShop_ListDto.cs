@@ -37,6 +37,12 @@ namespace Hugin.BookStore.Dtos
         public Guid? OwnerId { get; set; }
 
         /// <summary>
+        /// BossName 
+        /// </summary>
+        [QueryFilterField]
+        public string OwnerName { get; set; }
+
+        /// <summary>
         /// Boss 
         /// </summary>
         public BookShopOwnerDto BookShopOwner { get; set; }
@@ -48,11 +54,5 @@ namespace Hugin.BookStore.Dtos
         public string BooksOnSale => Books.IsEmpty()
              ? string.Empty
              : Books.Select(p => p.Name).ToList().Aggregate((a, b) => a + "," + b); //string.Join(',', Books.Select(p => p.Name));
-
-        /// <summary>
-        /// BossName 
-        /// </summary>
-        [QueryFilterField]
-        public string OwnerName { get; set; }
     }
 }
