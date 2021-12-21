@@ -291,8 +291,8 @@ namespace Hugin.BookStore
             context.Services.AddMiniProfiler(options => { options.RouteBasePath = "/profiler"; }).AddEntityFramework();
 
 #if DEBUG
-            context.Services.AddAlwaysAllowAuthorization();
-            context.Services.Replace(ServiceDescriptor.Singleton<ICurrentPrincipalAccessor, FakeCurrentPrincipalAccessor>());
+            //context.Services.AddAlwaysAllowAuthorization();
+            //context.Services.Replace(ServiceDescriptor.Singleton<ICurrentPrincipalAccessor, FakeCurrentPrincipalAccessor>());
 #endif
         }
 

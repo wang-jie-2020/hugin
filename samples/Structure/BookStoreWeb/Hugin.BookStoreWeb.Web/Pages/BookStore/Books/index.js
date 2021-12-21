@@ -1,5 +1,5 @@
 ﻿$(function () {
-    var l = abp.localization.getResource('Sample');
+    var l = abp.localization.getResource('BookStore');
     var createModal = new abp.ModalManager(abp.appPath + 'BookStore/Books/CreateModal');
     var editModal = new abp.ModalManager(abp.appPath + 'BookStore/Books/EditModal');
 
@@ -10,7 +10,7 @@
             order: [[1, "asc"]],
             searching: false,
             scrollX: true,
-            ajax: abp.libs.datatables.createAjax(lG.netCore.sample.bookStore.book.getList),
+            ajax: abp.libs.datatables.createAjax(hugin.bookStore.bookUpper.getList),
             columnDefs: [
                 {
                     title: l('Actions'),
@@ -19,14 +19,14 @@
                             [
                                 {
                                     text: l('Edit'),
-                                    visible: abp.auth.isGranted('Sample.BookStore.Book.Edit'),
+                                    visible: abp.auth.isGranted('BookStore.Book.Edit'),
                                     action: function (data) {
                                         editModal.open({ id: data.record.id });
                                     }
                                 },
                                 {
                                     text: l('Delete'),
-                                    visible: abp.auth.isGranted('Sample.BookStore.Book.Delete'),
+                                    visible: abp.auth.isGranted('BookStore.Book.Delete'),
                                     confirmMessage: function (data) {
                                         return l(
                                             'BookDeletionConfirmationMessage',
@@ -34,7 +34,7 @@
                                         );
                                     },
                                     action: function (data) {
-                                        lG.netCore.sample.bookStore.book
+                                        hugin.bookStore.bookUpper
                                             .delete(data.record.id)
                                             .then(function () {
                                                 abp.notify.info(

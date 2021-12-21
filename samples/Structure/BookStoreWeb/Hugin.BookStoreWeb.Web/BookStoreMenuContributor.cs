@@ -19,11 +19,8 @@ namespace Hugin.BookStoreWeb.Web
         {
             var l = context.GetLocalizer<BookStoreResource>();
 
-            var sampleMenu = new ApplicationMenuItem(name: "Sample", displayName: l["Menu:Sample"]);
-            context.Menu.AddItem(sampleMenu);
-
             var bookStoreMenu = new ApplicationMenuItem(name: "BooksStore", displayName: l["Menu:BookStore"], icon: "fa fa-book");
-            sampleMenu.AddItem(bookStoreMenu);
+            context.Menu.AddItem(bookStoreMenu);
 
             if (await context.IsGrantedAsync(BookStorePermissions.Book.Default))
             {
