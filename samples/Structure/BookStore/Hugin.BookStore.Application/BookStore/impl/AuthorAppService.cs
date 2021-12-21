@@ -37,7 +37,7 @@ namespace Hugin.BookStore.impl
                 input.Sorting = nameof(Author.Name);
             }
 
-            //abp示例就这么写的，但明显是不对的
+            //abp示例就这么写的
             var authors = await _authorRepository.GetListAsync(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);
             var totalCount = await AsyncExecuter.CountAsync<Author>(
                     _authorRepository.WhereIf(!input.Filter.IsNullOrWhiteSpace(),

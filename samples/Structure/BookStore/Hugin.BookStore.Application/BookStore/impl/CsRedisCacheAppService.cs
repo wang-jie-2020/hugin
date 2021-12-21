@@ -9,24 +9,21 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Hugin.BookStore.impl
 {
-    /*
-     * 这个例子演示的是缓存操作
-     */
-    [SwaggerTag("缓存")]
-    public class CacheAppService : BaseAppService
+    [SwaggerTag("CsRedis Cache")]
+    public class CsRedisCacheAppService : BaseAppService
     {
         private readonly IBookDaoService _bookDaoService;
-        private readonly ICsRedisCache<BookDto> _bookCache;
         private readonly IBookShopDaoService _bookShopDaoService;
+        private readonly ICsRedisCache<BookDto> _bookCache;
         private readonly ICsRedisCache<BookShopCto> _bookShopCache;
 
-        public CacheAppService(IBookDaoService bookDaoService,
-            ICsRedisCache<BookDto> bookCache,
+        public CsRedisCacheAppService(IBookDaoService bookDaoService,
             IBookShopDaoService bookShopDaoService,
+            ICsRedisCache<BookDto> bookCache,
             ICsRedisCache<BookShopCto> bookShopCache)
         {
-            _bookShopDaoService = bookShopDaoService;
             _bookDaoService = bookDaoService;
+            _bookShopDaoService = bookShopDaoService;
             _bookCache = bookCache;
             _bookShopCache = bookShopCache;
         }

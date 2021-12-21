@@ -5,9 +5,6 @@ using Volo.Abp.MultiTenancy;
 
 namespace Hugin.BookStore.Ctos
 {
-    /// <summary>
-    /// BookShop Cache
-    /// </summary>
     [CacheName("BookShopCache")]
     [IgnoreMultiTenancy]
     public class BookShopCto

@@ -5,10 +5,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Hugin.BookStore.impl
 {
-    /*
-     * 这个例子演示的是后台作业&后台任务
-     */
-    [SwaggerTag("作业")]
+    [SwaggerTag("Hangfire Jobs")]
     public class BackgroundJobAppService : BaseAppService
     {
         private readonly IBookStoreJob _bookStoreJob;

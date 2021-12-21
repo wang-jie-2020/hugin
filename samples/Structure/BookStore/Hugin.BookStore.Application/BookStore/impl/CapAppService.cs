@@ -3,10 +3,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Hugin.BookStore.impl
 {
-    /*
-     * 这个例子演示的是分布式事件操作
-     */
-    [SwaggerTag("Cap")]
+    [SwaggerTag("Cap Event")]
     public class CapAppService : BaseAppService
     {
         private readonly IBookStoreEvent _bookStoreEvent;

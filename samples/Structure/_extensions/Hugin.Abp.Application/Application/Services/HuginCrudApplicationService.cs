@@ -149,11 +149,23 @@ namespace Hugin.Application.Services
             );
         }
 
+        /// <summary>
+        /// Default Query to override
+        /// </summary>
+        /// <returns></returns>
         protected virtual IQueryable<object> CreateDefaultQuery()
         {
             return ApplyDefaultSorting(Repository);
         }
 
+        /// <summary>
+        /// Expression Filter With QueryFilterField Attribute
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="query"></param>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// <exception cref="AbpException"></exception>
         protected virtual IQueryable<T> ApplyFiltering<T>(IQueryable<T> query, TGetListInput input)
         {
             if (!(input is FilterPagedAndSortedResultRequestDto requestDto))

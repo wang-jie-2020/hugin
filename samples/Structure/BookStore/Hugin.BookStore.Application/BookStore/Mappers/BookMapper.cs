@@ -12,8 +12,7 @@ namespace Hugin.BookStore.Mappers
             CreateMap<Book, BookEditDto>();
             CreateMap<BookEditDto, Book>();
 
-            CreateMap<BookDao, BookDto>()
-                .IncludeMembers(s => s.Book);
+            CreateMap<BookDao, BookDto>().IncludeMembers(s => s.Book);
         }
     }
 }

@@ -11,13 +11,13 @@ namespace Hugin.BookStore.impl
     /*
      * 这个例子演示的是本地事件操作
      */
-    [SwaggerTag("事件")]
-    public class EventAppService : BaseAppService
+    [SwaggerTag("Local Event")]
+    public class LocalEventAppService : BaseAppService
     {
         private readonly IRepository<Book, Guid> _bookRepository;
         private readonly IRepository<BookShop, Guid> _bookShopRepository;
 
-        public EventAppService(IRepository<Book, Guid> bookRepository,
+        public LocalEventAppService(IRepository<Book, Guid> bookRepository,
             IRepository<BookShop, Guid> bookShopRepository)
         {
             _bookRepository = bookRepository;
