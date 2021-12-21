@@ -54,21 +54,21 @@ namespace Hugin.Mvc
             //替换Abp的错误处理
             context.Services.Replace(ServiceDescriptor.Transient<AbpExceptionFilter, HuginExceptionFilter>());
 
-            ////增加结果处理
-            //context.Services.AddTransient<LGResultFilter>();
+            ////增加结果处理    
+            //context.Services.AddTransient<HuginResultFilter>();  //因abp的httpClient在设计时未考虑到可能出现的封装，故不再封装
             //Configure<MvcOptions>(options =>
             //{
-            //    options.Filters.AddService<LGResultFilter>();
+            //    options.Filters.AddService<HuginResultFilter>();
             //});
 
             //Metadata处理
-            //context.Services.Replace(ServiceDescriptor.Singleton<IModelMetadataProvider, LGModelMetadataProvider>());
+            //context.Services.Replace(ServiceDescriptor.Singleton<IModelMetadataProvider, HuginModelMetadataProvider>());
             //Configure<MvcOptions>(options =>
             //{
-            //    options.ModelMetadataDetailsProviders.Add(new LGValidationMetadataProvider());
+            //    options.ModelMetadataDetailsProviders.Add(new HuginValidationMetadataProvider());
             //});
 
-            //context.Services.Replace(ServiceDescriptor.Singleton<IValidationAttributeAdapterProvider, LGValidationAttributeAdapterProvider>());
+            //context.Services.Replace(ServiceDescriptor.Singleton<IValidationAttributeAdapterProvider, HuginValidationAttributeAdapterProvider>());
         }
     }
 }

@@ -7,9 +7,6 @@ using Volo.Abp.Http;
 
 namespace Hugin.Mvc.ResultHandling
 {
-    /*
-     *  因abp的httpClient在设计时未考虑到可能出现的封装，故不再封装
-     */
     public class HuginResultFilter : IAsyncResultFilter
     {
         public async Task OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next)

@@ -14,7 +14,7 @@ namespace Hugin.DependencyInjection
             foreach (var interfaceType in type.GetTypeInfo().GetInterfaces())
             {
                 var interfaceName = interfaceType.Name;
-                if (interfaceName.EndsWith("DaoService"))
+                if (interfaceName.EndsWith("DaoService", StringComparison.OrdinalIgnoreCase))
                 {
                     types.Add(interfaceType);
                 }
