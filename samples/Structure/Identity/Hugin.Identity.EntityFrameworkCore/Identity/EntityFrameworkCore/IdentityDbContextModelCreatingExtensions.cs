@@ -5,7 +5,7 @@ namespace Hugin.Identity.EntityFrameworkCore
 {
     public static class IdentityDbContextModelCreatingExtensions
     {
-        public static void ConfigureLGIdentity(this ModelBuilder builder)
+        public static void ConfigureHuginIdentity(this ModelBuilder builder)
         {
             Check.NotNull(builder, nameof(builder));
 

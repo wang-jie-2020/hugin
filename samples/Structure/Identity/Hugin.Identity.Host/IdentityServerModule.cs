@@ -178,7 +178,7 @@ namespace Hugin.IdentityServer
 
             Configure<AbpDistributedCacheOptions>(options =>
             {
-                options.KeyPrefix = "Sample:";
+                options.KeyPrefix = "Identity:";
             });
 
             Configure<AbpLocalizationOptions>(options =>

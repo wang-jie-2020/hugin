@@ -102,12 +102,12 @@ namespace Hugin.BookStoreWeb
                     options.Scope.Add("role");
                     options.Scope.Add("email");
                     options.Scope.Add("phone");
-                    options.Scope.Add("Sample");
+                    options.Scope.Add("BookStore");
                 });
 
             Configure<AbpDistributedCacheOptions>(options =>
             {
-                options.KeyPrefix = "Sample:";
+                options.KeyPrefix = "BookStore:";
             });
 
             //todo 不清楚作用是什么，去掉一样可以运行正常

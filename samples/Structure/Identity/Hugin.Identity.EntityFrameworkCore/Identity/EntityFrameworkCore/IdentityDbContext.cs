@@ -19,7 +19,7 @@ namespace Hugin.Identity.EntityFrameworkCore
         {
             base.OnModelCreating(builder);
 
-            builder.ConfigureLGIdentity();
+            builder.ConfigureHuginIdentity();
         }
     }
 }

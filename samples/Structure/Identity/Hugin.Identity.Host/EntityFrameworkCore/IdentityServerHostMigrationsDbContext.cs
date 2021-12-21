@@ -30,7 +30,7 @@ namespace Hugin.IdentityServer.EntityFrameworkCore
             modelBuilder.ConfigureIdentityServer();
             modelBuilder.ConfigureFeatureManagement();
             modelBuilder.ConfigureTenantManagement();
-            modelBuilder.ConfigureLGIdentity(); ;
+            modelBuilder.ConfigureHuginIdentity(); ;
         }
     }
 }
