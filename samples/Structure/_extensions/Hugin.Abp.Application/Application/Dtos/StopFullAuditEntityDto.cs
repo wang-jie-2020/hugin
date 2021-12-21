@@ -1,5 +1,5 @@
-﻿using System;
-using Hugin.Domain.Entities;
+﻿using Hugin.Domain.Entities;
+using System;
 using Volo.Abp.Application.Dtos;
 
 namespace Hugin.Application.Dtos

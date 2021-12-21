@@ -11,7 +11,7 @@ namespace Hugin.BookStore.Permissions
             return LocalizableString.Create<BookStoreResource>("Permission:" + name);
         }
 
-        protected override string RootPermission => BookStoreConsts.Name;
+        protected override string Root => BookStoreConsts.Name;
 
         protected override Assembly[] Assemblies => new[] { typeof(BookStorePermissionDefinitionProvider).Assembly };
 

@@ -22,8 +22,8 @@ namespace Hugin.Application.Services
      *    也是很难保证全部地方都同步应用，也就不考虑在接下来的模板中再继续了
      *    
      *  RemoteService(IsEnabled = false, IsMetadataEnabled = false)
-     *    可能引起数据变化的操作在基类中都如此做
-     *    要求必须在派生类中进行重写，开放的同时还要求权限
+     *    限定引起数据变化的操作不再默认开放
+     *    派生类中可进行重写开放和权限
      */
 
     /// <summary>
@@ -78,7 +78,6 @@ namespace Hugin.Application.Services
         protected HuginCrudApplicationService(IRepository<TEntity, TKey> repository)
         {
             Repository = repository;
-
         }
 
         #region Query
@@ -202,7 +201,7 @@ namespace Hugin.Application.Services
                     constant);
 
                 filterExpression = filterExpression == null
-                    ? methodCall as Expression
+                    ? (Expression)methodCall
                     : Expression.Or(filterExpression, methodCall);
             }
 

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Hugin.Infrastructure.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Hugin.Infrastructure.Helpers;
 using Volo.Abp;
 using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Localization;
@@ -10,7 +10,7 @@ using Volo.Abp.Localization;
 namespace Hugin.Application.Permissions
 {
     /*
-     * 设计上按照三层权限组织的，例:
+     *  约定权限组织的方式如下
      *  platform    --- root
      *      bookstore   --- group
      *          book    --- child group
@@ -24,19 +24,19 @@ namespace Hugin.Application.Permissions
 
         protected abstract LocalizableString L(string name);
 
-        protected abstract string RootPermission { get; }
+        protected abstract string Root { get; }
 
         protected abstract Assembly[] Assemblies { get; }
 
         public override void Define(IPermissionDefinitionContext context)
         {
-            var root = context.AddGroup(RootPermission, L(RootPermission));
+            var root = context.AddGroup(Root, L(Root));
 
             var permissions = ReflectionHelper.GetImplementsFromAssembly<IPermissionDefine>(Assemblies);
             foreach (var permission in permissions)
             {
                 var instance = (IPermissionDefine)Activator.CreateInstance(permission);
-                var list = GetPermissionDefineFields(permission);
+                var list = GetPermissionDefineFieldInfos(permission);
 
                 var group = list.SingleOrDefault(field =>
                     field.ReflectedType is { } &&
@@ -80,7 +80,7 @@ namespace Hugin.Application.Permissions
             }
         }
 
-        private List<FieldInfo> GetPermissionDefineFields(Type type)
+        private List<FieldInfo> GetPermissionDefineFieldInfos(Type type)
         {
             var result = new List<FieldInfo>();
             Recursively(result, type, 1);

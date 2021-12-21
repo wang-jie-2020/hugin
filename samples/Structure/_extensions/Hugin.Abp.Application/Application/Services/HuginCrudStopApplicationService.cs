@@ -57,7 +57,7 @@ namespace Hugin.Application.Services
         }
 
         /*
-         * 不适合在这里进行
+         * 不具备通用性
          */
         //protected override IQueryable<TEntity> CreateDefaultQuery()
         //{
@@ -89,7 +89,7 @@ namespace Hugin.Application.Services
         {
             var entity = await Repository.GetAsync(id);
             entity.IsStop = false;
-            entity.StopUserId = CurrentUser?.Id;
+            entity.StopUserId = null;
             entity.StopTime = null;
             await Repository.UpdateAsync(entity, autoSave: true);
         }
