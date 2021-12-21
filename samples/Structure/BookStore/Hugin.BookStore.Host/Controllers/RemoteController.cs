@@ -7,8 +7,8 @@ using Volo.Abp.TenantManagement;
 
 namespace Hugin.BookStore.Controllers
 {
-    [Route("api/identity/user-extend")]
-    public class UserExtendController : AbpController
+    [Route("api/remote")]
+    public class RemoteController : AbpController
     {
         private readonly IIdentityUserAppService _identityUserAppService;
         private readonly IIdentityUserLookupAppService _identityUserLookupAppService;
@@ -17,7 +17,7 @@ namespace Hugin.BookStore.Controllers
         private readonly ITenantAppService _tenantAppService;
         private readonly IUserExtendAppService _userAppService;
 
-        public UserExtendController(IIdentityUserAppService identityUserAppService,
+        public RemoteController(IIdentityUserAppService identityUserAppService,
            IIdentityUserLookupAppService identityUserLookupAppService,
            IIdentityRoleAppService identityRoleAppService,
            IProfileAppService profileAppService,
