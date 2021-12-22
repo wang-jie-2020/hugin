@@ -1,4 +1,6 @@
-﻿namespace Volo.Abp.MultiStadium.ConfigurationStore
+﻿using System;
+
+namespace Volo.Abp.MultiStadium.ConfigurationStore
 {
     public class AbpDefaultStadiumStoreOptions
     {
@@ -6,7 +8,7 @@
 
         public AbpDefaultStadiumStoreOptions()
         {
-            Stadiums = new StadiumConfiguration[0];
+            Stadiums = Array.Empty<StadiumConfiguration>();
         }
     }
 }

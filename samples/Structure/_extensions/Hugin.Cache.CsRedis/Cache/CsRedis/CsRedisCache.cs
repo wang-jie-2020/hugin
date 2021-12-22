@@ -20,7 +20,7 @@ namespace Hugin.Cache.CsRedis
         protected readonly AbpDistributedCacheOptions DistributedCacheOption;
         protected readonly IDistributedCacheKeyNormalizer KeyNormalizer;
         protected readonly IDistributedCacheSerializer Serializer;
-        protected CSRedisCache CsRedisDistributedCache; //CsRedis实现的IDistributedCache，这里只是考虑到Get-And-Refresh
+        protected CSRedisCache CsRedisDistributedCache; //CsRedis实现的IDistributedCache，这里只是考虑到Get-And-Refresh的借用
 
         /// <summary>
         /// CsRedis客户端，不含任何封装
