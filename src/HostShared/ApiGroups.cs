@@ -1,6 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
 
-namespace LG.NetCore
+namespace HostShared
 {
     public static class ApiGroups
     {

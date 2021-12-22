@@ -35,8 +35,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LG.Wechat.Senparc", "module
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LG.Wechat.Senparc.HttpApi", "modules\wechat\src\LG.Wechat.Senparc.HttpApi\LG.Wechat.Senparc.HttpApi.csproj", "{9F409E86-39C2-4761-91D8-CD474CB80744}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LG.NetCore.HostShared", "host\LG.NetCore.HostShared\LG.NetCore.HostShared.csproj", "{F6AC8D4A-EDD7-4514-8E8A-5BCB019864DB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LG.NetCore.Platform.Host", "host\LG.NetCore.Platform.Host\LG.NetCore.Platform.Host.csproj", "{37B135B0-DAFE-4616-B25C-1BDF32FC44A2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LG.NetCore.IdentityServer", "host\LG.NetCore.IdentityServer.Host\LG.NetCore.IdentityServer.csproj", "{690203F4-3CD5-4569-88D9-EE831EEA5F5F}"
@@ -127,6 +125,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.Infrastructure.Log", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.Infrastructure.Log.Serilog", "_infrastructure\Hugin.Infrastructure.Log.Serilog\Hugin.Infrastructure.Log.Serilog.csproj", "{54033190-9FB5-4DE8-9E36-2CD3801BD771}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostShared", "HostShared\HostShared.csproj", "{FB5B865A-23F7-4E8B-891A-F0CEC7EEBA69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,10 +177,6 @@ Global
 		{9F409E86-39C2-4761-91D8-CD474CB80744}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F409E86-39C2-4761-91D8-CD474CB80744}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F409E86-39C2-4761-91D8-CD474CB80744}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6AC8D4A-EDD7-4514-8E8A-5BCB019864DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6AC8D4A-EDD7-4514-8E8A-5BCB019864DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6AC8D4A-EDD7-4514-8E8A-5BCB019864DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6AC8D4A-EDD7-4514-8E8A-5BCB019864DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{37B135B0-DAFE-4616-B25C-1BDF32FC44A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{37B135B0-DAFE-4616-B25C-1BDF32FC44A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37B135B0-DAFE-4616-B25C-1BDF32FC44A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -341,6 +337,10 @@ Global
 		{54033190-9FB5-4DE8-9E36-2CD3801BD771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54033190-9FB5-4DE8-9E36-2CD3801BD771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54033190-9FB5-4DE8-9E36-2CD3801BD771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB5B865A-23F7-4E8B-891A-F0CEC7EEBA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5B865A-23F7-4E8B-891A-F0CEC7EEBA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5B865A-23F7-4E8B-891A-F0CEC7EEBA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5B865A-23F7-4E8B-891A-F0CEC7EEBA69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

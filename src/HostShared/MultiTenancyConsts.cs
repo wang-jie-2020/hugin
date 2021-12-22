@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore
+﻿namespace HostShared
 {
     public static class MultiTenancyConsts
     {
