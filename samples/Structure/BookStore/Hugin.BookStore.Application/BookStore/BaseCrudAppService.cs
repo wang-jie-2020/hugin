@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Hugin.Application.Services;
+using Hugin.BookStore.FileObjects;
 using Hugin.BookStore.Localization;
 using Hugin.Infrastructure.Exporting;
 using Microsoft.AspNetCore.Mvc;
@@ -41,16 +42,20 @@ namespace Hugin.BookStore
         private IExcelExporting _excelExport;
         protected IExcelExporting ExcelExport => this.LazyGetRequiredService<IExcelExporting>(ref this._excelExport);
 
+        private IFileCacheAppService _fileCacheAppService;
+        protected IFileCacheAppService FileCacheApp => this.LazyGetRequiredService<IFileCacheAppService>(ref this._fileCacheAppService);
+
         public virtual async Task<FileContentResult> GetExcel(TGetListInput input)
         {
             var output = await GetListAsync(input);
             var list = output.Items.ToList();
             var buffer = await ExcelExport.ExportAsync(list);
 
+            //await FileCacheApp.SetFile(new FileCto("123", System.Net.Mime.MediaTypeNames.Application.Octet, buffer));
+
             return new FileContentResult(buffer, System.Net.Mime.MediaTypeNames.Application.Octet)
             {
                 FileDownloadName = DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsx"
-
             };
         }
 
