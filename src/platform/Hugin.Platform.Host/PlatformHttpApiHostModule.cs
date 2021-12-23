@@ -24,7 +24,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using HostShared;
 using Hugin.Cache.CsRedis;
 using Hugin.Domain.Entities;
 using Hugin.Infrastructure.Cap;
@@ -77,9 +76,9 @@ namespace Hugin.Platform
     )]
     public class PlatformHttpApiHostModule : AbpModule
     {
-        private const string DefaultCorsPolicyName = "Default";
+        private const string DefaultCorsPolicyName = "Abp";
 
-        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.DefaultGroup, ApiGroups.PlatformGroup, ApiGroups.SampleGroup };
+        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.PlatformGroup };
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
@@ -256,7 +255,7 @@ namespace Hugin.Platform
                                 return docName == groupName;
                             }
 
-                            return docName == ApiGroups.Default;
+                            return docName == ApiGroups.Abp;
                         });
 
                         options.EnableAnnotations();

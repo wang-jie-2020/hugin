@@ -1,4 +1,4 @@
-﻿namespace HostShared
+﻿namespace Hugin
 {
     public static class Global
     {

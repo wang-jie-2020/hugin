@@ -15,8 +15,8 @@ namespace HuginIdentityServer.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<IdentityServerHostMigrationsDbContext>().UseMySql(
-                configuration.GetConnectionString("Default"),
-                ServerVersion.AutoDetect(configuration.GetConnectionString("Default")));
+                configuration.GetConnectionString("Abp"),
+                ServerVersion.AutoDetect(configuration.GetConnectionString("Abp")));
 
             return new IdentityServerHostMigrationsDbContext(builder.Options);
         }

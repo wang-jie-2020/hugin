@@ -15,7 +15,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
-using HostShared;
+using Hugin;
 using Hugin.Mvc;
 using Volo.Abp;
 using Volo.Abp.Account;
@@ -100,9 +100,9 @@ namespace HuginIdentityServer
         )]
     public class IdentityServerModule : AbpModule
     {
-        private const string DefaultCorsPolicyName = "Default";
+        private const string DefaultCorsPolicyName = "Abp";
 
-        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.DefaultGroup, ApiGroups.PlatformGroup, ApiGroups.SampleGroup };
+        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.PlatformGroup };
 
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
@@ -232,7 +232,7 @@ namespace HuginIdentityServer
                             return docName == groupName;
                         }
 
-                        return docName == ApiGroups.Default;
+                        return docName == ApiGroups.Abp;
                     });
 
                     options.EnableAnnotations();

@@ -1,5 +1,4 @@
-﻿using HostShared;
-using Hugin.Platform.Localization;
+﻿using Hugin.Platform.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 

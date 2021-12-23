@@ -22,7 +22,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using HostShared;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.Client;
@@ -68,9 +67,9 @@ namespace Hugin.Terminal
     )]
     public class TerminalHttpApiHostModule : AbpModule
     {
-        private const string DefaultCorsPolicyName = "Default";
+        private const string DefaultCorsPolicyName = "Abp";
 
-        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.DefaultGroup, ApiGroups.TerminalGroup };
+        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.TerminalGroup };
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
@@ -241,7 +240,7 @@ namespace Hugin.Terminal
                                 return docName == groupName;
                             }
 
-                            return docName == ApiGroups.Default;
+                            return docName == ApiGroups.Abp;
                         });
 
                         options.EnableAnnotations();

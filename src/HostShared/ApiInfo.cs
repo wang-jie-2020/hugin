@@ -1,6 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
 
-namespace HostShared
+namespace Hugin
 {
     public class ApiInfo
     {

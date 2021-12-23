@@ -1,5 +1,4 @@
-﻿using HostShared;
-using Hugin.Application.Services;
+﻿using Hugin.Application.Services;
 using Hugin.Platform.Localization;
 using Microsoft.AspNetCore.Mvc;
 
