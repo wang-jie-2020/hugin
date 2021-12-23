@@ -2,7 +2,7 @@
 //using System.Security.Cryptography;
 //using System.Text;
 
-//namespace HuginInfrastructure.Helpers
+//namespace LG.NetCore.Infrastructure.Helpers
 //{
 //    public static class AppHelper
 //    {
