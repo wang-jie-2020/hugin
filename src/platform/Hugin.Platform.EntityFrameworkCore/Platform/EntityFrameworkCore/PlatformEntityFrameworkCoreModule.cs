@@ -2,7 +2,7 @@
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Platform.EntityFrameworkCore
+namespace Hugin.Platform.EntityFrameworkCore
 {
     [DependsOn(
         typeof(AbpEntityFrameworkCoreModule)

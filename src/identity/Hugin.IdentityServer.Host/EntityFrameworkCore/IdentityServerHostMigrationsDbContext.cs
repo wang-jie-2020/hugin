@@ -8,7 +8,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 
-namespace LG.NetCore.IdentityServer.EntityFrameworkCore
+namespace HuginIdentityServer.EntityFrameworkCore
 {
     public class IdentityServerHostMigrationsDbContext : AbpDbContext<IdentityServerHostMigrationsDbContext>
     {

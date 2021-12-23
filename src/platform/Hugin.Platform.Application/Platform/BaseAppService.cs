@@ -1,11 +1,12 @@
-﻿using LG.NetCore.Application.Services;
-using LG.NetCore.Platform.Localization;
+﻿using HostShared;
+using Hugin.Application.Services;
+using Hugin.Platform.Localization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     [ApiExplorerSettings(GroupName = ApiGroups.Platform)]
-    public abstract class BaseAppService : LGAppService
+    public abstract class BaseAppService : HuginApplicationService
     {
         protected BaseAppService()
         {

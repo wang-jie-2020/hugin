@@ -1,8 +1,9 @@
-﻿using LG.NetCore.Platform.Localization;
+﻿using HostShared;
+using Hugin.Platform.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace LG.NetCore.Terminal
+namespace Hugin.Terminal
 {
     [ApiExplorerSettings(GroupName = ApiGroups.Terminal)]
     public abstract class BaseController : AbpController

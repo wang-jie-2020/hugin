@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Platform
+﻿namespace Hugin.Platform
 {
     public static partial class PlatformConsts
     {

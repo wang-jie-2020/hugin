@@ -3,7 +3,7 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 
-namespace LG.NetCore.Platform.Swagger
+namespace Hugin.Platform.Swagger
 {
     public class StadiumHeaderFilter : IOperationFilter
     {

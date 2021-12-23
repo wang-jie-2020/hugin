@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace LG.NetCore.Platform.Controllers
+namespace Hugin.Platform.Controllers
 {
     [Area("stadium")]
     [Route("api/empty/authorize")]

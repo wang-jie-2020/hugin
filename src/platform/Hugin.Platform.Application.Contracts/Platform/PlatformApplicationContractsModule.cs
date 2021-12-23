@@ -2,7 +2,7 @@
 using Volo.Abp.Authorization;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     [DependsOn(
         typeof(AbpDddApplicationContractsModule),

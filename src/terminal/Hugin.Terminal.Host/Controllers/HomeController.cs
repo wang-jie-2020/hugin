@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace LG.NetCore.Terminal.Controllers
+namespace Hugin.Terminal.Controllers
 {
     public class HomeController : AbpController
     {

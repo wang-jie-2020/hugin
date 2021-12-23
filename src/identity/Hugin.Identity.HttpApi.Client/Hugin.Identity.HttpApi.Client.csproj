@@ -11,7 +11,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\LG.NetCore.Identity.Application.Contracts\LG.NetCore.Identity.Application.Contracts.csproj" />
+		<ProjectReference Include="..\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
 	</ItemGroup>
 
 </Project>

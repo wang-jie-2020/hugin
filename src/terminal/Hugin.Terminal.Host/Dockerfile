@@ -5,7 +5,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /source
 COPY . .
-WORKDIR /source/host/LG.NetCore.Terminal.Host
+WORKDIR /source/host/Hugin.Terminal.Host
 RUN dotnet restore -nowarn:msb3202,nu1503docj
 RUN dotnet build --no-restore -c Release -o /app
 
@@ -15,4 +15,4 @@ RUN dotnet publish --no-restore -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "LG.NetCore.Terminal.Host.dll"]
+ENTRYPOINT ["dotnet", "Hugin.Terminal.Host.dll"]

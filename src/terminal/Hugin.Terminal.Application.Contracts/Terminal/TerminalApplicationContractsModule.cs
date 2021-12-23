@@ -1,9 +1,9 @@
-﻿using LG.NetCore.Platform;
+﻿using Hugin.Platform;
 using Volo.Abp.Application;
 using Volo.Abp.Authorization;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Terminal
+namespace Hugin.Terminal
 {
     [DependsOn(
         typeof(AbpDddApplicationContractsModule),

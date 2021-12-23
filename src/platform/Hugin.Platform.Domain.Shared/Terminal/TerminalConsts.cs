@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Terminal
+﻿namespace Hugin.Terminal
 {
     public static partial class TerminalConsts
     {

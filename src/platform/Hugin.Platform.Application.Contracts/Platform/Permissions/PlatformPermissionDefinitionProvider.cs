@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
-using LG.NetCore.Platform.Localization;
+using Hugin.Platform.Localization;
 using Volo.Abp.Localization;
-using PermissionDefinitionProvider = LG.NetCore.Application.Permissions.PermissionDefinitionProvider;
+using PermissionDefinitionProvider = Hugin.Application.Permissions.PermissionDefinitionProvider;
 
-namespace LG.NetCore.Platform.Permissions
+namespace Hugin.Platform.Permissions
 {
     public class PlatformPermissionDefinitionProvider : PermissionDefinitionProvider
     {
@@ -12,7 +12,7 @@ namespace LG.NetCore.Platform.Permissions
             return LocalizableString.Create<PlatformResource>("Permission:" + name);
         }
 
-        protected override string RootPermission => PlatformPermissions.RootName;
+        protected override string Root => PlatformPermissions.RootName;
 
         protected override Assembly[] Assemblies => new[] { typeof(PlatformPermissionDefinitionProvider).Assembly };
     }

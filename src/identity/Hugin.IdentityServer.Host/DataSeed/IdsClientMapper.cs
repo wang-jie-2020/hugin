@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Client = Volo.Abp.IdentityServer.Clients.Client;
 
-namespace LG.NetCore.IdentityServer.DataSeed
+namespace HuginIdentityServer.DataSeed
 {
     public class IdsClientMapper : Profile
     {

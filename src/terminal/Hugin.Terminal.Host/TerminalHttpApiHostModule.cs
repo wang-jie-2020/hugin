@@ -2,14 +2,13 @@ using DotNetCore.CAP;
 using DotNetCore.CAP.Internal;
 using Hangfire;
 using Hangfire.MySql;
-using LG.NetCore.Cache.CsRedis;
-using LG.NetCore.Infrastructure.Cap;
-using LG.NetCore.Mvc;
-using LG.NetCore.Platform;
-using LG.NetCore.Platform.EntityFrameworkCore;
-using LG.NetCore.Platform.Localization;
-using LG.NetCore.Terminal.Security;
-using LG.NetCore.Wechat;
+using Hugin.Cache.CsRedis;
+using Hugin.Infrastructure.Cap;
+using Hugin.Mvc;
+using Hugin.Platform;
+using Hugin.Platform.EntityFrameworkCore;
+using Hugin.Platform.Localization;
+using Hugin.Terminal.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -23,6 +22,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using HostShared;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.Client;
@@ -44,7 +44,7 @@ using Volo.Abp.Settings;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.Threading;
 
-namespace LG.NetCore.Terminal
+namespace Hugin.Terminal
 {
     [DependsOn(
         //引入服务
@@ -60,7 +60,7 @@ namespace LG.NetCore.Terminal
         typeof(AbpAuditLoggingEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreMvcClientModule),
         typeof(AbpHttpClientIdentityModelWebModule),
-        typeof(WechatSenparcHttpApiModule),
+        //typeof(WechatSenparcHttpApiModule),
         //引入项目
         typeof(TerminalApplicationModule),
         typeof(TerminalHttpApiModule),

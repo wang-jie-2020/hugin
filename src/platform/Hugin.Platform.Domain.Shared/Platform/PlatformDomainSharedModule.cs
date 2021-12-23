@@ -1,4 +1,4 @@
-﻿using LG.NetCore.Platform.Localization;
+﻿using Hugin.Platform.Localization;
 using Volo.Abp.Localization;
 using Volo.Abp.Localization.ExceptionHandling;
 using Volo.Abp.Modularity;
@@ -6,7 +6,7 @@ using Volo.Abp.Validation;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     [DependsOn(
         typeof(AbpValidationModule)

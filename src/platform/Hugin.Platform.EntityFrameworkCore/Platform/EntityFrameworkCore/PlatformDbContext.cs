@@ -1,12 +1,12 @@
-﻿using LG.NetCore.EntityFrameworkCore;
-using LG.NetCore.Platform.Stadiums;
+﻿using Hugin.EntityFrameworkCore;
+using Hugin.Platform.Stadiums;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 
-namespace LG.NetCore.Platform.EntityFrameworkCore
+namespace Hugin.Platform.EntityFrameworkCore
 {
     [ConnectionStringName(PlatformConsts.DbProperties.ConnectionStringName)]
-    public class PlatformDbContext : LGDbContext<PlatformDbContext>
+    public class PlatformDbContext : HuginDbContext<PlatformDbContext>
     {
         public DbSet<Stadium> Stadiums { get; set; }
 

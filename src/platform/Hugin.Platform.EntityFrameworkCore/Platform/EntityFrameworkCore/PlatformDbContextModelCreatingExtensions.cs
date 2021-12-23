@@ -1,4 +1,4 @@
-﻿using LG.NetCore.Domain.Entities.Attributes;
+﻿using Hugin.Domain.Entities.Attributes;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.ComponentModel;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using Volo.Abp;
 
-namespace LG.NetCore.Platform.EntityFrameworkCore
+namespace Hugin.Platform.EntityFrameworkCore
 {
     public static class PlatformDbContextModelCreatingExtensions
     {

@@ -7,14 +7,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\_extensions\Hugin.Cache.CsRedis\Hugin.Cache.CsRedis.csproj" />
+		<ProjectReference Include="..\Hugin.Platform.Data\Hugin.Platform.Data.csproj" />
+		<ProjectReference Include="..\Hugin.Platform.Domain.Shared\Hugin.Platform.Domain.Shared.csproj" />
 		<PackageReference Include="Volo.Abp.Ddd.Domain" Version="4.1.2" />
 		<PackageReference Include="Volo.Abp.AutoMapper" Version="4.1.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\modules\cache\src\LG.Cache.CsRedis\LG.Cache.CsRedis.csproj" />
-		<ProjectReference Include="..\LG.NetCore.Platform.Data\LG.NetCore.Platform.Data.csproj" />
-		<ProjectReference Include="..\LG.NetCore.Platform.Domain.Shared\LG.NetCore.Platform.Domain.Shared.csproj" />
 	</ItemGroup>
 
 </Project>

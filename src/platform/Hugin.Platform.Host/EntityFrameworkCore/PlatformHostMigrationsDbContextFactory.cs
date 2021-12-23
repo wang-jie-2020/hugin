@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace LG.NetCore.Platform.EntityFrameworkCore
+namespace Hugin.Platform.EntityFrameworkCore
 {
     public class PlatformHostMigrationsDbContextFactory : IDesignTimeDbContextFactory<PlatformHostMigrationsDbContext>
     {

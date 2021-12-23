@@ -7,11 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Hugin.Platform.EntityFrameworkCore.Tests\Hugin.Platform.EntityFrameworkCore.Tests.csproj" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\LG.NetCore.Platform.EntityFrameworkCore.Tests\LG.NetCore.Platform.EntityFrameworkCore.Tests.csproj" />
 	</ItemGroup>
 
 </Project>

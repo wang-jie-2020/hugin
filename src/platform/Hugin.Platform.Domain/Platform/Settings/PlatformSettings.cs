@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Platform.Settings
+﻿namespace Hugin.Platform.Settings
 {
     public static class PlatformSettings
     {

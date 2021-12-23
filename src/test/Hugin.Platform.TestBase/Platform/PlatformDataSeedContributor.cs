@@ -4,7 +4,7 @@ using Volo.Abp.DependencyInjection;
 using Volo.Abp.Guids;
 using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     public class PlatformDataSeedContributor : IDataSeedContributor, ITransientDependency
     {

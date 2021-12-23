@@ -8,17 +8,15 @@
 
 	<PropertyGroup>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
-		<DocumentationFile>bin\$(Configuration)\LG.NetCore.Platform.Application.Contracts.xml</DocumentationFile>
+		<DocumentationFile>bin\$(Configuration)\Hugin.Platform.Application.Contracts.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Common\Hugin.Infrastructure.Common.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Application\Hugin.Abp.Application.csproj" />
+		<ProjectReference Include="..\Hugin.Platform.Domain.Shared\Hugin.Platform.Domain.Shared.csproj" />
 		<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="4.1.2" />
 		<PackageReference Include="Volo.Abp.Authorization" Version="4.1.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\modules\abp\src\LG.Abp.Application\LG.Abp.Application.csproj" />
-		<ProjectReference Include="..\LG.NetCore.Platform.Domain.Shared\LG.NetCore.Platform.Domain.Shared.csproj" />
 	</ItemGroup>
 
 </Project>

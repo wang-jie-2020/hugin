@@ -1,8 +1,9 @@
-﻿using LG.NetCore.Platform.Localization;
+﻿using HostShared;
+using Hugin.Platform.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     [ApiExplorerSettings(GroupName = ApiGroups.Platform)]
     public abstract class BaseController : AbpController

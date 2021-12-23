@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Settings;
 
-namespace LG.NetCore.Platform.Settings
+namespace Hugin.Platform.Settings
 {
     public class PlatformSettingDefinitionProvider : SettingDefinitionProvider
     {

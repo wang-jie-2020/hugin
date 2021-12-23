@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.SettingManagement;
 
-namespace LG.NetCore.IdentityServer.Controllers
+namespace HuginIdentityServer.Controllers
 {
     [Area("setting")]
     [ControllerName("SettingExtend")]

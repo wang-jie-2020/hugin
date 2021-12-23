@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     [DependsOn(
         typeof(PlatformApplicationModule),

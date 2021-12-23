@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Reflection;
 
-namespace LG.NetCore.Platform.Permissions
+namespace Hugin.Platform.Permissions
 {
     internal class PlatformPermissions
     {

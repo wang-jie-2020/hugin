@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Reflection;
 
-namespace LG.NetCore.Terminal.Permissions
+namespace Hugin.Terminal.Permissions
 {
     internal class TerminalPermissions
     {

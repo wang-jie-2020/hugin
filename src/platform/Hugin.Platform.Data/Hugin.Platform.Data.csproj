@@ -7,13 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Common\Hugin.Infrastructure.Common.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Domain\Hugin.Abp.Domain.csproj" />
+		<ProjectReference Include="..\Hugin.Platform.Domain.Shared\Hugin.Platform.Domain.Shared.csproj" />
 		<PackageReference Include="Volo.Abp.Ddd.Domain" Version="4.1.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\infrastructure\LG.NetCore.Infrastructure.Common\LG.NetCore.Infrastructure.Common.csproj" />
-		<ProjectReference Include="..\..\modules\abp\src\LG.Abp.Domain\LG.Abp.Domain.csproj" />
-		<ProjectReference Include="..\LG.NetCore.Platform.Domain.Shared\LG.NetCore.Platform.Domain.Shared.csproj" />
 	</ItemGroup>
 
 </Project>

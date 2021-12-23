@@ -1,9 +1,8 @@
 using IdentityServer4.Services;
-using LG.NetCore.IdentityServer.IdentityMappingExtensions;
-using LG.NetCore.IdentityServer.Security;
-using LG.NetCore.Mvc;
-using LG.NetCore.Platform;
-using LG.NetCore.Terminal;
+using HuginIdentityServer.IdentityMappingExtensions;
+using HuginIdentityServer.Security;
+using Hugin.Platform;
+using Hugin.Terminal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
@@ -16,6 +15,8 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using HostShared;
+using Hugin.Mvc;
 using Volo.Abp;
 using Volo.Abp.Account;
 using Volo.Abp.Account.Web;
@@ -57,7 +58,7 @@ using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.Threading;
 using IdentityUser = Volo.Abp.Identity.IdentityUser;
 
-namespace LG.NetCore.IdentityServer
+namespace HuginIdentityServer
 {
     [DependsOn(
         //引入服务

@@ -7,11 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Hugin.Terminal.Application.Contracts\Hugin.Terminal.Application.Contracts.csproj" />
 		<PackageReference Include="Volo.Abp.Http.Client" Version="4.1.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\LG.NetCore.Terminal.Application.Contracts\LG.NetCore.Terminal.Application.Contracts.csproj" />
 	</ItemGroup>
 
 </Project>

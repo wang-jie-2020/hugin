@@ -2,7 +2,7 @@
 //using Microsoft.OpenApi.Models;
 //using Swashbuckle.AspNetCore.SwaggerGen;
 
-//namespace LG.NetCore.Platform.Swagger
+//namespace Hugin.Platform.Swagger
 //{
 //    /// <summary>
 //    /// OpenApi的规范Schema

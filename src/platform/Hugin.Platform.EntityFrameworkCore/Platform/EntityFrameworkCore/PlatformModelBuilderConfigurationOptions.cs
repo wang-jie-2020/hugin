@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 
-namespace LG.NetCore.Platform.EntityFrameworkCore
+namespace Hugin.Platform.EntityFrameworkCore
 {
     public class PlatformModelBuilderConfigurationOptions : AbpModelBuilderConfigurationOptions
     {

@@ -6,7 +6,7 @@ using Volo.Abp.Guids;
 using Volo.Abp.Timing;
 using Volo.Abp.Uow;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     public abstract class BaseCapEvent : ITransientDependency
     {

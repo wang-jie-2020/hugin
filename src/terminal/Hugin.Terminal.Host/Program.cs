@@ -7,7 +7,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 
-namespace LG.NetCore.Terminal
+namespace Hugin.Terminal
 {
     public class Program
     {

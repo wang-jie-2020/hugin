@@ -2,15 +2,15 @@ using DotNetCore.CAP;
 using DotNetCore.CAP.Internal;
 using Hangfire;
 using Hangfire.MySql;
-using LG.NetCore.Cache.CsRedis;
-using LG.NetCore.Domain.Entities;
-using LG.NetCore.Identity;
-using LG.NetCore.Infrastructure.Cap;
-using LG.NetCore.Mvc;
-using LG.NetCore.Platform.EntityFrameworkCore;
-using LG.NetCore.Platform.Localization;
-using LG.NetCore.Platform.Security;
-using LG.NetCore.Platform.Swagger;
+using Hugin.Cache.CsRedis;
+using Hugin.Domain.Entities;
+using HuginIdentity;
+using Hugin.Infrastructure.Cap;
+using Hugin.Mvc;
+using Hugin.Platform.EntityFrameworkCore;
+using Hugin.Platform.Localization;
+using Hugin.Platform.Security;
+using Hugin.Platform.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -24,6 +24,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using HostShared;
+using Hugin.Cache.CsRedis;
+using Hugin.Domain.Entities;
+using Hugin.Infrastructure.Cap;
+using Hugin.Mvc;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.MultiStadium;
 using Volo.Abp.AspNetCore.Mvc;
@@ -47,7 +52,7 @@ using Volo.Abp.Settings;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.Threading;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     [DependsOn(
         //引入服务

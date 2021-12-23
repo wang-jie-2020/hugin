@@ -1,12 +1,10 @@
-﻿using LG.NetCore.Domain.Entities;
-using LG.NetCore.Domain.Repository;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Platform.Stadiums
+namespace Hugin.Platform.Stadiums
 {
     public class DataSeederContributor : IDataSeedContributor, ITransientDependency
     {

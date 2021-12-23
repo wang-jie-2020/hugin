@@ -3,7 +3,7 @@ using System.Security.Claims;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Security.Claims;
 
-namespace LG.NetCore.Terminal.Security
+namespace Hugin.Terminal.Security
 {
     [ExposeServices(IncludeSelf = true, IncludeDefaults = false)]
     public class FakeCurrentPrincipalAccessor : ThreadCurrentPrincipalAccessor

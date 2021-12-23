@@ -2,7 +2,7 @@
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.Threading;
 
-namespace LG.NetCore.IdentityServer.IdentityMappingExtensions
+namespace HuginIdentityServer.IdentityMappingExtensions
 {
     public static class IdentityEntityMappingExtensions
     {

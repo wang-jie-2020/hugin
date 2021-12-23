@@ -1,8 +1,8 @@
-﻿using LG.NetCore.Domain.Manager;
+﻿using Hugin.Domain.Manager;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
-    public abstract class BaseDomainManager : LGAppManager
+    public abstract class BaseDomainManager : HuginDomainManager
     {
 
     }

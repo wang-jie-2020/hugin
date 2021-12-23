@@ -2,11 +2,17 @@
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
-		<RootNamespace>LG.NetCore.IdentityServer</RootNamespace>
+		<RootNamespace>HuginIdentityServer</RootNamespace>
 		<PreserveCompilationReferences>true</PreserveCompilationReferences>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\HostShared\HostShared.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
+		<ProjectReference Include="..\..\_extensions\Volo.Abp.OAuth.Gitlab\Volo.Abp.OAuth.Gitlab.csproj" />
+		<ProjectReference Include="..\..\identity\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\platform\Hugin.Platform.Application.Contracts\Hugin.Platform.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\terminal\Hugin.Terminal.Application.Contracts\Hugin.Terminal.Application.Contracts.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
@@ -44,15 +50,6 @@
 		<PackageReference Include="Volo.Abp.TenantManagement.Application" Version="4.1.2" />
 		<PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="4.1.2" />
 		<PackageReference Include="Volo.Abp.TenantManagement.Web" Version="4.1.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\LG.NetCore.HostShared\LG.NetCore.HostShared.csproj" />
-		<ProjectReference Include="..\..\modules\abp\src\LG.Abp.Mvc\LG.Abp.Mvc.csproj" />
-		<ProjectReference Include="..\..\main\LG.NetCore.Identity.Application.Contracts\LG.NetCore.Identity.Application.Contracts.csproj" />
-		<ProjectReference Include="..\..\platform\LG.NetCore.Platform.Application.Contracts\LG.NetCore.Platform.Application.Contracts.csproj" />
-		<ProjectReference Include="..\..\terminal\LG.NetCore.Terminal.Application.Contracts\LG.NetCore.Terminal.Application.Contracts.csproj" />
-
 	</ItemGroup>
 
 	<ItemGroup>

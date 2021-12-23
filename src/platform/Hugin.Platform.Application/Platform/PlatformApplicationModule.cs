@@ -1,11 +1,11 @@
-﻿using LG.NetCore.Infrastructure.Exporting;
-using LG.NetCore.Infrastructure.Exporting.impl;
+﻿using Hugin.Infrastructure.Exporting;
+using Hugin.Infrastructure.Exporting.Magicodes;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Application;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     [DependsOn(
         typeof(AbpDddApplicationModule),

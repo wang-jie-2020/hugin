@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using LG.NetCore.Application.Services;
-using LG.NetCore.Infrastructure.Exporting;
-using LG.NetCore.Platform.Localization;
+using HostShared;
+using Hugin.Infrastructure.Exporting;
+using Hugin.Application.Services;
+using Hugin.Infrastructure.Exporting;
+using Hugin.Platform.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.Domain.Repositories;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     public abstract class BaseCrudAppService<TEntity, TKey, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput>
            : BaseCrudAppService<TEntity, TKey, TEntityDto, TEntityDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateOrUpdateInput, TCreateOrUpdateInput>
@@ -25,7 +27,7 @@ namespace LG.NetCore.Platform
 
     [ApiExplorerSettings(GroupName = ApiGroups.Platform)]
     public abstract class BaseCrudAppService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
-        : LGCrudAppService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
+        : HuginCrudApplicationService<TEntity, TKey, TGetOutputDto, TGetListOutputDto, TGetListInput, TEntityEditDto, TGetEditOutputDto, TCreateInput, TUpdateInput>
     where TKey : struct
     where TEntity : class, IEntity<TKey>
     where TGetListOutputDto : class, new()

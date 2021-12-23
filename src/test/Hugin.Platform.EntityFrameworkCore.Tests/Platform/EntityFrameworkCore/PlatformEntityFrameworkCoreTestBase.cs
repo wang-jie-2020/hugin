@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Platform.EntityFrameworkCore
+﻿namespace Hugin.Platform.EntityFrameworkCore
 {
     public abstract class PlatformEntityFrameworkCoreTestBase : PlatformTestBase<PlatformEntityFrameworkCoreTestModule>
     {

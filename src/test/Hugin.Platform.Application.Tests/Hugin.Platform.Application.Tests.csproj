@@ -7,12 +7,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\platform\Hugin.Platform.Application\Hugin.Platform.Application.csproj" />
+		<ProjectReference Include="..\Hugin.Platform.Domain.Tests\Hugin.Platform.Domain.Tests.csproj" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\platform\LG.NetCore.Platform.Application\LG.NetCore.Platform.Application.csproj" />
-		<ProjectReference Include="..\LG.NetCore.Platform.Domain.Tests\LG.NetCore.Platform.Domain.Tests.csproj" />
 	</ItemGroup>
 
 </Project>

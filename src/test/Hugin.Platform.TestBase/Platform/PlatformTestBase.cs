@@ -6,7 +6,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Testing;
 using Volo.Abp.Uow;
 
-namespace LG.NetCore.Platform
+namespace Hugin.Platform
 {
     public abstract class PlatformTestBase<TStartupModule> : AbpIntegratedTest<TStartupModule>
         where TStartupModule : IAbpModule

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 
-namespace LG.NetCore.Platform.Stadiums
+namespace Hugin.Platform.Stadiums
 {
     /// <summary>
     /// 场馆

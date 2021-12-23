@@ -6,11 +6,8 @@ using Volo.Abp.Guids;
 using Volo.Abp.Timing;
 using Volo.Abp.Uow;
 
-namespace LG.NetCore.Terminal
+namespace Hugin.Terminal
 {
-#if DEBUG
-    [Queue(Global.Identifier)]
-#endif
     public abstract class BaseBackgroundJob : ITransientDependency
     {
         public IServiceProvider ServiceProvider { get; set; }
