@@ -18,7 +18,7 @@ namespace Hugin.Mvc
     [DependsOn(
         typeof(AbpAspNetCoreMvcModule)
     )]
-    public class MvcExtensionModule : AbpModule
+    public class HuginMvcModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {

@@ -73,7 +73,7 @@ namespace Hugin.IdentityServer
         typeof(AbpCachingStackExchangeRedisModule),
         typeof(AbpEntityFrameworkCoreMySQLModule),
         typeof(AbpSwashbuckleModule),
-        typeof(MvcExtensionModule),
+        typeof(HuginMvcModule),
         typeof(GitlabOAuthModule),
         //引入模块
         typeof(AbpAuditLoggingEntityFrameworkCoreModule),
