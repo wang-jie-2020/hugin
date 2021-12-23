@@ -8,7 +8,7 @@
 
 	<PropertyGroup>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
-		<DocumentationFile>bin\$(Configuration)\LG.NetCore.Sample.Application.Contracts.xml</DocumentationFile>
+		<DocumentationFile>bin\$(Configuration)\Hugin.Identity.Application.Contracts.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>

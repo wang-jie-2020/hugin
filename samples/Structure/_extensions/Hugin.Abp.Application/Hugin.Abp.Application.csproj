@@ -7,7 +7,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Common\Hugin.Infrastructure.Common.csproj" />
 		<ProjectReference Include="..\Hugin.Abp.Domain\Hugin.Abp.Domain.csproj" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Application\Volo.Abp.Ddd.Application.csproj" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Application.Contracts\Volo.Abp.Ddd.Application.Contracts.csproj" />

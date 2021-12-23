@@ -12,6 +12,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
 		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Exporting.Magicodes\Hugin.Infrastructure.Exporting.Magicodes.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Application.Contracts\Hugin.BookStore.Application.Contracts.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Domain\Hugin.BookStore.Domain.csproj" />
@@ -21,8 +22,6 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.9" />
 		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
-		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.AutoMapper\Volo.Abp.AutoMapper.csproj" />
-		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Application\Volo.Abp.Ddd.Application.csproj" />
 	</ItemGroup>
 
 </Project>

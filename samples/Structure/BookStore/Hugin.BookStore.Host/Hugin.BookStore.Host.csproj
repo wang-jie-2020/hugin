@@ -13,7 +13,6 @@
 		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Cap\Hugin.Infrastructure.Cap.csproj" />
 		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
 		<ProjectReference Include="..\..\_extensions\Volo.Abp.AspNetCore.MultiStadium\Volo.Abp.AspNetCore.MultiStadium.csproj" />
-		<ProjectReference Include="..\..\_extensions\Hugin.Cache.CsRedis\Hugin.Cache.CsRedis.csproj" />
 		<ProjectReference Include="..\..\identity\Hugin.Identity.HttpApi.Client\Hugin.Identity.HttpApi.Client.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Application\Hugin.BookStore.Application.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.EntityFrameworkCore\Hugin.BookStore.EntityFrameworkCore.csproj" />

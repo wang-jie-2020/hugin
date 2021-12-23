@@ -7,7 +7,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Domain\Hugin.BookStore.Domain.csproj" />
 		<PackageReference Include="DotNetCore.CAP" Version="3.1.2" />
 	</ItemGroup>
