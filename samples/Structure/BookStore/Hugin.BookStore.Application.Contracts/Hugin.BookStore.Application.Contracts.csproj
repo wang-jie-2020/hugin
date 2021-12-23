@@ -12,8 +12,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Application\Hugin.Abp.Application.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Domain.Shared\Hugin.BookStore.Domain.Shared.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Application\Hugin.Abp.Application.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -7,8 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	<ProjectReference Include="..\..\BookStore\Hugin.BookStore.Application\Hugin.BookStore.Application.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Domain.Tests\Hugin.BookStore.Domain.Tests.csproj" />
+		<ProjectReference Include="..\..\BookStore\Hugin.BookStore.Application\Hugin.BookStore.Application.csproj" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
 	</ItemGroup>
 

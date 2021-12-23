@@ -9,14 +9,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
-		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Cap\Hugin.Infrastructure.Cap.csproj" />
-		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
-		<ProjectReference Include="..\..\_extensions\Volo.Abp.AspNetCore.MultiStadium\Volo.Abp.AspNetCore.MultiStadium.csproj" />
-		<ProjectReference Include="..\..\identity\Hugin.Identity.HttpApi.Client\Hugin.Identity.HttpApi.Client.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Application\Hugin.BookStore.Application.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.EntityFrameworkCore\Hugin.BookStore.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.HttpApi\Hugin.BookStore.HttpApi.csproj" />
+		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
+		<ProjectReference Include="..\..\identity\Hugin.Identity.HttpApi.Client\Hugin.Identity.HttpApi.Client.csproj" />
+		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Cap\Hugin.Infrastructure.Cap.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
+		<ProjectReference Include="..\..\_extensions\Volo.Abp.AspNetCore.MultiStadium\Volo.Abp.AspNetCore.MultiStadium.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />

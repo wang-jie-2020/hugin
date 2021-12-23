@@ -7,8 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Domain\Hugin.Abp.Domain.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Domain.Shared\Hugin.BookStore.Domain.Shared.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Domain\Hugin.Abp.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

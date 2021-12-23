@@ -7,12 +7,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
-		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
-		<ProjectReference Include="..\..\_extensions\Volo.Abp.OAuth.Gitlab\Volo.Abp.OAuth.Gitlab.csproj" />
 		<ProjectReference Include="..\Hugin.Identity.EntityFrameworkCore\Hugin.Identity.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
 		<ProjectReference Include="..\..\BookStore\Hugin.BookStore.Application.Contracts\Hugin.BookStore.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
+		<ProjectReference Include="..\..\_extensions\Volo.Abp.OAuth.Gitlab\Volo.Abp.OAuth.Gitlab.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />

@@ -7,8 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Common\Hugin.Infrastructure.Common.csproj" />
 		<ProjectReference Include="..\Volo.Abp.MultiStadium\Volo.Abp.MultiStadium.csproj" />
+		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Common\Hugin.Infrastructure.Common.csproj" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.Ddd.Domain\Volo.Abp.Ddd.Domain.csproj" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.AutoMapper\Volo.Abp.AutoMapper.csproj" />
 	</ItemGroup>

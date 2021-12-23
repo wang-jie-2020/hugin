@@ -12,8 +12,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
 		<ProjectReference Include="..\Hugin.BookStore.Application.Contracts\Hugin.BookStore.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\HostShard\HostShard.csproj" />
 		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.AspNetCore.Mvc\Volo.Abp.AspNetCore.Mvc.csproj" />
