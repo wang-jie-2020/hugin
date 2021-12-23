@@ -7,14 +7,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\BookStore\Hugin.BookStore.EntityFrameworkCore\Hugin.BookStore.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\Hugin.BookStore.TestBase\Hugin.BookStore.TestBase.csproj" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.*" />
 		<ProjectReference Include="D:\Code\GitHubRepository\abp\framework\src\Volo.Abp.EntityFrameworkCore.Sqlite\Volo.Abp.EntityFrameworkCore.Sqlite.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\BookStore\Hugin.BookStore.EntityFrameworkCore\Hugin.BookStore.EntityFrameworkCore.csproj" />
-		<ProjectReference Include="..\Hugin.BookStore.TestBase\Hugin.BookStore.TestBase.csproj" />
 	</ItemGroup>
 
 </Project>

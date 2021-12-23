@@ -7,11 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Hugin.BookStore.EntityFrameworkCore.Tests\Hugin.BookStore.EntityFrameworkCore.Tests.csproj" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Hugin.BookStore.EntityFrameworkCore.Tests\Hugin.BookStore.EntityFrameworkCore.Tests.csproj" />
-	</ItemGroup>
 
 </Project>
