@@ -1,8 +1,14 @@
-using IdentityServer4.Services;
-using HuginIdentityServer.IdentityMappingExtensions;
-using HuginIdentityServer.Security;
+using System;
+using System.Globalization;
+using System.Linq;
+using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
+using Hugin.IdentityServer.IdentityMappingExtensions;
+using Hugin.IdentityServer.Security;
+using Hugin.Mvc;
 using Hugin.Platform;
 using Hugin.Terminal;
+using IdentityServer4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
@@ -10,13 +16,6 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Globalization;
-using System.Linq;
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-using Hugin;
-using Hugin.Mvc;
 using Volo.Abp;
 using Volo.Abp.Account;
 using Volo.Abp.Account.Web;
@@ -58,7 +57,7 @@ using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.Threading;
 using IdentityUser = Volo.Abp.Identity.IdentityUser;
 
-namespace HuginIdentityServer
+namespace Hugin.IdentityServer
 {
     [DependsOn(
         //引入服务
@@ -100,9 +99,9 @@ namespace HuginIdentityServer
         )]
     public class IdentityServerModule : AbpModule
     {
-        private const string DefaultCorsPolicyName = "Abp";
+        private const string DefaultCorsPolicyName = "Default";
 
-        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.PlatformGroup };
+        private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.IdentityGroup };
 
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
@@ -130,8 +129,8 @@ namespace HuginIdentityServer
                 }
 
                 //UserClaims
-                builder.Services.Replace(ServiceDescriptor.Transient<IObjectAccessor<IUserClaimsPrincipalFactory<IdentityUser>>, ObjectAccessor<LGUserClaimsPrincipalFactory>>());
-                builder.Services.Replace(ServiceDescriptor.Transient<IClaimsService, LGClaimsService>());
+                builder.Services.Replace(ServiceDescriptor.Transient<IObjectAccessor<IUserClaimsPrincipalFactory<IdentityUser>>, ObjectAccessor<HuginUserClaimsPrincipalFactory>>());
+                builder.Services.Replace(ServiceDescriptor.Transient<IClaimsService, HuginClaimsService>());
             });
         }
 
@@ -155,12 +154,11 @@ namespace HuginIdentityServer
 
             Configure<AbpDistributedCacheOptions>(options =>
             {
-                options.KeyPrefix = "Platform:";
+                options.KeyPrefix = "Identity:";
             });
 
             Configure<AbpLocalizationOptions>(options =>
             {
-                //options.DefaultResourceType = typeof(PlatformResource);
                 options.Languages.Add(new LanguageInfo("en", "en", "English"));
                 options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
             });

@@ -4,7 +4,7 @@ using Volo.Abp.Guids;
 using Volo.Abp.Identity;
 using Volo.Abp.IdentityServer.IdentityResources;
 
-namespace HuginIdentityServer.DataSeed
+namespace Hugin.IdentityServer.DataSeed
 {
     /// <summary>
     /// forked from abp/modules/identityServer

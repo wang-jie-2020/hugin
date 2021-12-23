@@ -12,6 +12,8 @@ namespace Hugin
 
         public const string Terminal = "terminal";
 
+        public const string Identity = "identity";
+
         public static readonly ApiInfo AbpGroup = new ApiInfo
         {
             Name = ApiGroups.Abp,
@@ -21,6 +23,18 @@ namespace Hugin
                 Version = ApiVersion,
                 Title = ApiGroups.Abp + " api",
                 Description = "ABP"
+            }
+        };
+
+        public static readonly ApiInfo IdentityGroup = new ApiInfo
+        {
+            Name = ApiGroups.Identity,
+            DisplayName = "Identity API",
+            OpenApiInfo = new OpenApiInfo
+            {
+                Version = ApiVersion,
+                Title = ApiGroups.Identity + " api",
+                Description = "Identity"
             }
         };
 

@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.SettingManagement;
 
-namespace HuginIdentityServer.Controllers
+namespace Hugin.IdentityServer.Controllers
 {
     [Area("setting")]
     [ControllerName("SettingExtend")]

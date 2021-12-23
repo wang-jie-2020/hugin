@@ -2,7 +2,7 @@
 using Volo.Abp.Authorization;
 using Volo.Abp.Modularity;
 
-namespace HuginIdentity
+namespace Hugin.Identity
 {
     [DependsOn(
         typeof(AbpDddApplicationContractsModule),

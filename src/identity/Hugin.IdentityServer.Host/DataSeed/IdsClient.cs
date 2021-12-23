@@ -2,7 +2,7 @@
 using IdentityServer4;
 using IdentityServer4.Models;
 
-namespace HuginIdentityServer.DataSeed
+namespace Hugin.IdentityServer.DataSeed
 {
     /// <summary>
     /// <see cref="Volo.Abp.IdentityServer.Clients.Client"/>

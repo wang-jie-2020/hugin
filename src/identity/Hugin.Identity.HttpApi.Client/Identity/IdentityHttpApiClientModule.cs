@@ -2,7 +2,7 @@
 using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
 
-namespace HuginIdentity
+namespace Hugin.Identity
 {
     [DependsOn(
         typeof(AbpHttpClientModule),

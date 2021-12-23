@@ -1,11 +1,11 @@
 ﻿using Volo.Abp.DependencyInjection;
 using Volo.Abp.Ui.Branding;
 
-namespace HuginIdentityServer
+namespace Hugin.IdentityServer
 {
     [Dependency(ReplaceServices = true)]
     public class ProjectBrandingProvider : DefaultBrandingProvider
     {
-        public override string AppName => "LG";
+        public override string AppName => "Hugin";
     }
 }

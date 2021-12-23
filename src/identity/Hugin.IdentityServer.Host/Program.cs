@@ -7,7 +7,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 
-namespace HuginIdentityServer
+namespace Hugin.IdentityServer
 {
     public class Program
     {

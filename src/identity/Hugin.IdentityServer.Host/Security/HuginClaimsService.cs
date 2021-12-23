@@ -4,12 +4,11 @@ using IdentityServer4.Services;
 using Microsoft.Extensions.Logging;
 using Volo.Abp.IdentityServer;
 
-
-namespace HuginIdentityServer.Security
+namespace Hugin.IdentityServer.Security
 {
-    public class LGClaimsService : AbpClaimsService
+    public class HuginClaimsService : AbpClaimsService
     {
-        public LGClaimsService(IProfileService profile, ILogger<DefaultClaimsService> logger) : base(profile, logger)
+        public HuginClaimsService(IProfileService profile, ILogger<DefaultClaimsService> logger) : base(profile, logger)
         {
         }
 

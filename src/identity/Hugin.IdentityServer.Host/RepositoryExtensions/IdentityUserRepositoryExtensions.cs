@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Identity;
 
-namespace HuginIdentityServer.RepositoryExtensions
+namespace Hugin.IdentityServer.RepositoryExtensions
 {
     public static class IdentityUserRepositoryExtensions
     {

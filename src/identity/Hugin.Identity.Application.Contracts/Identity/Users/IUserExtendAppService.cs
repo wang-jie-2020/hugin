@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Identity;
 
-namespace HuginIdentity.Users
+namespace Hugin.Identity.Users
 {
     public interface IUserExtendAppService : IApplicationService
     {

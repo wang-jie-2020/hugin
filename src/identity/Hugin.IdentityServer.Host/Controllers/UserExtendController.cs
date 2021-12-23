@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
-using HuginIdentity.Users;
-using HuginIdentityServer.EntityExtensions;
-using HuginIdentityServer.RepositoryExtensions;
+using Hugin.Identity.Users;
+using Hugin.IdentityServer.EntityExtensions;
+using Hugin.IdentityServer.RepositoryExtensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Identity;
 
-namespace HuginIdentityServer.Controllers
+namespace Hugin.IdentityServer.Controllers
 {
     [Area("identity")]
     [ControllerName("UserExtend")]

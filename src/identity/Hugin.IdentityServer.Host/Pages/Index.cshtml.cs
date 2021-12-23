@@ -1,6 +1,6 @@
 using Volo.Abp.AspNetCore.Mvc.UI.RazorPages;
 
-namespace HuginIdentityServer.Pages
+namespace Hugin.IdentityServer.Pages
 {
     public class IndexModel : AbpPageModel
     {

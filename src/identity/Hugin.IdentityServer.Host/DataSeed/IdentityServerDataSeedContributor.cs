@@ -18,7 +18,7 @@ using ApiResource = Volo.Abp.IdentityServer.ApiResources.ApiResource;
 using ApiScope = Volo.Abp.IdentityServer.ApiScopes.ApiScope;
 using Client = Volo.Abp.IdentityServer.Clients.Client;
 
-namespace HuginIdentityServer.DataSeed
+namespace Hugin.IdentityServer.DataSeed
 {
     public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransientDependency
     {

@@ -1,10 +1,10 @@
-﻿using HuginIdentityServer.IdentityMappingExtensions;
+﻿using System.IO;
+using Hugin.IdentityServer.IdentityMappingExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using System.IO;
 
-namespace HuginIdentityServer.EntityFrameworkCore
+namespace Hugin.IdentityServer.EntityFrameworkCore
 {
     public class IdentityServerHostMigrationsDbContextFactory : IDesignTimeDbContextFactory<IdentityServerHostMigrationsDbContext>
     {
