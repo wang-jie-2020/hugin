@@ -114,7 +114,7 @@ namespace Hugin.Terminal
                 context.Services.AddHangfireServer(options =>
                 {
 #if DEBUG
-                    options.Queues = new[] { Global.Identifier };
+                    options.Queues = new[] { "debug" };
 #else
                     options.Queues = new[] { "default" };
 #endif
