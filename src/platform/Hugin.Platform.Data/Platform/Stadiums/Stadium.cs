@@ -15,7 +15,7 @@ namespace Hugin.Platform.Stadiums
         /// 名称
         /// </summary>
         [Required]
-        [MaxLength(PlatformConsts.Lengths.Small)]
+        [MaxLength(PlatformConsts.Lengths.Default)]
         [Description("名称")]
         public string Name { get; set; }
 

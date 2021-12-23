@@ -10,6 +10,7 @@ namespace Hugin.Platform
 {
     [DependsOn(
         typeof(AbpDddDomainModule),
+        typeof(AbpAutoMapperModule),
         typeof(PlatformDomainSharedModule)
     )]
     public class PlatformDomainModule : AbpModule

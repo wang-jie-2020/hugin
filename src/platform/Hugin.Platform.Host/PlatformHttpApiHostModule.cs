@@ -4,13 +4,13 @@ using Hangfire;
 using Hangfire.MySql;
 using Hugin.Cache.CsRedis;
 using Hugin.Domain.Entities;
-using HuginIdentity;
 using Hugin.Infrastructure.Cap;
 using Hugin.Mvc;
 using Hugin.Platform.EntityFrameworkCore;
 using Hugin.Platform.Localization;
 using Hugin.Platform.Security;
 using Hugin.Platform.Swagger;
+using HuginIdentity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -24,10 +24,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Hugin.Cache.CsRedis;
-using Hugin.Domain.Entities;
-using Hugin.Infrastructure.Cap;
-using Hugin.Mvc;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.MultiStadium;
 using Volo.Abp.AspNetCore.Mvc;
@@ -76,14 +72,22 @@ namespace Hugin.Platform
     )]
     public class PlatformHttpApiHostModule : AbpModule
     {
-        private const string DefaultCorsPolicyName = "Abp";
+        private const string DefaultCorsPolicyName = "Default";
 
         private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.PlatformGroup };
+
+        public override void PreConfigureServices(ServiceConfigurationContext context)
+        {
+            //Proxy
+            //System.Net.WebRequest.DefaultWebProxy = new System.Net.WebProxy("127.0.0.1", 8888);
+        }
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             var hostingEnvironment = context.Services.GetHostingEnvironment();
             var configuration = context.Services.GetConfiguration();
+
+            #region Persistent
 
             Configure<AbpDbContextOptions>(options =>
             {
@@ -93,14 +97,6 @@ namespace Hugin.Platform
                 });
             });
 
-            Configure<AbpDataFilterOptions>(options =>
-            {
-                options.DefaultStates[typeof(IMultiUser)] = new DataFilterState(isEnabled: false);
-                options.DefaultStates[typeof(IMultiStadium)] = new DataFilterState(isEnabled: false);
-            });
-
-            #region Csredis
-
             Configure<CsRedisCacheOptions>(cacheOptions =>
             {
                 var redisConfiguration = configuration["Redis:Platform"];
@@ -109,10 +105,6 @@ namespace Hugin.Platform
                     cacheOptions.ConnectionString = redisConfiguration;
                 }
             });
-
-            #endregion
-
-            #region Hangfire
 
             context.Services.AddHangfire(options =>
             {
@@ -129,16 +121,12 @@ namespace Hugin.Platform
                 context.Services.AddHangfireServer(options =>
                 {
 #if DEBUG
-                    options.Queues = new[] { Global.Identifier };
+                    options.Queues = new[] { "debug" };
 #else
                     options.Queues = new[] { "default" };
 #endif
                 });
             }
-
-            #endregion
-
-            #region Cap
 
             context.Services.AddCap(options =>
             {
@@ -166,24 +154,7 @@ namespace Hugin.Platform
 
             Configure<AbpDistributedCacheOptions>(options =>
             {
-                options.KeyPrefix = "Platform:";
-            });
-
-            Configure<AbpLocalizationOptions>(options =>
-            {
-                options.DefaultResourceType = typeof(PlatformResource);
-                options.Languages.Add(new LanguageInfo("en", "en", "English"));
-                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
-            });
-
-            context.Services.Replace(ServiceDescriptor.Transient<ILanguageProvider, DefaultLanguageProvider>());
-            context.Services.Replace(ServiceDescriptor.Transient<ISettingProvider, SettingProvider>());
-            Configure<AbpLocalizationOptions>(options =>
-            {
-                if (options.GlobalContributors.Contains<RemoteLocalizationContributor>())
-                {
-                    options.GlobalContributors.Remove<RemoteLocalizationContributor>();
-                }
+                options.KeyPrefix = PlatformConsts.Name + ":";
             });
 
             context.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -222,6 +193,30 @@ namespace Hugin.Platform
                 });
             });
 
+            Configure<AbpLocalizationOptions>(options =>
+            {
+                options.DefaultResourceType = typeof(PlatformResource);
+                options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
+            });
+
+            ////DataFilter
+            //Configure<AbpDataFilterOptions>(options =>
+            //{
+            //    options.DefaultStates[typeof(IMultiUser)] = new DataFilterState(isEnabled: false);
+            //    options.DefaultStates[typeof(IMultiStadium)] = new DataFilterState(isEnabled: false);
+            //});
+
+            context.Services.Replace(ServiceDescriptor.Transient<ILanguageProvider, DefaultLanguageProvider>());
+            context.Services.Replace(ServiceDescriptor.Transient<ISettingProvider, SettingProvider>());
+            Configure<AbpLocalizationOptions>(options =>
+            {
+                if (options.GlobalContributors.Contains<RemoteLocalizationContributor>())
+                {
+                    options.GlobalContributors.Remove<RemoteLocalizationContributor>();
+                }
+            });
+
             ConfigureDevelopmentServices(context);
         }
 
@@ -238,7 +233,7 @@ namespace Hugin.Platform
             context.Services.AddAbpSwaggerGenWithOAuth(configuration["AuthServer:Authority"],
                     scopes: new Dictionary<string, string>
                     {
-                        {"Platform", "平台内容管理"}    //todo 
+                        {"Platform", "平台内容管理"}     
                     },
                     setupAction: options =>
                     {
@@ -276,7 +271,6 @@ namespace Hugin.Platform
             context.Services.AddAlwaysAllowAuthorization();
             context.Services.Replace(ServiceDescriptor.Singleton<ICurrentPrincipalAccessor, FakeCurrentPrincipalAccessor>());
 #endif
-            //todo Cors?
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)

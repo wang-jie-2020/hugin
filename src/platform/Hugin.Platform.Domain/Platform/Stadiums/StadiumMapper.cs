@@ -3,9 +3,9 @@ using Volo.Abp.MultiStadium;
 
 namespace Hugin.Platform.Stadiums
 {
-    public class StadiumDomainMapper : Profile
+    public class StadiumMapper : Profile
     {
-        public StadiumDomainMapper()
+        public StadiumMapper()
         {
             CreateMap<Stadium, StadiumConfiguration>();
         }

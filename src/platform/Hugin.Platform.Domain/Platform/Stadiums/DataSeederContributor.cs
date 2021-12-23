@@ -17,11 +17,7 @@ namespace Hugin.Platform.Stadiums
 
         public async Task SeedAsync(DataSeedContext context)
         {
-            //await _stadiumRepository.InsertOnlyNotExistAsync(new Stadium(null, "123")
-            //    .TrySetId(new Guid("0a301ffa-a83d-4c5e-9521-64eabaa5c329")), autoSave: true);
-
-            //await _stadiumRepository.InsertOnlyNotExistAsync(new Stadium(null, "456")
-            //    .TrySetId(new Guid("a99863a7-3f2c-491b-b4d8-b549cd2fd0f5")), autoSave: true);
+            await Task.Delay(100);
         }
     }
 }
