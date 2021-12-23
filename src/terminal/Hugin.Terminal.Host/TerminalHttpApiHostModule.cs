@@ -55,7 +55,7 @@ namespace Hugin.Terminal
         typeof(AbpEntityFrameworkCoreMySQLModule),
         typeof(AbpSwashbuckleModule),
         typeof(CsRedisCacheModule),
-        typeof(MvcExtensionModule),
+        typeof(HuginMvcModule),
         //引入模块
         typeof(AbpAuditLoggingEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreMvcClientModule),

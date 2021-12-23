@@ -12,16 +12,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\HostShared\HostShared.csproj" />
-		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Exporting.Magicodes\Hugin.Infrastructure.Exporting.Magicodes.csproj" />
 		<ProjectReference Include="..\Hugin.Platform.Application.Contracts\Hugin.Platform.Application.Contracts.csproj" />
 		<ProjectReference Include="..\Hugin.Platform.Domain\Hugin.Platform.Domain.csproj" />
 		<ProjectReference Include="..\Hugin.Platform.BackgroundJob\Hugin.Platform.BackgroundJob.csproj" />
 		<ProjectReference Include="..\Hugin.Platform.Cap\Hugin.Platform.Cap.csproj" />
+		<ProjectReference Include="..\..\HostShared\HostShared.csproj" />
+		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Exporting.Magicodes\Hugin.Infrastructure.Exporting.Magicodes.csproj" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.9" />
 		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
-		<PackageReference Include="Volo.Abp.AutoMapper" Version="4.1.2" />
-		<PackageReference Include="Volo.Abp.Ddd.Application" Version="4.1.2" />
 	</ItemGroup>
 
 </Project>

@@ -2,17 +2,17 @@
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
-		<RootNamespace>HuginIdentityServer</RootNamespace>
+		<RootNamespace>Hugin.IdentityServer</RootNamespace>
 		<PreserveCompilationReferences>true</PreserveCompilationReferences>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
 		<ProjectReference Include="..\..\HostShared\HostShared.csproj" />
-		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
-		<ProjectReference Include="..\..\_extensions\Volo.Abp.OAuth.Gitlab\Volo.Abp.OAuth.Gitlab.csproj" />
-		<ProjectReference Include="..\..\identity\Hugin.Identity.Application.Contracts\Hugin.Identity.Application.Contracts.csproj" />
 		<ProjectReference Include="..\..\platform\Hugin.Platform.Application.Contracts\Hugin.Platform.Application.Contracts.csproj" />
 		<ProjectReference Include="..\..\terminal\Hugin.Terminal.Application.Contracts\Hugin.Terminal.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
+		<ProjectReference Include="..\..\_extensions\Volo.Abp.OAuth.Gitlab\Volo.Abp.OAuth.Gitlab.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />

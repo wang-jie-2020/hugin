@@ -63,7 +63,7 @@ namespace Hugin.Platform
         typeof(AbpEntityFrameworkCoreMySQLModule),
         typeof(AbpSwashbuckleModule),
         typeof(CsRedisCacheModule),
-        typeof(MvcExtensionModule),
+        typeof(HuginMvcModule),
         typeof(AbpAspNetCoreMultiStadiumModule),
         //引入模块
         typeof(AbpAuditLoggingEntityFrameworkCoreModule),
