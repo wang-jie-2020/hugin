@@ -12,7 +12,7 @@ namespace Hugin.Platform.Permissions
             return LocalizableString.Create<PlatformResource>("Permission:" + name);
         }
 
-        protected override string Root => PlatformPermissions.RootName;
+        protected override string Root => PlatformConsts.Name;
 
         protected override Assembly[] Assemblies => new[] { typeof(PlatformPermissionDefinitionProvider).Assembly };
     }
