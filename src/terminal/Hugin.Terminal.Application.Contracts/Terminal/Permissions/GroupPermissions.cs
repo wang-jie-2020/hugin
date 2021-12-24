@@ -8,7 +8,7 @@ namespace Hugin.Terminal.Permissions
     {
         public static class Group
         {
-            public const string Default = PlatformConsts.Name;
+            public const string Default = TerminalConsts.Name;
         }
 
         public MultiTenancySides MultiTenancySide { get; } = MultiTenancySides.Tenant;
