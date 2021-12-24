@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
@@ -8,17 +9,17 @@ namespace Hugin.Platform.Controllers
     public class HealthCheckController : AbpController
     {
         [HttpGet]
-        public IActionResult HeathCheck()
+        public async Task<IActionResult> HeathCheck()
         {
-            return Ok();
+            return await Task.FromResult(Ok());
         }
 
         [Authorize]
         [HttpGet]
         [Route("authorize")]
-        public int Authorize()
+        public async Task<IActionResult> Authorize()
         {
-            return 1;
+            return await Task.FromResult(Ok());
         }
     }
 }

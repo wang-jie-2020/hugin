@@ -93,6 +93,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStore.EntityFrame
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStore.TestBase", "test\Hugin.BookStore.TestBase\Hugin.BookStore.TestBase.csproj", "{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.BookStore.HttpApiClient.Test", "test\Hugin.BookStore.HttpApiClient.Test\Hugin.BookStore.HttpApiClient.Test.csproj", "{0CABC7E4-CD3D-4599-8A5D-44F70076F5ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -251,6 +253,10 @@ Global
 		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CABC7E4-CD3D-4599-8A5D-44F70076F5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CABC7E4-CD3D-4599-8A5D-44F70076F5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CABC7E4-CD3D-4599-8A5D-44F70076F5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CABC7E4-CD3D-4599-8A5D-44F70076F5ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -293,6 +299,7 @@ Global
 		{48FBA8E7-EBC2-4D4B-8DCE-6ECC05FCF3A7} = {AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}
 		{96596FE2-9A6D-45EB-982F-4EF3B58B6118} = {AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}
 		{B6F25C7E-37AA-45F3-A9A8-CC2F032F54BE} = {AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}
+		{0CABC7E4-CD3D-4599-8A5D-44F70076F5ED} = {AAEE2879-64DC-49CD-92C4-0913BEB8B9B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03AD04CE-9418-4E4F-ACA5-221DFAD10580}

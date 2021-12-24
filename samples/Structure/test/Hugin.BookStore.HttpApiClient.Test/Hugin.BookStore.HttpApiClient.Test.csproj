@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+	
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\BookStore\Hugin.BookStore.HttpApi.Client\Hugin.BookStore.HttpApi.Client.csproj" />
+		<PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="4.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+
+	</ItemGroup>
+
+</Project>

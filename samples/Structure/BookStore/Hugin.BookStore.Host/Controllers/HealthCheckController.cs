@@ -1,24 +1,25 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using Volo.Abp.AspNetCore.Mvc;
 
 namespace Hugin.BookStore.Controllers
 {
     [Route("api/healthCheck")]
-    public class HealthCheckController : AbpController
+    public class HealthCheckController : AbpController, IHealthCheckService
     {
         [HttpGet]
-        public IActionResult HeathCheck()
+        public async Task<IActionResult> HeathCheck()
         {
-            return Ok();
+            return await Task.FromResult(Ok());
         }
 
         [Authorize]
         [HttpGet]
         [Route("authorize")]
-        public int Authorize()
+        public async Task<IActionResult> Authorize()
         {
-            return 1;
+            return await Task.FromResult(Ok());
         }
     }
 }
