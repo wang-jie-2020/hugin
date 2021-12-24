@@ -15,8 +15,8 @@ namespace Hugin
             {
                 application.Initialize();
 
-                var demo = application.ServiceProvider.GetRequiredService<ClientDemoService>();
-                await demo.RunAsync();
+                var client = application.ServiceProvider.GetRequiredService<BookStoreClientService>();
+                await client.RunAsync();
 
                 application.Shutdown();
             }

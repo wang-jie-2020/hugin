@@ -8,54 +8,51 @@ using Volo.Abp.IdentityModel;
 
 namespace Hugin.BookStore
 {
-    public class ClientDemoService : ITransientDependency
+    public class BookStoreClientService : ITransientDependency
     {
-        private readonly IHealthCheckService _sampleAppService;
         private readonly IIdentityModelAuthenticationService _authenticationService;
         private readonly IConfiguration _configuration;
+        private readonly IHealthCheckService _healthCheckService;
 
-        public ClientDemoService(
-            IHealthCheckService sampleAppService,
-            IIdentityModelAuthenticationService authenticationService,
-            IConfiguration configuration)
+        public BookStoreClientService(IIdentityModelAuthenticationService authenticationService,
+            IConfiguration configuration,
+            IHealthCheckService healthCheckService)
         {
-            _sampleAppService = sampleAppService;
             _authenticationService = authenticationService;
             _configuration = configuration;
+            _healthCheckService = healthCheckService;
         }
 
         public async Task RunAsync()
         {
-            await TestWithDynamicProxiesAsync();
-            await TestWithHttpClientAndIdentityModelAuthenticationServiceAsync();
-            await TestAllManuallyAsync();
+            await DynamicProxiesAsync();
+            await HttpClientAndIdentityModelAuthenticationServiceAsync();
+            await ManuallyAsync();
         }
 
         /* Shows how to perform an HTTP request to the API using ABP's dynamic c# proxy
          * feature. It is just simple as calling a local service method.
          * Authorization and HTTP request details are handled by the ABP framework.
          */
-        private async Task TestWithDynamicProxiesAsync()
+        private async Task DynamicProxiesAsync()
         {
             Console.WriteLine();
-            Console.WriteLine($"***** {nameof(TestWithDynamicProxiesAsync)} *****");
+            Console.WriteLine($"*****ABP动态代理*****");
 
-            var result = _sampleAppService.HeathCheck();
+            var result = await _healthCheckService.HeathCheck();
             Console.WriteLine("Result: " + result);
 
-            var result2 = _sampleAppService.Authorize();
-            Console.WriteLine("Result (authorized): " + result2);
+            result = await _healthCheckService.Authorize();
+            Console.WriteLine("Result (authorized): " + result);
         }
 
         /* Shows how to use HttpClient to perform a request to the HTTP API.
          * It uses ABP's IIdentityModelAuthenticationService to simplify obtaining access tokens.
          */
-        private async Task TestWithHttpClientAndIdentityModelAuthenticationServiceAsync()
+        private async Task HttpClientAndIdentityModelAuthenticationServiceAsync()
         {
             Console.WriteLine();
-            Console.WriteLine($"***** {nameof(TestWithHttpClientAndIdentityModelAuthenticationServiceAsync)} *****");
-
-            //Get access token using ABP's IIdentityModelAuthenticationService
+            Console.WriteLine($"*****ABP集成*****");
 
             var accessToken = await _authenticationService.GetAccessTokenAsync(
                 new IdentityClientConfiguration(
@@ -69,20 +66,17 @@ namespace Hugin.BookStore
                 )
             );
 
-            //Perform the actual HTTP request
-
             using (var httpClient = new HttpClient())
             {
                 httpClient.SetBearerToken(accessToken);
 
-                var url = _configuration["RemoteServices:Platform:BaseUrl"] +
-                          "api/Platform/sample/authorized";
+                var url = _configuration["RemoteServices:BookStore:BaseUrl"] + "api/healthCheck/authorize";
 
                 var responseMessage = await httpClient.GetAsync(url);
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     var responseString = await responseMessage.Content.ReadAsStringAsync();
-                    Console.WriteLine("Result: " + responseString);
+                    Console.WriteLine("Result (authorized): " + responseString);
                 }
                 else
                 {
@@ -95,12 +89,10 @@ namespace Hugin.BookStore
          * It obtains access token using IdentityServer's API. See its documentation:
          * https://identityserver4.readthedocs.io/en/latest/quickstarts/2_resource_owner_passwords.html
          */
-        private async Task TestAllManuallyAsync()
+        private async Task ManuallyAsync()
         {
             Console.WriteLine();
-            Console.WriteLine($"***** {nameof(TestAllManuallyAsync)} *****");
-
-            //Obtain access token from the IDS4 server
+            Console.WriteLine($"*****不集成*****");
 
             // discover endpoints from metadata
             var client = new HttpClient();
@@ -130,14 +122,11 @@ namespace Hugin.BookStore
 
             Console.WriteLine(tokenResponse.Json);
 
-            //Perform the actual HTTP request
-
             using (var httpClient = new HttpClient())
             {
                 httpClient.SetBearerToken(tokenResponse.AccessToken);
 
-                var url = _configuration["RemoteServices:Platform:BaseUrl"] +
-                          "api/Platform/sample/authorized";
+                var url = _configuration["RemoteServices:BookStore:BaseUrl"] + "api/healthCheck/authorize";
 
                 var responseMessage = await httpClient.GetAsync(url);
                 if (responseMessage.IsSuccessStatusCode)
