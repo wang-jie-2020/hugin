@@ -8,6 +8,9 @@ using Volo.Abp.Uow;
 
 namespace Hugin.Terminal
 {
+#if DEBUG
+    [Queue("debug")]
+#endif
     public abstract class BaseBackgroundJob : ITransientDependency
     {
         public IServiceProvider ServiceProvider { get; set; }

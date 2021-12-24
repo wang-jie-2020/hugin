@@ -1,4 +1,4 @@
-﻿using Hugin.Platform.Localization;
+﻿using Hugin.Terminal.Localization;
 using Localization.Resources.AbpUi;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AspNetCore.Mvc;
@@ -26,7 +26,7 @@ namespace Hugin.Terminal
             Configure<AbpLocalizationOptions>(options =>
             {
                 options.Resources
-                    .Get<PlatformResource>()
+                    .Get<TerminalResource>()
                     .AddBaseTypes(typeof(AbpUiResource));
             });
         }

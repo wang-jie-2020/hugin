@@ -1,10 +1,9 @@
-﻿using Hugin.Platform;
-using Volo.Abp.Modularity;
+﻿using Volo.Abp.Modularity;
 
 namespace Hugin.Terminal
 {
     [DependsOn(
-        typeof(PlatformDomainModule)
+        typeof(TerminalDomainModule)
     )]
     public class TerminalCapModule : AbpModule
     {

@@ -8,6 +8,7 @@ namespace Hugin.Terminal
     [DependsOn(
         typeof(AbpDddApplicationContractsModule),
         typeof(AbpAuthorizationModule),
+        typeof(TerminalDomainSharedModule),
         typeof(PlatformDomainSharedModule)
         )]
     public class TerminalApplicationContractsModule : AbpModule

@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\platform\Hugin.Platform.Domain\Hugin.Platform.Domain.csproj" />
+		<ProjectReference Include="..\Hugin.Terminal.Domain\Hugin.Terminal.Domain.csproj" />
 		<PackageReference Include="Hangfire.AspNetCore" Version="1.7.*" />
 	</ItemGroup>
 

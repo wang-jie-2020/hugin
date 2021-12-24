@@ -9,7 +9,7 @@ namespace Hugin.Terminal
     [DependsOn(
         typeof(AbpDddApplicationModule),
         typeof(AbpAutoMapperModule),
-        typeof(PlatformDomainModule),
+        typeof(TerminalDomainModule),
         typeof(TerminalApplicationContractsModule),
         typeof(TerminalBackgroundJobModule),
         typeof(TerminalCapModule)

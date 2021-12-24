@@ -105,6 +105,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.Platform.EntityFramew
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.Platform.TestBase", "test\Hugin.Platform.TestBase\Hugin.Platform.TestBase.csproj", "{9922564F-97C7-43CC-8D75-EB6BE10E5420}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.Terminal.Domain", "terminal\Hugin.Terminal.Domain\Hugin.Terminal.Domain.csproj", "{DAAD4BCD-A025-4EEA-A2E9-8725E4DB2D2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hugin.Terminal.Domain.Shared", "terminal\Hugin.Terminal.Domain.Shared\Hugin.Terminal.Domain.Shared.csproj", "{02E0C14F-A1C6-455D-9977-8BA623BDF353}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -275,6 +279,14 @@ Global
 		{9922564F-97C7-43CC-8D75-EB6BE10E5420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9922564F-97C7-43CC-8D75-EB6BE10E5420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9922564F-97C7-43CC-8D75-EB6BE10E5420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAD4BCD-A025-4EEA-A2E9-8725E4DB2D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAD4BCD-A025-4EEA-A2E9-8725E4DB2D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAD4BCD-A025-4EEA-A2E9-8725E4DB2D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAD4BCD-A025-4EEA-A2E9-8725E4DB2D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02E0C14F-A1C6-455D-9977-8BA623BDF353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E0C14F-A1C6-455D-9977-8BA623BDF353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E0C14F-A1C6-455D-9977-8BA623BDF353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E0C14F-A1C6-455D-9977-8BA623BDF353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -323,6 +335,8 @@ Global
 		{DF4761BA-93C7-4FB2-BF6F-21D178CCF2C9} = {CCD2960C-23CC-4AB4-B84D-60C7AAA52F4D}
 		{31CB9544-F265-4732-85AE-1ACDEC5FDF94} = {CCD2960C-23CC-4AB4-B84D-60C7AAA52F4D}
 		{9922564F-97C7-43CC-8D75-EB6BE10E5420} = {CCD2960C-23CC-4AB4-B84D-60C7AAA52F4D}
+		{DAAD4BCD-A025-4EEA-A2E9-8725E4DB2D2B} = {96A21436-DAEC-4062-B2FC-6117FD58AD4D}
+		{02E0C14F-A1C6-455D-9977-8BA623BDF353} = {96A21436-DAEC-4062-B2FC-6117FD58AD4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4324B3B4-B60B-4E3C-91D8-59576B4E26DD}

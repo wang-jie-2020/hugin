@@ -1,4 +1,4 @@
-﻿using Hugin.Platform.Localization;
+﻿using Hugin.Terminal.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
@@ -9,7 +9,7 @@ namespace Hugin.Terminal
     {
         protected BaseController()
         {
-            LocalizationResource = typeof(PlatformResource);
+            LocalizationResource = typeof(TerminalResource);
         }
     }
 }
