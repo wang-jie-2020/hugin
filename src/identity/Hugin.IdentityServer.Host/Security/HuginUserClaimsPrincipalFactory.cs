@@ -22,6 +22,7 @@ namespace Hugin.IdentityServer.Security
             : base(userManager, roleManager, options, currentPrincipalAccessor, abpClaimsPrincipalFactory)
         {
         }
+
         public override async Task<ClaimsPrincipal> CreateAsync(IdentityUser user)
         {
             var principal = await base.CreateAsync(user);
