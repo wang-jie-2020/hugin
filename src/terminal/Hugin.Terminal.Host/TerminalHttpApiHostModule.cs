@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using Hugin.Terminal.Localization;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.Client;
@@ -67,7 +68,7 @@ namespace Hugin.Terminal
     )]
     public class TerminalHttpApiHostModule : AbpModule
     {
-        private const string DefaultCorsPolicyName = "Abp";
+        private const string DefaultCorsPolicyName = "Default";
 
         private static readonly ApiInfo[] HostApiGroup = new[] { ApiGroups.AbpGroup, ApiGroups.TerminalGroup };
 
@@ -75,6 +76,8 @@ namespace Hugin.Terminal
         {
             var hostingEnvironment = context.Services.GetHostingEnvironment();
             var configuration = context.Services.GetConfiguration();
+
+            #region Persistent
 
             Configure<AbpDbContextOptions>(options =>
             {
@@ -84,8 +87,6 @@ namespace Hugin.Terminal
                 });
             });
 
-            #region Csredis
-
             Configure<CsRedisCacheOptions>(cacheOptions =>
             {
                 var redisConfiguration = configuration["Redis:Terminal"];
@@ -94,10 +95,6 @@ namespace Hugin.Terminal
                     cacheOptions.ConnectionString = redisConfiguration;
                 }
             });
-
-            #endregion
-
-            #region Hangfire
 
             context.Services.AddHangfire(options =>
             {
@@ -120,10 +117,6 @@ namespace Hugin.Terminal
 #endif
                 });
             }
-
-            #endregion
-
-            #region Cap
 
             context.Services.AddCap(options =>
             {
@@ -151,24 +144,7 @@ namespace Hugin.Terminal
 
             Configure<AbpDistributedCacheOptions>(options =>
             {
-                options.KeyPrefix = "Platform:";
-            });
-
-            Configure<AbpLocalizationOptions>(options =>
-            {
-                options.DefaultResourceType = typeof(PlatformResource);
-                options.Languages.Add(new LanguageInfo("en", "en", "English"));
-                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
-            });
-
-            context.Services.Replace(ServiceDescriptor.Transient<ILanguageProvider, DefaultLanguageProvider>());
-            context.Services.Replace(ServiceDescriptor.Transient<ISettingProvider, SettingProvider>());
-            Configure<AbpLocalizationOptions>(options =>
-            {
-                if (options.GlobalContributors.Contains<RemoteLocalizationContributor>())
-                {
-                    options.GlobalContributors.Remove<RemoteLocalizationContributor>();
-                }
+                options.KeyPrefix = TerminalConsts.Name + ":";
             });
 
             context.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -205,6 +181,23 @@ namespace Hugin.Terminal
                         .AllowAnyMethod()
                         .AllowCredentials();
                 });
+            });
+
+            Configure<AbpLocalizationOptions>(options =>
+            {
+                options.DefaultResourceType = typeof(TerminalResource);
+                options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
+            });
+
+            context.Services.Replace(ServiceDescriptor.Transient<ILanguageProvider, DefaultLanguageProvider>());
+            context.Services.Replace(ServiceDescriptor.Transient<ISettingProvider, SettingProvider>());
+            Configure<AbpLocalizationOptions>(options =>
+            {
+                if (options.GlobalContributors.Contains<RemoteLocalizationContributor>())
+                {
+                    options.GlobalContributors.Remove<RemoteLocalizationContributor>();
+                }
             });
 
             ConfigureDevelopmentServices(context);

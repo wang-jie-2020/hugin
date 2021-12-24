@@ -6,14 +6,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\terminal\Hugin.Terminal.HttpApi\Hugin.Terminal.HttpApi.csproj" />
+		<ProjectReference Include="..\..\terminal\Hugin.Terminal.Application\Hugin.Terminal.Application.csproj" />
+		<ProjectReference Include="..\..\platform\Hugin.Platform.EntityFrameworkCore\Hugin.Platform.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\..\HostShared\HostShared.csproj" />
 		<ProjectReference Include="..\..\_infrastructure\Hugin.Infrastructure.Cap\Hugin.Infrastructure.Cap.csproj" />
 		<ProjectReference Include="..\..\_extensions\Hugin.Abp.Mvc\Hugin.Abp.Mvc.csproj" />
 		<ProjectReference Include="..\..\_extensions\Volo.Abp.AspNetCore.MultiStadium\Volo.Abp.AspNetCore.MultiStadium.csproj" />
 		<ProjectReference Include="..\..\_extensions\Hugin.Cache.CsRedis\Hugin.Cache.CsRedis.csproj" />
-		<ProjectReference Include="..\..\platform\Hugin.Platform.EntityFrameworkCore\Hugin.Platform.EntityFrameworkCore.csproj" />
-		<ProjectReference Include="..\..\terminal\Hugin.Terminal.HttpApi\Hugin.Terminal.HttpApi.csproj" />
-		<ProjectReference Include="..\..\terminal\Hugin.Terminal.Application\Hugin.Terminal.Application.csproj" />
 		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
 		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
 		<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />

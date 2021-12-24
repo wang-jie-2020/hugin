@@ -20,7 +20,7 @@ namespace Hugin.Terminal.Controllers
             {
                 return new ContentResult
                 {
-                    Content = "服务已经启动"
+                    Content = "Host Start"
                 };
             }
 

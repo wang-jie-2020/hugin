@@ -1,5 +1,4 @@
-﻿using Hugin.Platform;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Domain;
 using Volo.Abp.Modularity;
@@ -9,8 +8,7 @@ namespace Hugin.Terminal
     [DependsOn(
         typeof(AbpDddDomainModule),
         typeof(AbpAutoMapperModule),
-        typeof(TerminalDomainSharedModule),
-        typeof(PlatformDomainModule)
+        typeof(TerminalDomainSharedModule)
     )]
     public class TerminalDomainModule : AbpModule
     {
