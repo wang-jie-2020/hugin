@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Reflection;
 
-namespace LG.NetCore.Sms.ChinaMobile
+namespace Hugin.Sms.ChinaMobile
 {
     internal class EnumHelper
     {

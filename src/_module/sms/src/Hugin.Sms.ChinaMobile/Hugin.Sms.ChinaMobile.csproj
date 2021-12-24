@@ -1,9 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="..\..\..\..\common.props" />
-
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>Hugin</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -13,7 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\LG.Sms.Core\LG.Sms.Core.csproj" />
+		<ProjectReference Include="..\Hugin.Sms.Core\Hugin.Sms.Core.csproj" />
 	</ItemGroup>
 
 </Project>

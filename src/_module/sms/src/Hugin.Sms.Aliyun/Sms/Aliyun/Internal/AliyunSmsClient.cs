@@ -2,10 +2,10 @@
 using Aliyun.Acs.Core;
 using Aliyun.Acs.Core.Profile;
 using Aliyun.Acs.Dysmsapi.Model.V20170525;
-using LG.NetCore.Sms.Aliyun.Internal.Model;
+using Hugin.Sms.Aliyun.Internal.Model;
 using Newtonsoft.Json;
 
-namespace LG.NetCore.Sms.Aliyun.Internal
+namespace Hugin.Sms.Aliyun.Internal
 {
     internal class AliyunSmsClient
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LG.NetCore.Sms.Aliyun.Internal.Model
+namespace Hugin.Sms.Aliyun.Internal.Model
 {
     internal class AliyunSmsTemplate
     {

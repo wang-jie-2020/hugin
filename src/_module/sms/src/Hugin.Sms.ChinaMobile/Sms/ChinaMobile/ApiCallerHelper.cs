@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace LG.NetCore.Sms.ChinaMobile
+namespace Hugin.Sms.ChinaMobile
 {
     /// <summary>
     /// ApiHelper 辅助进行api请求

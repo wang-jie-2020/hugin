@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="..\..\..\..\common.props" />
-
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
+		<RootNamespace>Hugin</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -15,9 +14,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\LG.Sms.Aliyun\LG.Sms.Aliyun.csproj" />
-		<ProjectReference Include="..\..\src\LG.Sms.ChinaMobile\LG.Sms.ChinaMobile.csproj" />
-		<ProjectReference Include="..\..\src\LG.Sms.Core\LG.Sms.Core.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Sms.Aliyun\Hugin.Sms.Aliyun.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Sms.ChinaMobile\Hugin.Sms.ChinaMobile.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Sms.Core\Hugin.Sms.Core.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LG.NetCore.Sms
+namespace Hugin.Sms
 {
     public interface ISmsService
     {

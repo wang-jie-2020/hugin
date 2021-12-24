@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LG.NetCore.Sms.ChinaMobile.Internal;
-using LG.NetCore.Sms.ChinaMobile.Internal.Model;
+using Hugin.Sms.ChinaMobile.Internal;
+using Hugin.Sms.ChinaMobile.Internal.Model;
 using Microsoft.Extensions.Options;
 
-namespace LG.NetCore.Sms.ChinaMobile
+namespace Hugin.Sms.ChinaMobile
 {
     public class ChinaMobileService : ISmsService
     {

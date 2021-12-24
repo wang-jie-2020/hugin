@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Aliyun.Acs.Dysmsapi.Model.V20170525;
 
-namespace LG.NetCore.Sms.Aliyun
+namespace Hugin.Sms.Aliyun
 {
     public interface IAliSmsService
     {

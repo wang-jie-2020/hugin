@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace LG.NetCore.Sms.ChinaMobile
+namespace Hugin.Sms.ChinaMobile
 {
     public class ChinaMobileSmsOptions
     {

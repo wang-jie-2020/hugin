@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace LG.NetCore.Sms.ChinaMobile.Internal.Model
+namespace Hugin.Sms.ChinaMobile.Internal.Model
 {
     internal class ChinaMobileHttpRsp
     {

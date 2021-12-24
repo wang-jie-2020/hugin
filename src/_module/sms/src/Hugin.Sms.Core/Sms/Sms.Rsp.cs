@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LG.NetCore.Sms
+namespace Hugin.Sms
 {
     public class SmsRsp
     {

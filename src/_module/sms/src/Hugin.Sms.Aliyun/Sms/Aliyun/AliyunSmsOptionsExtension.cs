@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 
-namespace LG.NetCore.Sms.Aliyun
+namespace Hugin.Sms.Aliyun
 {
     public class AliyunSmsOptionsExtension : ISmsOptionsExtension
     {

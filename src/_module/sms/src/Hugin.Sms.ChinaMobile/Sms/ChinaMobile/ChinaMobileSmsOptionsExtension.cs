@@ -1,10 +1,10 @@
 ﻿using System;
-using LG.NetCore.Sms.ChinaMobile.Internal;
+using Hugin.Sms.ChinaMobile.Internal;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 
-namespace LG.NetCore.Sms.ChinaMobile
+namespace Hugin.Sms.ChinaMobile
 {
     public class ChinaMobileSmsOptionsExtension : ISmsOptionsExtension
     {

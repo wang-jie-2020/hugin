@@ -1,9 +1,9 @@
-using LG.NetCore.Sms.Aliyun;
+using Hugin.Sms.Aliyun;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Xunit;
 
-namespace LG.NetCore.Sms
+namespace Hugin.Sms
 {
     public class SampleTest
     {

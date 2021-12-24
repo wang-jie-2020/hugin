@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Aliyun.Acs.Dysmsapi.Model.V20170525;
-using LG.NetCore.Sms.Aliyun.Internal;
-using LG.NetCore.Sms.Aliyun.Internal.Model;
+using Hugin.Sms.Aliyun.Internal;
+using Hugin.Sms.Aliyun.Internal.Model;
 using Microsoft.Extensions.Options;
 
-namespace LG.NetCore.Sms.Aliyun
+namespace Hugin.Sms.Aliyun
 {
     public class AliyunSmsService : ISmsService, IAliSmsService
     {

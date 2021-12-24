@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using LG.NetCore.Sms.ChinaMobile.Internal.Model;
+using Hugin.Sms.ChinaMobile.Internal.Model;
 using Newtonsoft.Json;
 
-namespace LG.NetCore.Sms.ChinaMobile.Internal
+namespace Hugin.Sms.ChinaMobile.Internal
 {
     /// <summary>
     /// 基于http文档

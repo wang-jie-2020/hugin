@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace LG.NetCore.Sms
+namespace Hugin.Sms
 {
     public interface ISmsOptionsExtension
     {

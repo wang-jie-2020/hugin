@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Sms.ChinaMobile
+namespace Hugin.Sms.ChinaMobile
 {
     public static class ServiceCollectionExtensions
     {
