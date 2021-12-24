@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Oss.Local.@internal
+namespace Hugin.Oss.Local.@internal
 {
     internal class FileRecord
     {

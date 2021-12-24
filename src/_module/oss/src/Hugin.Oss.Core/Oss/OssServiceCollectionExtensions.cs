@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LG.NetCore.Oss
+namespace Hugin.Oss
 {
     public static class ServiceCollectionExtensions
     {

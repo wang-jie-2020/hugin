@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace LG.NetCore.Oss
+namespace Hugin.Oss
 {
     public interface IOssOptionsExtension
     {

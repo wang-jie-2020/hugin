@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace LG.NetCore.Oss.Local
+namespace Hugin.Oss.Local
 {
     /// <summary>
     /// ApiHelper 辅助进行api请求

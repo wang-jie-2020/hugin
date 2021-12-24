@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace LG.NetCore.Oss.Aliyun
+namespace Hugin.Oss.Aliyun
 {
     public class AliyunOssOptions
     {

@@ -8,7 +8,7 @@ using Aliyun.OSS.Util;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 
-namespace LG.NetCore.Oss.Aliyun
+namespace Hugin.Oss.Aliyun
 {
     public class AliyunOssService : IOssService
     {

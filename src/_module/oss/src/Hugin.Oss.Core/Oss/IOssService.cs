@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace LG.NetCore.Oss
+namespace Hugin.Oss
 {
     public interface IOssService
     {

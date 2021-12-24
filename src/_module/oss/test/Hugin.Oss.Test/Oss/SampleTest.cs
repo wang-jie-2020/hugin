@@ -1,9 +1,9 @@
-using LG.NetCore.Oss.Aliyun;
+using Hugin.Oss.Aliyun;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Xunit;
 
-namespace LG.NetCore.Oss
+namespace Hugin.Oss
 {
     public class SampleTest
     {

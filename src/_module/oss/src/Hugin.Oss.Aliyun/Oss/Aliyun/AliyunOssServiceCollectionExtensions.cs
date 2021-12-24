@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Oss.Aliyun
+namespace Hugin.Oss.Aliyun
 {
     public static class ServiceCollectionExtensions
     {

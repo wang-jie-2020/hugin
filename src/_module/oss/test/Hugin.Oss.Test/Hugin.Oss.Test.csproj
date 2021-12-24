@@ -1,9 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-	<Import Project="..\..\..\..\common.props" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
+		<RootNamespace>Hugin</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -15,9 +14,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\LG.Oss.Aliyun\LG.Oss.Aliyun.csproj" />
-		<ProjectReference Include="..\..\src\LG.Oss.Core\LG.Oss.Core.csproj" />
-		<ProjectReference Include="..\..\src\LG.Oss.Local\LG.Oss.Local.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Oss.Core\Hugin.Oss.Core.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Oss.Aliyun\Hugin.Oss.Aliyun.csproj" />
+		<ProjectReference Include="..\..\src\Hugin.Oss.Local\Hugin.Oss.Local.csproj" />
 	</ItemGroup>
 
 </Project>

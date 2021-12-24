@@ -3,12 +3,12 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using LG.NetCore.Oss.Local.@internal;
+using Hugin.Oss.Local.@internal;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
-namespace LG.NetCore.Oss.Local
+namespace Hugin.Oss.Local
 {
     public class LocalOssService : IOssService
     {

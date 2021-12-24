@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace LG.NetCore.Oss.Local
+namespace Hugin.Oss.Local
 {
     public class LocalOssOptions
     {

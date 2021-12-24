@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Oss
+namespace Hugin.Oss
 {
     public class OssFileInfo
     {

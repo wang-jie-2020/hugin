@@ -1,7 +1,7 @@
 ﻿using System;
 using Aliyun.OSS.Model;
 
-namespace LG.NetCore.Oss.Aliyun
+namespace Hugin.Oss.Aliyun
 {
     public static class AliyunOssExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LG.NetCore.Oss
+namespace Hugin.Oss
 {
     public class OssRsp
     {

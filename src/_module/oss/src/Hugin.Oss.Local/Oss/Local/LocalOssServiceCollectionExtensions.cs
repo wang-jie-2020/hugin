@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LG.NetCore.Oss.Local
+namespace Hugin.Oss.Local
 {
     public static class ServiceCollectionExtensions
     {
