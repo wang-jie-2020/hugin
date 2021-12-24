@@ -1,13 +1,13 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Senparc.Weixin;
 using Senparc.Weixin.MP;
+using Senparc.Weixin.MP.AdvancedAPIs;
 using Senparc.Weixin.MP.Entities.Request;
 using Senparc.Weixin.MP.Helpers;
-using System.Threading.Tasks;
-using Senparc.Weixin.MP.AdvancedAPIs;
 
-namespace LG.NetCore.Wechat
+namespace Wechat
 {
     [Route("api/[controller]/[action]")]
     public class WechatController : Controller

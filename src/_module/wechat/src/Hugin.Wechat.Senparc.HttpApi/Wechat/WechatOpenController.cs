@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Senparc.Weixin;
 using Senparc.Weixin.MP;
 using Senparc.Weixin.WxOpen.AdvancedAPIs.Sns;
 using Senparc.Weixin.WxOpen.Containers;
 using Senparc.Weixin.WxOpen.Entities.Request;
 using Senparc.Weixin.WxOpen.Helpers;
-using System;
-using System.Threading.Tasks;
 
-namespace LG.NetCore.Wechat
+namespace Wechat
 {
     [Route("api/[controller]/[action]")]
     public class WechatOpenController : Controller

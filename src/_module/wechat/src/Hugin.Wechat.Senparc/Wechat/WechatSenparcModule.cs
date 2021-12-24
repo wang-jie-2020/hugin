@@ -15,7 +15,7 @@ using Volo.Abp;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Wechat
+namespace Wechat
 {
     public class WechatSenparcModule : AbpModule
     {

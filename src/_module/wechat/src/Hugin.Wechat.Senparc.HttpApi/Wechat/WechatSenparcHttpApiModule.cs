@@ -2,7 +2,7 @@
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Wechat
+namespace Wechat
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcModule),

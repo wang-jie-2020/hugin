@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Modularity;
 
-namespace LG.NetCore.Wechat
+namespace Wechat
 {
     public class WechatAbstractionsModule : AbpModule
     {

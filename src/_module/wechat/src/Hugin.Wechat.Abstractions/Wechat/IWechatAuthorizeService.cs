@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace LG.NetCore.Wechat
+namespace Wechat
 {
     /// <summary>
     /// 微信认证

@@ -1,4 +1,4 @@
-﻿namespace LG.NetCore.Wechat
+﻿namespace Wechat
 {
     public class WeChatEncryptedData
     {

@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="..\..\..\..\common.props" />
-
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
+		<RootNameSpace>Hugin</RootNameSpace>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -15,6 +14,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\LG.Wechat.Abstractions\LG.Wechat.Abstractions.csproj" />
+		<ProjectReference Include="..\Hugin.Wechat.Abstractions\Hugin.Wechat.Abstractions.csproj" />
 	</ItemGroup>
 </Project>
