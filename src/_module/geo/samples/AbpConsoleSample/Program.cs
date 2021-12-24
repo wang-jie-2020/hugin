@@ -14,7 +14,6 @@ namespace AbpConsoleSample
     {
         static void Main(string[] args)
         {
-
             using (var bootstrapper = AbpBootstrapper.Create<AbpConsoleSampleModule>())
             {
                 bootstrapper.Initialize();
