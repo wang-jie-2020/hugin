@@ -4,6 +4,6 @@
     <Version>0.1.0</Version>
     <NoWarn>$(NoWarn);CS1591;CS0436</NoWarn>
     <AbpProjectType>module</AbpProjectType>
-	<RootNamespace>Hugin</RootNamespace>
+	  <RootNamespace>Hugin</RootNamespace>
   </PropertyGroup>
 </Project>
