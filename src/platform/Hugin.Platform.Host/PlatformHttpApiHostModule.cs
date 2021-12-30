@@ -297,7 +297,7 @@ namespace Hugin.Platform
             {
                 app.UseMultiTenancy();
             }
-            app.UseMultiStadium();
+
             app.UseAbpRequestLocalization(options =>
             {
                 var defaultCulture = new CultureInfo("zh-hans");
