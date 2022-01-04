@@ -1,5 +1,5 @@
-﻿using Hugin.DependencyInjection;
-using Hugin.Mvc.Conventions;
+﻿using Hugin.Mvc.Conventions;
+using Hugin.Mvc.DependencyInjection;
 using Hugin.Mvc.ExceptionHandling;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;

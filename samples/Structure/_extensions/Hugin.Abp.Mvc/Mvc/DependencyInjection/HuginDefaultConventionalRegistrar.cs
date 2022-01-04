@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Volo.Abp.DependencyInjection;
 
-namespace Hugin.DependencyInjection
+namespace Hugin.Mvc.DependencyInjection
 {
     public class HuginDefaultConventionalRegistrar : DefaultConventionalRegistrar
     {
