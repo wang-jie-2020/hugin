@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Hugin.Application.Authorization
 {
-    public class UserClaimHandler : AuthorizationHandler<HuginUserClaimRequirement>
+    public class HuginUserClaimHandler : AuthorizationHandler<HuginUserClaimRequirement>
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, HuginUserClaimRequirement requirement)
         {
