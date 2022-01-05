@@ -4,27 +4,27 @@
 ############################################################################################################
 
 DOCKERFILES=(
-	"../host/LG.NetCore.IdentityServer.Host/Dockerfile"
-	"../host/LG.NetCore.Platform.Host/Dockerfile"
-	"../host/LG.NetCore.Terminal.Host/Dockerfile"
+	"../src/identity/Hugin.IdentityServer.Host/Dockerfile"
+	"../src/platform/Hugin.Platform.Host/Dockerfile"
+	"../src/terminal/Hugin.Terminal.Host/Dockerfile"
 )
 
 DOCKERIMAGES=(
-	"lg.identity"
-	"lg.platform"
-	"lg.terminal"
+	"hugin.identity"
+	"hugin.platform"
+	"hugin.terminal"
 )
 
 DOCKERREPOSITORIES=(
-	"registry.cn-hangzhou.aliyuncs.com/wxlgzh/identity"
-	"registry.cn-hangzhou.aliyuncs.com/wxlgzh/platform"
-	"registry.cn-hangzhou.aliyuncs.com/wxlgzh/terminal"
+	"registry.cn-hangzhou.aliyuncs.com/wangjie0303/identity"
+	"registry.cn-hangzhou.aliyuncs.com/wangjie0303/platform"
+	"registry.cn-hangzhou.aliyuncs.com/wangjie0303/ternimal"
 )
 
 DOCKER_IMAGE_VERSION="1.0"
 DOCKER_REPOSITORY="registry.cn-hangzhou.aliyuncs.com"
-DOCKER_REPOSITORY_USER="棱光智慧"
-DOCKER_REPOSITORY_PASSWORD="lingguang168"
+DOCKER_REPOSITORY_USER=""
+DOCKER_REPOSITORY_PASSWORD=""
 
 HELPINFO="args: [-i , -p , -h] or [--image= , --push , --help]" 
 

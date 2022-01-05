@@ -5,7 +5,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /source
 COPY . .
-WORKDIR /source/host/Hugin.Platform.Host
+WORKDIR /source/platform/Hugin.Platform.Host
 RUN dotnet restore -nowarn:msb3202,nu1503docj
 RUN dotnet build --no-restore -c Release -o /app
 
