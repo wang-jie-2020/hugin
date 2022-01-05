@@ -3,11 +3,12 @@ Write-Host "Start Building"
 # COMMON PATHS
 
 $buildFolder = (Get-Item -Path "./" -Verbose).FullName
-$slnFolder = Join-Path $buildFolder "../"
 $outputFolder = Join-Path $buildFolder "outputs"
-$identityFolder = Join-Path $slnFolder "host/LG.NetCore.IdentityServer.Host"
-$platformFolder = Join-Path $slnFolder "host/LG.NetCore.Platform.Host"
-$terminalFolder = Join-Path $slnFolder "host/LG.NetCore.Terminal.Host"
+
+$slnFolder = Join-Path $buildFolder "../src"
+$identityFolder = Join-Path $slnFolder "identity/Hugin.IdentityServer.Host"
+$platformFolder = Join-Path $slnFolder "platform/Hugin.Platform.Host"
+$terminalFolder = Join-Path $slnFolder "terminal/Hugin.Terminal.Host"
 
 ## CLEAR ######################################################################
 
